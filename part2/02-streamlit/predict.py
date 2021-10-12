@@ -1,13 +1,24 @@
 import torch
 import streamlit as st
-from model import MaskClassificationModel
+from model import MyEfficientNet
 from utils import transform_image
 
+
 @st.cache
-def load_model():
+def load_model(model_path=""):
+    
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    model = MaskClassificationModel(num_classes=18).to(device)
+    model = MyEfficientNet(num_classes=18).to(device)
+
+
+    if str(device) =="cpu":
+        model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+    else:
+        model.load_state_dict(torch.load(model_path))
+        model.to(device)
+
     return model
 
 
