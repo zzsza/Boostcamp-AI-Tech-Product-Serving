@@ -22,7 +22,7 @@ available_slots = int(os.getenv("AVAILABLE_SLOTS", 3))
 
 orders = []
 
-def transform_image(image_bytes):
+def transform_image(image_bytes: bytes):
     transform = albumentations.Compose([
             albumentations.Resize(height=512, width=384),
             albumentations.Normalize(mean=(0.5, 0.5, 0.5), 
@@ -34,11 +34,11 @@ def transform_image(image_bytes):
     image_array = np.array(image)
     return transform(image=image_array)['image'].unsqueeze(0)
 
-def predict_from_image_byte(image_bytes, model):
+def predict_from_image_byte(image_bytes: bytes, model) -> List[int]:
     transformed_image = transform_image(image_bytes)
     outputs = model.forward(transformed_image)
     _, y_hat = outputs.max(1)
-    return transformed_image, y_hat
+    return y_hat.tolist()
 
 
 
@@ -84,14 +84,17 @@ async def order(file: UploadFile = File(...), model: MyEfficientNet = Depends(ge
     if len(outstanding_orders) >= available_slots:
         return {"message": "손님이 많습니다. 주문을 진행할 수 없습니다"}
     
+    product = InferenceImageProduct(result=None) 
+    new_order = Order(status="IN_PROGRESS", products=[product]) # TODO(humphrey): queue에 inference task를 넣고, background에 돌려야하나?
+    orders.append(new_order)
+
     image_bytes = await file.read()
     inference_result = predict_from_image_byte(image_bytes=image_bytes, model=model)
+    existing_order = await get_order(new_order.id)
+    existing_order.status = "DONE"
+    existing_order.products[0].result=inference_result
 
-    product = InferenceImageProduct(result=inference_result) # TODO(humphrey): output schema를 지정한다
-    new_order = Order(status="STARTED", products=[product]) # TODO(humphrey): queue에 inference task를 넣고, background에 돌려야하나?
-
-    orders.append(new_order)
-    return new_order.id
+    return existing_order
 
 
 @app.patch("/order", description="주문을 수정합니다")
