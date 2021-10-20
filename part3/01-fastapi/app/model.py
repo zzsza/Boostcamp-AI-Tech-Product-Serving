@@ -4,19 +4,6 @@ import torch.nn.functional as F
 from efficientnet_pytorch import EfficientNet
 
 
-def get_model(model_path: str = "../../assets/mask_task/model.pth"):
-    """Model을 가져옵니다"""
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = MyEfficientNet(num_classes=18).to(device)
-    if str(device) == "cpu":
-        model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
-    else:
-        model.load_state_dict(torch.load(model_path))
-        model.to(device)
-    model.eval()
-    return model
-
-
 class MyEfficientNet(nn.Module):
     """
     EfiicientNet-b4의 출력층만 변경합니다.
@@ -31,3 +18,16 @@ class MyEfficientNet(nn.Module):
         x = self.EFF(x)
         x = F.softmax(x, dim=1)
         return x
+
+
+def get_model(model_path: str = "../../assets/mask_task/model.pth") -> MyEfficientNet:
+    """Model을 가져옵니다"""
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = MyEfficientNet(num_classes=18).to(device)
+    if str(device) == "cpu":
+        model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
+    else:
+        model.load_state_dict(torch.load(model_path))
+        model.to(device)
+    model.eval()
+    return model
