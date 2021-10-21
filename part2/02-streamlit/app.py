@@ -19,19 +19,17 @@ root_password = 'password'
 
 def main():
     st.title("Mask Classification Model")
-    #TODO뭔가 지저분한..
-    asset_dir = "../../assets/mask_task/"
 
-    with open(os.path.join(asset_dir,"config.yaml")) as f:
+    with open("config.yaml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
-    model_path = os.path.join(asset_dir,config['model_name'])
+    
 
-    model = load_model(model_path)
+    model = load_model()
     model.eval()
 
     uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg","png"])
 
-    if uploaded_file is not None:
+    if uploaded_file:
         image_bytes = uploaded_file.getvalue()
         image = Image.open(io.BytesIO(image_bytes))
 
@@ -44,7 +42,8 @@ def main():
 
 
 @cache_on_button_press('Authenticate')
-def authenticate(password):
+def authenticate(password) ->bool:
+    print(type(password))
     return password == root_password
 
 
