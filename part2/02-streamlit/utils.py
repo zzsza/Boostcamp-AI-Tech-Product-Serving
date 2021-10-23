@@ -4,9 +4,10 @@ from PIL import Image
 
 import albumentations
 import albumentations.pytorch
+import torch
 
 
-def transform_image(image_bytes):
+def transform_image(image_bytes: bytes) -> torch.Tensor:
     transform = albumentations.Compose([
             albumentations.Resize(height=512, width=384),
             albumentations.Normalize(mean=(0.5, 0.5, 0.5),

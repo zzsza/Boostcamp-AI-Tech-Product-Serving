@@ -1,0 +1,74 @@
+classes:
+  0:
+  - Wear
+  - Male
+  - under 30
+  1:
+  - Wear
+  - Male
+  - between 30 and 60
+  2:
+  - Wear
+  - Male
+  - over 60
+  3:
+  - Wear
+  - Female
+  - under 30
+  4:
+  - Wear
+  - Female
+  - between 30 and 60
+  5:
+  - Wear
+  - Female
+  - over 60
+  6:
+  - Incorrect
+  - Male
+  - under 30
+  7:
+  - Incorrect
+  - Male
+  - between 30 and 60
+  8:
+  - Incorrect
+  - Male
+  - over 60
+  9:
+  - Incorrect
+  - Female
+  - under 30
+  10:
+  - Incorrect
+  - Female
+  - between 30 and 60
+  11:
+  - Incorrect
+  - Female
+  - over 60
+  12:
+  - Not Wear
+  - Male
+  - under 30
+  13:
+  - Not Wear
+  - Male
+  - between 30 and 60
+  14:
+  - Not Wear
+  - Male
+  - over 60
+  15:
+  - Not Wear
+  - Female
+  - under 30
+  16:
+  - Not Wear
+  - Female
+  - between 30 and 60
+  17:
+  - Not Wear
+  - Female
+  - over 60
+model_path: ../../assets/mask_task/model.pth

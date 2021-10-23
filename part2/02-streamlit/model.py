@@ -1,26 +1,20 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
+
+from efficientnet_pytorch import EfficientNet
 
 
-class MaskClassificationModel(nn.Module):
-    def __init__(self, num_classes: int = 1000):
-        super(MaskClassificationModel, self).__init__()
-        self.features = nn.Sequential(
-            nn.Conv2d(3, 64, kernel_size=11, stride=4, padding=2),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-        self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
-        self.classifier = nn.Sequential(
-            nn.Dropout(),
-            nn.Linear(64, 32),
-            nn.ReLU(inplace=True),
-            nn.Linear(32, num_classes),
-        )
-
+class MyEfficientNet(nn.Module) :
+    '''
+    EfiicientNet-b4의 출력층만 변경합니다.
+    한번에 18개의 Class를 예측하는 형태의 Model입니다.
+    '''
+    def __init__(self, num_classes: int = 18) :
+        super(MyEfficientNet, self).__init__()
+        self.EFF = EfficientNet.from_pretrained('efficientnet-b4', in_channels=3, num_classes=num_classes)
+    
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.features(x)
-        x = self.avgpool(x)
-        x = torch.flatten(x, 1)
-        x = self.classifier(x)
+        x = self.EFF(x)
+        x = F.softmax(x, dim=1)
         return x
