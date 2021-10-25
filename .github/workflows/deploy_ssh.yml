@@ -1,7 +1,8 @@
 name: CICD-SSH
 on:
   push:
-      branches: [ deploy_ssh ]
+      paths:
+        - 'part2/04-cicd/**'
       workflow_dispatch:
 
 jobs:
