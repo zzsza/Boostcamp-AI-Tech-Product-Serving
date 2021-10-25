@@ -58,38 +58,40 @@
   1. 이때 접근이 되지 않는다면, GCP의 방화벽 설정에서 `8501`포트를 열어둡니다.
 
 ### 3. Github Action 세팅
-1. 배포하려는 Repo에서 Setting으로 이동 한 뒤에 SECRET섹션에 새로운 키를 `SSH_KEY`라는 이름으로 추가합니다.
-   - 이때 내용에는 아까 복사한 `github-action` 키를 붙여 넣습니다.
-   - `BEGIN`으로 시작하는 부분부터 `END`까지모두 복사 붙여넣기 합니다.
+1. 배포하려는 Repo에서 Setting으로 이동 한 뒤에 SECRET섹션에서 github action에서 사용할 값들을 저장합니다 
+   - `SSH_KEY`라는 값을 추가합니다.
+     - 이때 내용에는 아까 복사한 `github-action` 키를 붙여 넣습니다.
+     - `BEGIN`으로 시작하는 부분부터 `END`까지모두 복사 붙여넣기 합니다.
+   - `HOST`라는 값을 추가합니다.
+     - 이때 서버의 public ip주소를 넣습니다.
+   - `USERNAME`이라는 값을 추가합니다.
+     - 이때 위에서 키를 만들때 사용했던 유저 이름을 추가합니다.
 
-1. Github Repo페이지에서 Github Action탭을 클릭한 다음에, `set up a workflow yourself`를 클릭 한뒤에 아래 내용을 붙여넣기 합니다. 그리고 `HOST_ADDRESS`와 `USERNAME`의 값을 변경합니다.
-    - `HOST_ADDRESS`: Compute Engine의 IP주소 또는 도메인
-    - `USERNAME`: 최초에 키를 만들었을 때 입력했던, 이메일 주소의 이름
-      - 추가적인 세팅을 안했다면, Compute Engine의 터미널에 접근했을 때의 user이름을 입력하시면 됩니다.
-      - `이름@example.com`
-        ```
-        name: CICD-SSH
-        on:
-        push:
-            branches: [ deploy_ssh ]
-        workflow_dispatch:
+2. 만약 아직 Github Action을 세팅하지 않았다면, Github Repo페이지에서 Github Action탭을 클릭한 다음에, `set up a workflow yourself`를 클릭 한뒤에 아래 내용을 붙여넣기 합니다. 
+   
+    ```
+    name: CICD-SSH
+    on:
+    push:
+        branches: [ deploy_ssh ]
+    workflow_dispatch:
 
-        jobs:
-        build:
-            runs-on: ubuntu-latest
-            steps:
-            - name: executing remote ssh commands using ssh key
-                uses: appleboy/ssh-action@master
-                with:
-                host: <HOST_ADDRESS>
-                username: <USERNAME>
-                key: ${{ secrets.SSH_KEY }}
-                port: 22
-                script: |
-                    cd github-action-test/part2/04-cicd
-                    sh deploy.sh
-                
-        ```
+    jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: executing remote ssh commands using ssh key
+            uses: appleboy/ssh-action@master
+            with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            key: ${{ secrets.SSH_KEY }}
+            port: 22
+            script: |
+                cd github-action-test/part2/04-cicd
+                sh deploy.sh
+            
+    ```
 
 ### 4. 테스트
 Github에서 `app.py` 파일의 title 부분을 변경하여서, 현재 돌고 있는 서버에 업데이트가 반영되는지 확인합니다.
