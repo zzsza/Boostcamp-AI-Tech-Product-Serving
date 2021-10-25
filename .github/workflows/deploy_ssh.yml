@@ -1,0 +1,20 @@
+name: CICD-SSH
+on:
+  push:
+      branches: [ deploy_ssh ]
+      workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+      host: ${{ secrets.HOST }} 
+      username: ${{ secrets.USERNAME }}
+      key: ${{ secrets.SSH_KEY }}
+      port: 22
+      script: |
+          cd github-action-test/part2/04-cicd
+          sh deploy.sh

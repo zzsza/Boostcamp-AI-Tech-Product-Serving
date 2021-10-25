@@ -68,10 +68,10 @@
       - 추가적인 세팅을 안했다면, Compute Engine의 터미널에 접근했을 때의 user이름을 입력하시면 됩니다.
       - `이름@example.com`
         ```
-        name: CI
+        name: CICD-SSH
         on:
         push:
-            branches: [ main ]
+            branches: [ deploy_ssh ]
         workflow_dispatch:
 
         jobs:
