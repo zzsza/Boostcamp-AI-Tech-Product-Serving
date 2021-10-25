@@ -1,64 +1,100 @@
 # CICD
 
 ## Prerequisite
-- Github 계정
-- Google Cloud Platform 계정
-## 1. SSH키를 활용한 간단한 예제
+- Google Cloud Platform에서 Compute Engine을 실행해놓은 상태
 
-### 1. 
-```
-#ssh 키 파일을 생성하기 위해 이동합니다.
-cd ~/.ssh
-#GCP를 가입했던 이메일로 사용해주세요! (username과 나중에 연관이 있습니다.)
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-#파일 이름을 다음과 같이 작성합니다.
-#Enter file in which to save the key (/home/boostcamp_jungwon/.ssh/id_rsa): github-action
-#아무것도 입력하지 않고 그냥 엔터를 칩니다.
-#Enter passphrase (empty for no passphrase): 
-#Enter same passphrase again: 
-#일반적으로는 생성한 키를 authorized_keys파일에 추가를 해야하는데, 
-#Google Compute Engine의 경우 주기적으로 삭제작업이 들어갑니다.
-#이 부분은 뒤에서 처리하겠습니다.
-cat github-action.pub >> authorized_keys
-#cat github-action 명령어로 출력된 결과를 복사
-```
+## 1. SSH키를 활용한 배포
 
-```
-cd
-sudo apt-get update
-sudo apt-get install python3.8-venv -y
-git config --global credential.helper store
-git clone <YOUR_REPOSITORY>
-cd github-action-test/part2/04-cicd
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py --server.runOnSave true
-```
+### 1. Compute Engine에 접속하여 SSH Key 생성
 
-```
-name: CI
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+  1. ssh 키 파일을 생성하기 위해 이동합니다.
+        ```
+        cd ~/.ssh
+        ```
+  1. GCP를 가입했던 이메일로 사용해주세요! (username과 나중에 연관이 있습니다.)
+        ```
+        `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+        ```
+  1. 파일 이름을 다음과 같이 작성합니다.
+      - `Enter file in which to save the key (/home/boostcamp_jungwon/.ssh/id_rsa): github-action`
+  1. 아무것도 입력하지 않고 그냥 엔터를 칩니다.
+      - `Enter passphrase (empty for no passphrase): `
+      - `Enter same passphrase again: `
+  1. 일반적으로는 생성한 키를 authorized_keys파일에 추가를 해야하는데, Google Compute Engine의 경우 주기적으로 삭제작업이 들어갑니다. 
+        ```
+        cat github-action.pub >> authorized_keys
+        ```
+        - GCP 콘솔 페이지의 메타데이터 섹션에서 SSH키를 추가합니다.
+           - https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys
+    
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
-        with:
-          host: 34.64.172.212
-          username: boostcamp_jungwon
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: |
-            cd github-action-test/part2/04-cicd
-            sh deploy.sh
-          
-```
+  1. `cat github-action` 명령어로 출력된 결과를 복사해두고 메모장같은 곳에 잘 보관해둡니다.
+     1. 추후에 Github Secret에 저장할 내용입니다.
 
+
+### 2. 서버 초기 세팅
+  1. 계정의 초기경로로 이도합니다.
+      ```
+      cd
+      ```
+  3. 다음 명령어로 최소한의 패키지를 설치합니다.
+      ```
+      sudo apt-get update
+      sudo apt-get install python3.8-venv -y
+      ```
+  1. 서빙할 코드를 가져옵니다. 이때 private repository인 경우에는 아래 명령어를 활용하여 인증 정보를 저장합니다.
+      ```
+      git config --global credential.helper store
+      git clone <YOUR_REPOSITORY>
+      ```
+  1. 실행하려는 경로로 이동한 뒤에 virtualenv를 설정한 뒤에 웹사이트가 돌아가는지 확인합니다.
+      ```
+      cd github-action-test/part2/04-cicd
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+      streamlit run app.py --server.runOnSave true
+      ```
+  1. 이때 접근이 되지 않는다면, GCP의 방화벽 설정에서 `8501`포트를 열어둡니다.
+
+### 3. Github Action 세팅
+1. 배포하려는 Repo에서 Setting으로 이동 한 뒤에 SECRET섹션에 새로운 키를 `SSH_KEY`라는 이름으로 추가합니다.
+   - 이때 내용에는 아까 복사한 `github-action` 키를 붙여 넣습니다.
+   - `BEGIN`으로 시작하는 부분부터 `END`까지모두 복사 붙여넣기 합니다.
+
+1. Github Repo페이지에서 Github Action탭을 클릭한 다음에, `set up a workflow yourself`를 클릭 한뒤에 아래 내용을 붙여넣기 합니다. 그리고 `HOST_ADDRESS`와 `USERNAME`의 값을 변경합니다.
+    - `HOST_ADDRESS`: Compute Engine의 IP주소 또는 도메인
+    - `USERNAME`: 최초에 키를 만들었을 때 입력했던, 이메일 주소의 이름
+      - 추가적인 세팅을 안했다면, Compute Engine의 터미널에 접근했을 때의 user이름을 입력하시면 됩니다.
+      - `이름@example.com`
+        ```
+        name: CI
+        on:
+        push:
+            branches: [ main ]
+        workflow_dispatch:
+
+        jobs:
+        build:
+            runs-on: ubuntu-latest
+            steps:
+            - name: executing remote ssh commands using ssh key
+                uses: appleboy/ssh-action@master
+                with:
+                host: <HOST_ADDRESS>
+                username: <USERNAME>
+                key: ${{ secrets.SSH_KEY }}
+                port: 22
+                script: |
+                    cd github-action-test/part2/04-cicd
+                    sh deploy.sh
+                
+        ```
+
+### 4. 테스트
+Github에서 `app.py` 파일의 title 부분을 변경하여서, 현재 돌고 있는 서버에 업데이트가 반영되는지 확인합니다.
+```
+st.title("Mask Classification Model CICD TEST")
+```
 ## 2. Docker를 활용한 간단한 예제
 TBD
