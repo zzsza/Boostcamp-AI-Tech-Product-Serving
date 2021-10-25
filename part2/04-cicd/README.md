@@ -74,8 +74,6 @@
     on:
     push:
         branches: [ deploy_ssh ]
-    workflow_dispatch:
-
     jobs:
     build:
         runs-on: ubuntu-latest
