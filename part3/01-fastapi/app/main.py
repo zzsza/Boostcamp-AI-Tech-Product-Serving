@@ -1,9 +1,4 @@
 import os
-import io
-import albumentations
-import albumentations.pytorch
-import numpy as np
-
 
 from datetime import datetime
 from typing import List, Optional, Union
@@ -12,9 +7,7 @@ from fastapi.param_functions import Depends
 from pydantic import BaseModel, Field
 from uuid import UUID, uuid4
 
-from PIL import Image
-
-from app.model import MyEfficientNet, get_model
+from app.model import MyEfficientNet, get_model, predict_from_image_byte
 
 app = FastAPI()
 
@@ -26,27 +19,6 @@ orders = []  # TODO(humphrey): repository 객체를 생성한다
 def can_order() -> bool:
     outstanding_orders = [order for order in orders if order.status == "IN_PROGRESS"]
     return len(outstanding_orders) < available_slots
-
-
-def transform_image(image_bytes: bytes):
-    transform = albumentations.Compose(
-        [
-            albumentations.Resize(height=512, width=384),
-            albumentations.Normalize(mean=(0.5, 0.5, 0.5), std=(0.2, 0.2, 0.2)),
-            albumentations.pytorch.transforms.ToTensorV2(),
-        ]
-    )
-    image = Image.open(io.BytesIO(image_bytes))
-    image = image.convert("RGB")
-    image_array = np.array(image)
-    return transform(image=image_array)["image"].unsqueeze(0)
-
-
-def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet) -> List[int]:
-    transformed_image = transform_image(image_bytes)
-    outputs = model.forward(transformed_image)
-    _, y_hat = outputs.max(1)
-    return y_hat.tolist()
 
 
 class Product(BaseModel):
@@ -102,7 +74,7 @@ async def order(
     # TODO(humphrey): update order 함수를 활용해서 코드를 간소화한다
     existing_order = await get_order(new_order.id)
     if isinstance(existing_order, dict):
-        return {"message": "주문 정보를 찾을 수 없습니다"}
+        return existing_order
     existing_order.status = "DONE"
     existing_order.products[0].result = inference_result
 
