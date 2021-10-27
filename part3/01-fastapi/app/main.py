@@ -63,13 +63,30 @@ class InferenceImageProduct(Product):
 
 class Order(BaseModel):
     id: UUID = Field(default_factory=uuid4)
-    status: str
     products: List[Product] = Field(default_factory=list)
     created_at: datetime = Field(default_factory=datetime.now)
 
     @property
     def bill(self):
         return sum([product.price for product in self.products])
+
+class OrderUpdate(BaseModel):
+    order_id: UUID
+    product_id: UUID
+    result: Optional[List]
+
+
+def get_order_by_id(order_id: UUID) -> Order:
+    return next((order for order in orders if order.id == order_id))
+
+
+def update_order_by_id(order_id: UUID, next_order: Order) -> Optional[Order]:
+    updated_order = None
+    for index, item in enumerate(orders):
+        if item.id == order_id:
+            updated_order = item.copy(update=next_order.dict(exclude_unset=True))
+            orders[index] = updated_order
+    return updated_order
 
 
 @app.get("/order", description="주문 리스트를 가져옵니다")
@@ -80,38 +97,29 @@ async def get_orders() -> List[Order]:
 @app.get("/order/{order_id}", description="주문 정보를 가져옵니다")
 async def get_order(order_id: UUID) -> Union[Order, dict]:
     try:
-        return next((order for order in orders if order.id == order_id))
+        return get_order_by_id(order_id=order_id)
     except StopIteration:
         return {"message": "주문 정보를 찾을 수 없습니다"}
 
 
-@app.post("/order", description="주문을 요청합니다", status_code=202)
+@app.post("/order", description="주문을 요청합니다")
 async def order(
-    file: UploadFile = File(...), model: MyEfficientNet = Depends(get_model)
+    files: List[UploadFile] = File(...), model: MyEfficientNet = Depends(get_model)
 ) -> Union[Order, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
-    if not can_order():
-        return {"message": "손님이 많습니다. 주문을 진행할 수 없습니다"}
-
-    product = InferenceImageProduct(result=None)
-    new_order = Order(status="IN_PROGRESS", products=[product])
+    products = []
+    for file in files:
+        image_bytes = await file.read()
+        inference_result = predict_from_image_byte(image_bytes=image_bytes, model=model)
+        product = InferenceImageProduct(result=inference_result)
+        products.append(product)
+    new_order = Order(products=products)
     orders.append(new_order)
-
-    image_bytes = await file.read()
-    # TODO(humphrey): background에서 prediction과 domain model update를 수행한다
-    inference_result = predict_from_image_byte(image_bytes=image_bytes, model=model)
-    # TODO(humphrey): update order 함수를 활용해서 코드를 간소화한다
-    existing_order = await get_order(new_order.id)
-    if isinstance(existing_order, dict):
-        return {"message": "주문 정보를 찾을 수 없습니다"}
-    existing_order.status = "DONE"
-    existing_order.products[0].result = inference_result
-
-    return existing_order
+    return new_order
 
 
 @app.patch("/order", description="주문을 수정합니다")
-async def update_order():
-    pass  # TODO(humphrey): 주문 상태를 수정한다
+async def update_order(order_id: UUID, next_order: Order):
+    return update_order_by_id(order_id=order_id, next_order=next_order)
 
 
 @app.get("/bill/{order_id}", description="계산을 요청합니다")
