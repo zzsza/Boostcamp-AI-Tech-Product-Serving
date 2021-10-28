@@ -1,0 +1,1064 @@
+[2021-10-26 18:18:03,642] {processor.py:163} INFO - Started process (PID=48352) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:18:03,642] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:18:03,642] {logging_mixin.py:109} INFO - [2021-10-26 18:18:03,642] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:18:03,672] {logging_mixin.py:109} INFO - [2021-10-26 18:18:03,668] {dagbag.py:406} ERROR - Failed to bag_dag: /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+Traceback (most recent call last):
+  File "/Users/hardy/Desktop/boostcamp/.venv/lib/python3.8/site-packages/airflow/timetables/interval.py", line 153, in validate
+    croniter(self._expression)
+  File "/Users/hardy/Desktop/boostcamp/.venv/lib/python3.8/site-packages/croniter/croniter.py", line 154, in __init__
+    self.expanded, self.nth_weekday_of_month = self.expand(expr_format, hash_id=hash_id)
+  File "/Users/hardy/Desktop/boostcamp/.venv/lib/python3.8/site-packages/croniter/croniter.py", line 759, in expand
+    return cls._expand(expr_format, hash_id=hash_id)
+  File "/Users/hardy/Desktop/boostcamp/.venv/lib/python3.8/site-packages/croniter/croniter.py", line 611, in _expand
+    raise CroniterBadCronError(cls.bad_length)
+croniter.croniter.CroniterBadCronError: Exactly 5 or 6 columns has to be specified for iterator expression.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hardy/Desktop/boostcamp/.venv/lib/python3.8/site-packages/airflow/models/dagbag.py", line 401, in _process_modules
+    dag.timetable.validate()
+  File "/Users/hardy/Desktop/boostcamp/.venv/lib/python3.8/site-packages/airflow/timetables/interval.py", line 155, in validate
+    raise AirflowTimetableInvalid(str(e))
+airflow.exceptions.AirflowTimetableInvalid: Exactly 5 or 6 columns has to be specified for iterator expression.
+[2021-10-26 18:18:03,694] {processor.py:634} WARNING - No viable dags retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:18:03,698] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.057 seconds
+[2021-10-26 18:19:39,380] {processor.py:163} INFO - Started process (PID=48431) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:19:39,380] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:19:39,381] {logging_mixin.py:109} INFO - [2021-10-26 18:19:39,381] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:19:39,455] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:19:40,367] {logging_mixin.py:109} INFO - [2021-10-26 18:19:40,367] {manager.py:496} INFO - Created Permission View: can read on DAG:hello_world
+[2021-10-26 18:19:40,375] {logging_mixin.py:109} INFO - [2021-10-26 18:19:40,375] {manager.py:496} INFO - Created Permission View: can edit on DAG:hello_world
+[2021-10-26 18:19:40,375] {logging_mixin.py:109} INFO - [2021-10-26 18:19:40,375] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:19:40,381] {logging_mixin.py:109} INFO - [2021-10-26 18:19:40,381] {dag.py:2408} INFO - Creating ORM DAG for hello_world
+[2021-10-26 18:19:40,386] {logging_mixin.py:109} INFO - [2021-10-26 18:19:40,386] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:19:40,417] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 1.038 seconds
+[2021-10-26 18:21:32,495] {processor.py:163} INFO - Started process (PID=48512) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:21:32,496] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:21:32,496] {logging_mixin.py:109} INFO - [2021-10-26 18:21:32,496] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:21:32,557] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:21:32,578] {logging_mixin.py:109} INFO - [2021-10-26 18:21:32,578] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:21:32,588] {logging_mixin.py:109} INFO - [2021-10-26 18:21:32,588] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:21:32,596] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.101 seconds
+[2021-10-26 18:23:23,935] {processor.py:163} INFO - Started process (PID=48607) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:23:23,935] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:23:23,936] {logging_mixin.py:109} INFO - [2021-10-26 18:23:23,936] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:23:23,997] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:23:24,022] {logging_mixin.py:109} INFO - [2021-10-26 18:23:24,022] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:23:24,036] {logging_mixin.py:109} INFO - [2021-10-26 18:23:24,036] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:23:24,045] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.111 seconds
+[2021-10-26 18:25:09,456] {processor.py:163} INFO - Started process (PID=48696) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:25:09,456] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:25:09,456] {logging_mixin.py:109} INFO - [2021-10-26 18:25:09,456] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:25:09,524] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:25:09,548] {logging_mixin.py:109} INFO - [2021-10-26 18:25:09,548] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:25:09,558] {logging_mixin.py:109} INFO - [2021-10-26 18:25:09,557] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:25:09,567] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.113 seconds
+[2021-10-26 18:27:04,740] {processor.py:163} INFO - Started process (PID=48786) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:27:04,741] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:27:04,741] {logging_mixin.py:109} INFO - [2021-10-26 18:27:04,741] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:27:04,847] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:27:04,869] {logging_mixin.py:109} INFO - [2021-10-26 18:27:04,869] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:27:04,879] {logging_mixin.py:109} INFO - [2021-10-26 18:27:04,879] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:27:04,889] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.149 seconds
+[2021-10-26 18:29:04,070] {processor.py:163} INFO - Started process (PID=48873) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:29:04,070] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:29:04,071] {logging_mixin.py:109} INFO - [2021-10-26 18:29:04,071] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:29:04,135] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:29:04,159] {logging_mixin.py:109} INFO - [2021-10-26 18:29:04,158] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:29:04,185] {logging_mixin.py:109} INFO - [2021-10-26 18:29:04,185] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:29:04,195] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.126 seconds
+[2021-10-26 18:30:53,638] {processor.py:163} INFO - Started process (PID=48984) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:30:53,638] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:30:53,639] {logging_mixin.py:109} INFO - [2021-10-26 18:30:53,639] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:30:53,687] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:30:53,704] {logging_mixin.py:109} INFO - [2021-10-26 18:30:53,704] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:30:53,712] {logging_mixin.py:109} INFO - [2021-10-26 18:30:53,712] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:30:53,719] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.082 seconds
+[2021-10-26 18:32:24,104] {processor.py:163} INFO - Started process (PID=49071) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:32:24,105] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:32:24,105] {logging_mixin.py:109} INFO - [2021-10-26 18:32:24,105] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:32:24,143] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:32:24,157] {logging_mixin.py:109} INFO - [2021-10-26 18:32:24,157] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:32:24,164] {logging_mixin.py:109} INFO - [2021-10-26 18:32:24,164] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:32:24,170] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.067 seconds
+[2021-10-26 18:33:47,509] {processor.py:163} INFO - Started process (PID=49206) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:33:47,510] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:33:47,510] {logging_mixin.py:109} INFO - [2021-10-26 18:33:47,510] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:33:47,559] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:33:47,575] {logging_mixin.py:109} INFO - [2021-10-26 18:33:47,575] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:33:47,582] {logging_mixin.py:109} INFO - [2021-10-26 18:33:47,582] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:33:47,588] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.080 seconds
+[2021-10-26 18:35:14,849] {processor.py:163} INFO - Started process (PID=49289) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:35:14,850] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:35:14,850] {logging_mixin.py:109} INFO - [2021-10-26 18:35:14,850] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:35:14,899] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:35:14,915] {logging_mixin.py:109} INFO - [2021-10-26 18:35:14,915] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:35:14,922] {logging_mixin.py:109} INFO - [2021-10-26 18:35:14,922] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:35:14,928] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.080 seconds
+[2021-10-26 18:36:36,883] {processor.py:163} INFO - Started process (PID=49364) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:36:36,883] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:36:36,883] {logging_mixin.py:109} INFO - [2021-10-26 18:36:36,883] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:36:36,928] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:36:36,943] {logging_mixin.py:109} INFO - [2021-10-26 18:36:36,943] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:36:36,950] {logging_mixin.py:109} INFO - [2021-10-26 18:36:36,950] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:36:36,957] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 18:37:55,117] {processor.py:163} INFO - Started process (PID=49440) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:37:55,118] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:37:55,118] {logging_mixin.py:109} INFO - [2021-10-26 18:37:55,118] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:37:55,163] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:37:55,179] {logging_mixin.py:109} INFO - [2021-10-26 18:37:55,179] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:37:55,186] {logging_mixin.py:109} INFO - [2021-10-26 18:37:55,186] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:37:55,193] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.076 seconds
+[2021-10-26 18:39:12,307] {processor.py:163} INFO - Started process (PID=49514) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:39:12,307] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:39:12,308] {logging_mixin.py:109} INFO - [2021-10-26 18:39:12,308] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:39:12,345] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:39:12,358] {logging_mixin.py:109} INFO - [2021-10-26 18:39:12,358] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:39:12,364] {logging_mixin.py:109} INFO - [2021-10-26 18:39:12,363] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:39:12,369] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 18:40:32,295] {processor.py:163} INFO - Started process (PID=49598) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:40:32,295] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:40:32,296] {logging_mixin.py:109} INFO - [2021-10-26 18:40:32,296] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:40:32,344] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:40:32,361] {logging_mixin.py:109} INFO - [2021-10-26 18:40:32,361] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:40:32,368] {logging_mixin.py:109} INFO - [2021-10-26 18:40:32,368] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:40:32,374] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.080 seconds
+[2021-10-26 18:41:49,571] {processor.py:163} INFO - Started process (PID=49674) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:41:49,572] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:41:49,572] {logging_mixin.py:109} INFO - [2021-10-26 18:41:49,572] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:41:49,616] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:41:49,631] {logging_mixin.py:109} INFO - [2021-10-26 18:41:49,631] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:41:49,638] {logging_mixin.py:109} INFO - [2021-10-26 18:41:49,638] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:41:49,645] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 18:43:07,895] {processor.py:163} INFO - Started process (PID=49749) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:43:07,895] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:43:07,896] {logging_mixin.py:109} INFO - [2021-10-26 18:43:07,896] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:43:07,933] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:43:07,947] {logging_mixin.py:109} INFO - [2021-10-26 18:43:07,947] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:43:07,953] {logging_mixin.py:109} INFO - [2021-10-26 18:43:07,953] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:43:07,959] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.064 seconds
+[2021-10-26 18:44:25,726] {processor.py:163} INFO - Started process (PID=49829) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:44:25,726] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:44:25,726] {logging_mixin.py:109} INFO - [2021-10-26 18:44:25,726] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:44:25,765] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:44:25,779] {logging_mixin.py:109} INFO - [2021-10-26 18:44:25,778] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:44:25,784] {logging_mixin.py:109} INFO - [2021-10-26 18:44:25,784] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:44:25,790] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.065 seconds
+[2021-10-26 18:45:43,072] {processor.py:163} INFO - Started process (PID=49905) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:45:43,073] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:45:43,073] {logging_mixin.py:109} INFO - [2021-10-26 18:45:43,073] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:45:43,118] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:45:43,133] {logging_mixin.py:109} INFO - [2021-10-26 18:45:43,133] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:45:43,140] {logging_mixin.py:109} INFO - [2021-10-26 18:45:43,139] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:45:43,146] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 18:46:59,860] {processor.py:163} INFO - Started process (PID=49981) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:46:59,860] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:46:59,860] {logging_mixin.py:109} INFO - [2021-10-26 18:46:59,860] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:46:59,898] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:46:59,910] {logging_mixin.py:109} INFO - [2021-10-26 18:46:59,910] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:46:59,916] {logging_mixin.py:109} INFO - [2021-10-26 18:46:59,916] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:46:59,922] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.063 seconds
+[2021-10-26 18:48:17,449] {processor.py:163} INFO - Started process (PID=50055) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:48:17,449] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:48:17,449] {logging_mixin.py:109} INFO - [2021-10-26 18:48:17,449] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:48:17,486] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:48:17,499] {logging_mixin.py:109} INFO - [2021-10-26 18:48:17,499] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:48:17,505] {logging_mixin.py:109} INFO - [2021-10-26 18:48:17,505] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:48:17,511] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.063 seconds
+[2021-10-26 18:49:37,520] {processor.py:163} INFO - Started process (PID=50138) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:49:37,521] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:49:37,521] {logging_mixin.py:109} INFO - [2021-10-26 18:49:37,521] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:49:37,559] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:49:37,572] {logging_mixin.py:109} INFO - [2021-10-26 18:49:37,572] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:49:37,578] {logging_mixin.py:109} INFO - [2021-10-26 18:49:37,578] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:49:37,584] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.064 seconds
+[2021-10-26 18:50:56,149] {processor.py:163} INFO - Started process (PID=50221) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:50:56,150] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:50:56,150] {logging_mixin.py:109} INFO - [2021-10-26 18:50:56,150] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:50:56,195] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:50:56,208] {logging_mixin.py:109} INFO - [2021-10-26 18:50:56,208] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:50:56,214] {logging_mixin.py:109} INFO - [2021-10-26 18:50:56,213] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:50:56,219] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.070 seconds
+[2021-10-26 18:52:10,683] {processor.py:163} INFO - Started process (PID=50295) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:52:10,683] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:52:10,683] {logging_mixin.py:109} INFO - [2021-10-26 18:52:10,683] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:52:10,719] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:52:10,731] {logging_mixin.py:109} INFO - [2021-10-26 18:52:10,731] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:52:10,737] {logging_mixin.py:109} INFO - [2021-10-26 18:52:10,737] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:52:10,743] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.061 seconds
+[2021-10-26 18:53:25,744] {processor.py:163} INFO - Started process (PID=50368) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:53:25,744] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:53:25,745] {logging_mixin.py:109} INFO - [2021-10-26 18:53:25,745] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:53:25,781] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:53:25,793] {logging_mixin.py:109} INFO - [2021-10-26 18:53:25,793] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:53:25,799] {logging_mixin.py:109} INFO - [2021-10-26 18:53:25,799] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:53:25,805] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.061 seconds
+[2021-10-26 18:54:40,413] {processor.py:163} INFO - Started process (PID=50451) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:54:40,414] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:54:40,414] {logging_mixin.py:109} INFO - [2021-10-26 18:54:40,414] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:54:40,459] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:54:40,474] {logging_mixin.py:109} INFO - [2021-10-26 18:54:40,474] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:54:40,481] {logging_mixin.py:109} INFO - [2021-10-26 18:54:40,481] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:54:40,488] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.076 seconds
+[2021-10-26 18:55:56,538] {processor.py:163} INFO - Started process (PID=50531) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:55:56,538] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:55:56,538] {logging_mixin.py:109} INFO - [2021-10-26 18:55:56,538] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:55:56,581] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:55:56,593] {logging_mixin.py:109} INFO - [2021-10-26 18:55:56,593] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:55:56,599] {logging_mixin.py:109} INFO - [2021-10-26 18:55:56,599] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:55:56,606] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.069 seconds
+[2021-10-26 18:57:12,793] {processor.py:163} INFO - Started process (PID=50608) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:57:12,793] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:57:12,794] {logging_mixin.py:109} INFO - [2021-10-26 18:57:12,794] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:57:12,832] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:57:12,845] {logging_mixin.py:109} INFO - [2021-10-26 18:57:12,845] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:57:12,851] {logging_mixin.py:109} INFO - [2021-10-26 18:57:12,851] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:57:12,857] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.065 seconds
+[2021-10-26 18:58:27,521] {processor.py:163} INFO - Started process (PID=50681) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:58:27,521] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:58:27,521] {logging_mixin.py:109} INFO - [2021-10-26 18:58:27,521] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:58:27,559] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:58:27,572] {logging_mixin.py:109} INFO - [2021-10-26 18:58:27,572] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:58:27,579] {logging_mixin.py:109} INFO - [2021-10-26 18:58:27,579] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:58:27,585] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.065 seconds
+[2021-10-26 18:59:42,310] {processor.py:163} INFO - Started process (PID=50757) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:59:42,310] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 18:59:42,310] {logging_mixin.py:109} INFO - [2021-10-26 18:59:42,310] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:59:42,354] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 18:59:42,369] {logging_mixin.py:109} INFO - [2021-10-26 18:59:42,368] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 18:59:42,375] {logging_mixin.py:109} INFO - [2021-10-26 18:59:42,375] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 18:59:42,384] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 19:00:56,143] {processor.py:163} INFO - Started process (PID=50835) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:00:56,143] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:00:56,143] {logging_mixin.py:109} INFO - [2021-10-26 19:00:56,143] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:00:56,186] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:00:56,200] {logging_mixin.py:109} INFO - [2021-10-26 19:00:56,200] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:00:56,206] {logging_mixin.py:109} INFO - [2021-10-26 19:00:56,206] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:00:56,211] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.069 seconds
+[2021-10-26 19:02:10,994] {processor.py:163} INFO - Started process (PID=50909) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:02:10,995] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:02:10,995] {logging_mixin.py:109} INFO - [2021-10-26 19:02:10,995] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:02:11,031] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:02:11,044] {logging_mixin.py:109} INFO - [2021-10-26 19:02:11,044] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:02:11,049] {logging_mixin.py:109} INFO - [2021-10-26 19:02:11,049] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:02:11,055] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 19:03:23,134] {processor.py:163} INFO - Started process (PID=50983) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:03:23,134] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:03:23,135] {logging_mixin.py:109} INFO - [2021-10-26 19:03:23,135] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:03:23,172] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:03:23,185] {logging_mixin.py:109} INFO - [2021-10-26 19:03:23,185] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:03:23,191] {logging_mixin.py:109} INFO - [2021-10-26 19:03:23,191] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:03:23,197] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.063 seconds
+[2021-10-26 19:04:36,722] {processor.py:163} INFO - Started process (PID=51062) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:04:36,722] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:04:36,722] {logging_mixin.py:109} INFO - [2021-10-26 19:04:36,722] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:04:36,759] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:04:36,771] {logging_mixin.py:109} INFO - [2021-10-26 19:04:36,771] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:04:36,777] {logging_mixin.py:109} INFO - [2021-10-26 19:04:36,777] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:04:36,784] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 19:05:50,615] {processor.py:163} INFO - Started process (PID=51146) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:05:50,616] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:05:50,616] {logging_mixin.py:109} INFO - [2021-10-26 19:05:50,616] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:05:50,652] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:05:50,664] {logging_mixin.py:109} INFO - [2021-10-26 19:05:50,664] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:05:50,670] {logging_mixin.py:109} INFO - [2021-10-26 19:05:50,670] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:05:50,676] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.061 seconds
+[2021-10-26 19:07:03,085] {processor.py:163} INFO - Started process (PID=51219) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:07:03,085] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:07:03,085] {logging_mixin.py:109} INFO - [2021-10-26 19:07:03,085] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:07:03,121] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:07:03,134] {logging_mixin.py:109} INFO - [2021-10-26 19:07:03,134] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:07:03,139] {logging_mixin.py:109} INFO - [2021-10-26 19:07:03,139] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:07:03,146] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 19:08:17,113] {processor.py:163} INFO - Started process (PID=51299) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:08:17,113] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:08:17,114] {logging_mixin.py:109} INFO - [2021-10-26 19:08:17,114] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:08:17,149] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:08:17,162] {logging_mixin.py:109} INFO - [2021-10-26 19:08:17,162] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:08:17,167] {logging_mixin.py:109} INFO - [2021-10-26 19:08:17,167] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:08:17,173] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.061 seconds
+[2021-10-26 19:09:30,859] {processor.py:163} INFO - Started process (PID=51378) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:09:30,860] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:09:30,860] {logging_mixin.py:109} INFO - [2021-10-26 19:09:30,860] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:09:30,901] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:09:30,915] {logging_mixin.py:109} INFO - [2021-10-26 19:09:30,915] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:09:30,922] {logging_mixin.py:109} INFO - [2021-10-26 19:09:30,922] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:09:30,928] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.069 seconds
+[2021-10-26 19:10:45,539] {processor.py:163} INFO - Started process (PID=51456) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:10:45,539] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:10:45,540] {logging_mixin.py:109} INFO - [2021-10-26 19:10:45,540] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:10:45,583] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:10:45,598] {logging_mixin.py:109} INFO - [2021-10-26 19:10:45,598] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:10:45,604] {logging_mixin.py:109} INFO - [2021-10-26 19:10:45,604] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:10:45,611] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 19:11:59,825] {processor.py:163} INFO - Started process (PID=51531) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:11:59,825] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:11:59,825] {logging_mixin.py:109} INFO - [2021-10-26 19:11:59,825] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:11:59,862] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:11:59,874] {logging_mixin.py:109} INFO - [2021-10-26 19:11:59,874] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:11:59,880] {logging_mixin.py:109} INFO - [2021-10-26 19:11:59,880] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:11:59,886] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 19:13:13,837] {processor.py:163} INFO - Started process (PID=51604) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:13:13,837] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:13:13,837] {logging_mixin.py:109} INFO - [2021-10-26 19:13:13,837] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:13:13,882] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:13:13,898] {logging_mixin.py:109} INFO - [2021-10-26 19:13:13,898] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:13:13,905] {logging_mixin.py:109} INFO - [2021-10-26 19:13:13,905] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:13:13,911] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 19:14:30,505] {processor.py:163} INFO - Started process (PID=51691) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:14:30,506] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:14:30,506] {logging_mixin.py:109} INFO - [2021-10-26 19:14:30,506] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:14:30,554] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:14:30,570] {logging_mixin.py:109} INFO - [2021-10-26 19:14:30,570] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:14:30,577] {logging_mixin.py:109} INFO - [2021-10-26 19:14:30,577] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:14:30,585] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.080 seconds
+[2021-10-26 19:16:05,738] {processor.py:163} INFO - Started process (PID=51780) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:16:05,738] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:16:05,739] {logging_mixin.py:109} INFO - [2021-10-26 19:16:05,739] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:16:05,779] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:16:05,792] {logging_mixin.py:109} INFO - [2021-10-26 19:16:05,792] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:16:05,797] {logging_mixin.py:109} INFO - [2021-10-26 19:16:05,797] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:16:05,803] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.065 seconds
+[2021-10-26 19:17:40,980] {processor.py:163} INFO - Started process (PID=51862) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:17:40,981] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:17:40,982] {logging_mixin.py:109} INFO - [2021-10-26 19:17:40,982] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:17:41,068] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:17:41,084] {logging_mixin.py:109} INFO - [2021-10-26 19:17:41,084] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:17:41,091] {logging_mixin.py:109} INFO - [2021-10-26 19:17:41,091] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:17:41,098] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.119 seconds
+[2021-10-26 19:19:17,284] {processor.py:163} INFO - Started process (PID=51956) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:19:17,285] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:19:17,285] {logging_mixin.py:109} INFO - [2021-10-26 19:19:17,285] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:19:17,337] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:19:17,354] {logging_mixin.py:109} INFO - [2021-10-26 19:19:17,354] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:19:17,361] {logging_mixin.py:109} INFO - [2021-10-26 19:19:17,361] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:19:17,368] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.085 seconds
+[2021-10-26 19:20:55,395] {processor.py:163} INFO - Started process (PID=52044) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:20:55,395] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:20:55,395] {logging_mixin.py:109} INFO - [2021-10-26 19:20:55,395] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:20:55,447] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:20:55,465] {logging_mixin.py:109} INFO - [2021-10-26 19:20:55,465] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:20:55,474] {logging_mixin.py:109} INFO - [2021-10-26 19:20:55,473] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:20:55,481] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.087 seconds
+[2021-10-26 19:22:39,473] {processor.py:163} INFO - Started process (PID=52131) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:22:39,473] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:22:39,473] {logging_mixin.py:109} INFO - [2021-10-26 19:22:39,473] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:22:39,532] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:22:39,553] {logging_mixin.py:109} INFO - [2021-10-26 19:22:39,553] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:22:39,563] {logging_mixin.py:109} INFO - [2021-10-26 19:22:39,563] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-24 06:00:00+00:00
+[2021-10-26 19:22:39,572] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.100 seconds
+[2021-10-26 19:24:30,252] {processor.py:163} INFO - Started process (PID=52263) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:24:30,252] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:24:30,252] {logging_mixin.py:109} INFO - [2021-10-26 19:24:30,252] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:24:30,313] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:24:30,333] {logging_mixin.py:109} INFO - [2021-10-26 19:24:30,333] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:24:30,342] {logging_mixin.py:109} INFO - [2021-10-26 19:24:30,342] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:24:30,350] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.099 seconds
+[2021-10-26 19:26:12,334] {processor.py:163} INFO - Started process (PID=52347) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:26:12,334] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:26:12,334] {logging_mixin.py:109} INFO - [2021-10-26 19:26:12,334] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:26:12,390] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:26:12,409] {logging_mixin.py:109} INFO - [2021-10-26 19:26:12,408] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:26:12,417] {logging_mixin.py:109} INFO - [2021-10-26 19:26:12,416] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:26:12,424] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.091 seconds
+[2021-10-26 19:27:50,803] {processor.py:163} INFO - Started process (PID=52432) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:27:50,804] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:27:50,804] {logging_mixin.py:109} INFO - [2021-10-26 19:27:50,804] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:27:50,860] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:27:50,879] {logging_mixin.py:109} INFO - [2021-10-26 19:27:50,879] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:27:50,887] {logging_mixin.py:109} INFO - [2021-10-26 19:27:50,887] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:27:50,895] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.092 seconds
+[2021-10-26 19:29:32,709] {processor.py:163} INFO - Started process (PID=52513) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:29:32,709] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:29:32,710] {logging_mixin.py:109} INFO - [2021-10-26 19:29:32,710] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:29:32,757] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:29:32,773] {logging_mixin.py:109} INFO - [2021-10-26 19:29:32,773] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:29:32,781] {logging_mixin.py:109} INFO - [2021-10-26 19:29:32,780] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:29:32,788] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.080 seconds
+[2021-10-26 19:31:02,252] {processor.py:163} INFO - Started process (PID=52601) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:31:02,252] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:31:02,252] {logging_mixin.py:109} INFO - [2021-10-26 19:31:02,252] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:31:02,308] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:31:02,326] {logging_mixin.py:109} INFO - [2021-10-26 19:31:02,326] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:31:02,334] {logging_mixin.py:109} INFO - [2021-10-26 19:31:02,334] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:31:02,343] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.092 seconds
+[2021-10-26 19:32:40,992] {processor.py:163} INFO - Started process (PID=52692) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:32:40,993] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:32:40,993] {logging_mixin.py:109} INFO - [2021-10-26 19:32:40,993] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:32:41,092] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:32:41,114] {logging_mixin.py:109} INFO - [2021-10-26 19:32:41,113] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:32:41,123] {logging_mixin.py:109} INFO - [2021-10-26 19:32:41,123] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:32:41,132] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.141 seconds
+[2021-10-26 19:34:30,550] {processor.py:163} INFO - Started process (PID=52849) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:34:30,551] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:34:30,551] {logging_mixin.py:109} INFO - [2021-10-26 19:34:30,551] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:34:30,621] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:34:30,646] {logging_mixin.py:109} INFO - [2021-10-26 19:34:30,646] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:34:30,658] {logging_mixin.py:109} INFO - [2021-10-26 19:34:30,658] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:34:30,669] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.119 seconds
+[2021-10-26 19:36:26,728] {processor.py:163} INFO - Started process (PID=52932) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:36:26,728] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:36:26,728] {logging_mixin.py:109} INFO - [2021-10-26 19:36:26,728] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:36:26,787] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:36:26,809] {logging_mixin.py:109} INFO - [2021-10-26 19:36:26,809] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:36:26,817] {logging_mixin.py:109} INFO - [2021-10-26 19:36:26,817] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:36:26,826] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.099 seconds
+[2021-10-26 19:38:18,990] {processor.py:163} INFO - Started process (PID=53019) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:38:18,991] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:38:18,991] {logging_mixin.py:109} INFO - [2021-10-26 19:38:18,991] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:38:19,076] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:38:19,097] {logging_mixin.py:109} INFO - [2021-10-26 19:38:19,097] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:38:19,107] {logging_mixin.py:109} INFO - [2021-10-26 19:38:19,107] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:38:19,116] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.127 seconds
+[2021-10-26 19:40:14,103] {processor.py:163} INFO - Started process (PID=53109) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:40:14,104] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:40:14,104] {logging_mixin.py:109} INFO - [2021-10-26 19:40:14,104] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:40:14,172] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:40:14,196] {logging_mixin.py:109} INFO - [2021-10-26 19:40:14,196] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:40:14,207] {logging_mixin.py:109} INFO - [2021-10-26 19:40:14,207] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:40:14,216] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.113 seconds
+[2021-10-26 19:42:11,493] {processor.py:163} INFO - Started process (PID=53192) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:42:11,493] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:42:11,494] {logging_mixin.py:109} INFO - [2021-10-26 19:42:11,494] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:42:11,611] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:42:11,646] {logging_mixin.py:109} INFO - [2021-10-26 19:42:11,646] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:42:11,659] {logging_mixin.py:109} INFO - [2021-10-26 19:42:11,659] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:42:11,669] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.177 seconds
+[2021-10-26 19:44:13,484] {processor.py:163} INFO - Started process (PID=53304) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:44:13,484] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:44:13,485] {logging_mixin.py:109} INFO - [2021-10-26 19:44:13,485] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:44:13,564] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:44:13,592] {logging_mixin.py:109} INFO - [2021-10-26 19:44:13,592] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:44:13,605] {logging_mixin.py:109} INFO - [2021-10-26 19:44:13,604] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:44:13,616] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.133 seconds
+[2021-10-26 19:46:15,059] {processor.py:163} INFO - Started process (PID=53391) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:46:15,059] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:46:15,059] {logging_mixin.py:109} INFO - [2021-10-26 19:46:15,059] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:46:15,114] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:46:15,133] {logging_mixin.py:109} INFO - [2021-10-26 19:46:15,133] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:46:15,141] {logging_mixin.py:109} INFO - [2021-10-26 19:46:15,141] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:46:15,148] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.091 seconds
+[2021-10-26 19:48:07,386] {processor.py:163} INFO - Started process (PID=53477) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:48:07,386] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:48:07,387] {logging_mixin.py:109} INFO - [2021-10-26 19:48:07,387] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:48:07,460] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:48:07,487] {logging_mixin.py:109} INFO - [2021-10-26 19:48:07,487] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:48:07,497] {logging_mixin.py:109} INFO - [2021-10-26 19:48:07,497] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:48:07,508] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.123 seconds
+[2021-10-26 19:50:02,527] {processor.py:163} INFO - Started process (PID=53559) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:50:02,527] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:50:02,528] {logging_mixin.py:109} INFO - [2021-10-26 19:50:02,528] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:50:02,599] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:50:02,626] {logging_mixin.py:109} INFO - [2021-10-26 19:50:02,625] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:50:02,637] {logging_mixin.py:109} INFO - [2021-10-26 19:50:02,637] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:50:02,646] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.120 seconds
+[2021-10-26 19:52:07,840] {processor.py:163} INFO - Started process (PID=53637) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:52:07,842] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:52:07,843] {logging_mixin.py:109} INFO - [2021-10-26 19:52:07,842] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:52:07,935] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:52:07,958] {logging_mixin.py:109} INFO - [2021-10-26 19:52:07,958] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:52:07,969] {logging_mixin.py:109} INFO - [2021-10-26 19:52:07,968] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:52:07,979] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.139 seconds
+[2021-10-26 19:54:12,944] {processor.py:163} INFO - Started process (PID=53726) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:54:12,946] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:54:12,946] {logging_mixin.py:109} INFO - [2021-10-26 19:54:12,946] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:54:13,009] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:54:13,030] {logging_mixin.py:109} INFO - [2021-10-26 19:54:13,030] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:54:13,040] {logging_mixin.py:109} INFO - [2021-10-26 19:54:13,040] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:54:13,048] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.105 seconds
+[2021-10-26 19:55:45,471] {processor.py:163} INFO - Started process (PID=53807) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:55:45,472] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:55:45,472] {logging_mixin.py:109} INFO - [2021-10-26 19:55:45,472] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:55:45,517] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:55:45,533] {logging_mixin.py:109} INFO - [2021-10-26 19:55:45,532] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:55:45,539] {logging_mixin.py:109} INFO - [2021-10-26 19:55:45,539] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:55:45,546] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 19:57:14,706] {processor.py:163} INFO - Started process (PID=53885) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:57:14,706] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:57:14,706] {logging_mixin.py:109} INFO - [2021-10-26 19:57:14,706] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:57:14,754] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:57:14,770] {logging_mixin.py:109} INFO - [2021-10-26 19:57:14,770] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:57:14,777] {logging_mixin.py:109} INFO - [2021-10-26 19:57:14,777] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:57:14,784] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.079 seconds
+[2021-10-26 19:58:44,895] {processor.py:163} INFO - Started process (PID=53960) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:58:44,896] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 19:58:44,896] {logging_mixin.py:109} INFO - [2021-10-26 19:58:44,896] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:58:44,943] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 19:58:44,959] {logging_mixin.py:109} INFO - [2021-10-26 19:58:44,959] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 19:58:44,965] {logging_mixin.py:109} INFO - [2021-10-26 19:58:44,965] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 19:58:44,972] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.078 seconds
+[2021-10-26 20:00:12,865] {processor.py:163} INFO - Started process (PID=54039) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:00:12,865] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:00:12,865] {logging_mixin.py:109} INFO - [2021-10-26 20:00:12,865] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:00:12,911] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:00:12,928] {logging_mixin.py:109} INFO - [2021-10-26 20:00:12,928] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:00:12,935] {logging_mixin.py:109} INFO - [2021-10-26 20:00:12,935] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:00:12,942] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.078 seconds
+[2021-10-26 20:01:33,666] {processor.py:163} INFO - Started process (PID=54113) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:01:33,666] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:01:33,667] {logging_mixin.py:109} INFO - [2021-10-26 20:01:33,667] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:01:33,713] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:01:33,730] {logging_mixin.py:109} INFO - [2021-10-26 20:01:33,730] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:01:33,737] {logging_mixin.py:109} INFO - [2021-10-26 20:01:33,737] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:01:33,744] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.078 seconds
+[2021-10-26 20:02:52,832] {processor.py:163} INFO - Started process (PID=54193) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:02:52,832] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:02:52,832] {logging_mixin.py:109} INFO - [2021-10-26 20:02:52,832] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:02:52,869] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:02:52,882] {logging_mixin.py:109} INFO - [2021-10-26 20:02:52,882] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:02:52,888] {logging_mixin.py:109} INFO - [2021-10-26 20:02:52,887] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:02:52,894] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.063 seconds
+[2021-10-26 20:04:12,000] {processor.py:163} INFO - Started process (PID=54274) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:04:12,001] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:04:12,001] {logging_mixin.py:109} INFO - [2021-10-26 20:04:12,001] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:04:12,038] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:04:12,051] {logging_mixin.py:109} INFO - [2021-10-26 20:04:12,050] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:04:12,056] {logging_mixin.py:109} INFO - [2021-10-26 20:04:12,056] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:04:12,062] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 20:05:28,206] {processor.py:163} INFO - Started process (PID=54352) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:05:28,207] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:05:28,207] {logging_mixin.py:109} INFO - [2021-10-26 20:05:28,207] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:05:28,251] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:05:28,266] {logging_mixin.py:109} INFO - [2021-10-26 20:05:28,266] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:05:28,273] {logging_mixin.py:109} INFO - [2021-10-26 20:05:28,273] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:05:28,280] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 20:06:45,784] {processor.py:163} INFO - Started process (PID=54431) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:06:45,784] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:06:45,785] {logging_mixin.py:109} INFO - [2021-10-26 20:06:45,785] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:06:45,830] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:06:45,846] {logging_mixin.py:109} INFO - [2021-10-26 20:06:45,846] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:06:45,853] {logging_mixin.py:109} INFO - [2021-10-26 20:06:45,853] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:06:45,859] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.076 seconds
+[2021-10-26 20:08:02,876] {processor.py:163} INFO - Started process (PID=54509) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:08:02,880] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:08:02,881] {logging_mixin.py:109} INFO - [2021-10-26 20:08:02,880] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:08:02,932] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:08:02,949] {logging_mixin.py:109} INFO - [2021-10-26 20:08:02,949] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:08:02,956] {logging_mixin.py:109} INFO - [2021-10-26 20:08:02,956] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:08:02,963] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.088 seconds
+[2021-10-26 20:09:18,381] {processor.py:163} INFO - Started process (PID=54585) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:09:18,381] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:09:18,381] {logging_mixin.py:109} INFO - [2021-10-26 20:09:18,381] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:09:18,425] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:09:18,440] {logging_mixin.py:109} INFO - [2021-10-26 20:09:18,440] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:09:18,447] {logging_mixin.py:109} INFO - [2021-10-26 20:09:18,447] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:09:18,453] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 20:10:34,796] {processor.py:163} INFO - Started process (PID=54661) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:10:34,797] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:10:34,797] {logging_mixin.py:109} INFO - [2021-10-26 20:10:34,797] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:10:34,842] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:10:34,857] {logging_mixin.py:109} INFO - [2021-10-26 20:10:34,857] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:10:34,864] {logging_mixin.py:109} INFO - [2021-10-26 20:10:34,864] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:10:34,871] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:11:47,798] {processor.py:163} INFO - Started process (PID=54738) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:11:47,798] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:11:47,798] {logging_mixin.py:109} INFO - [2021-10-26 20:11:47,798] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:11:47,835] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:11:47,848] {logging_mixin.py:109} INFO - [2021-10-26 20:11:47,848] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:11:47,854] {logging_mixin.py:109} INFO - [2021-10-26 20:11:47,854] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:11:47,860] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 20:13:05,236] {processor.py:163} INFO - Started process (PID=54812) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:13:05,236] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:13:05,236] {logging_mixin.py:109} INFO - [2021-10-26 20:13:05,236] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:13:05,274] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:13:05,286] {logging_mixin.py:109} INFO - [2021-10-26 20:13:05,286] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:13:05,292] {logging_mixin.py:109} INFO - [2021-10-26 20:13:05,292] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:13:05,299] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.064 seconds
+[2021-10-26 20:14:23,145] {processor.py:163} INFO - Started process (PID=54898) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:14:23,146] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:14:23,146] {logging_mixin.py:109} INFO - [2021-10-26 20:14:23,146] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:14:23,182] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:14:23,194] {logging_mixin.py:109} INFO - [2021-10-26 20:14:23,194] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:14:23,199] {logging_mixin.py:109} INFO - [2021-10-26 20:14:23,199] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:14:23,205] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.061 seconds
+[2021-10-26 20:15:40,862] {processor.py:163} INFO - Started process (PID=54976) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:15:40,862] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:15:40,862] {logging_mixin.py:109} INFO - [2021-10-26 20:15:40,862] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:15:40,907] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:15:40,922] {logging_mixin.py:109} INFO - [2021-10-26 20:15:40,922] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:15:40,929] {logging_mixin.py:109} INFO - [2021-10-26 20:15:40,929] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:15:40,935] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 20:16:56,366] {processor.py:163} INFO - Started process (PID=55053) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:16:56,366] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:16:56,367] {logging_mixin.py:109} INFO - [2021-10-26 20:16:56,367] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:16:56,410] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:16:56,425] {logging_mixin.py:109} INFO - [2021-10-26 20:16:56,425] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:16:56,431] {logging_mixin.py:109} INFO - [2021-10-26 20:16:56,431] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:16:56,438] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 20:18:10,385] {processor.py:163} INFO - Started process (PID=55126) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:18:10,385] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:18:10,385] {logging_mixin.py:109} INFO - [2021-10-26 20:18:10,385] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:18:10,431] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:18:10,444] {logging_mixin.py:109} INFO - [2021-10-26 20:18:10,444] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:18:10,450] {logging_mixin.py:109} INFO - [2021-10-26 20:18:10,450] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:18:10,456] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.072 seconds
+[2021-10-26 20:19:26,624] {processor.py:163} INFO - Started process (PID=55201) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:19:26,624] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:19:26,625] {logging_mixin.py:109} INFO - [2021-10-26 20:19:26,625] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:19:26,667] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:19:26,682] {logging_mixin.py:109} INFO - [2021-10-26 20:19:26,682] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:19:26,689] {logging_mixin.py:109} INFO - [2021-10-26 20:19:26,689] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:19:26,696] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 20:20:41,283] {processor.py:163} INFO - Started process (PID=55279) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:20:41,284] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:20:41,284] {logging_mixin.py:109} INFO - [2021-10-26 20:20:41,284] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:20:41,330] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:20:41,346] {logging_mixin.py:109} INFO - [2021-10-26 20:20:41,345] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:20:41,352] {logging_mixin.py:109} INFO - [2021-10-26 20:20:41,352] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:20:41,359] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.076 seconds
+[2021-10-26 20:21:54,211] {processor.py:163} INFO - Started process (PID=55354) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:21:54,211] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:21:54,211] {logging_mixin.py:109} INFO - [2021-10-26 20:21:54,211] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:21:54,256] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:21:54,271] {logging_mixin.py:109} INFO - [2021-10-26 20:21:54,271] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:21:54,278] {logging_mixin.py:109} INFO - [2021-10-26 20:21:54,278] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:21:54,284] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 20:23:08,435] {processor.py:163} INFO - Started process (PID=55429) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:23:08,436] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:23:08,436] {logging_mixin.py:109} INFO - [2021-10-26 20:23:08,436] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:23:08,481] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:23:08,496] {logging_mixin.py:109} INFO - [2021-10-26 20:23:08,496] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:23:08,503] {logging_mixin.py:109} INFO - [2021-10-26 20:23:08,502] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:23:08,510] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:24:25,432] {processor.py:163} INFO - Started process (PID=55506) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:24:25,432] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:24:25,433] {logging_mixin.py:109} INFO - [2021-10-26 20:24:25,433] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:24:25,470] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:24:25,482] {logging_mixin.py:109} INFO - [2021-10-26 20:24:25,482] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:24:25,488] {logging_mixin.py:109} INFO - [2021-10-26 20:24:25,488] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:24:25,494] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 20:25:39,038] {processor.py:163} INFO - Started process (PID=55586) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:25:39,038] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:25:39,038] {logging_mixin.py:109} INFO - [2021-10-26 20:25:39,038] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:25:39,078] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:25:39,091] {logging_mixin.py:109} INFO - [2021-10-26 20:25:39,091] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:25:39,096] {logging_mixin.py:109} INFO - [2021-10-26 20:25:39,096] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:25:39,102] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.065 seconds
+[2021-10-26 20:26:53,699] {processor.py:163} INFO - Started process (PID=55660) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:26:53,699] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:26:53,699] {logging_mixin.py:109} INFO - [2021-10-26 20:26:53,699] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:26:53,747] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:26:53,762] {logging_mixin.py:109} INFO - [2021-10-26 20:26:53,762] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:26:53,768] {logging_mixin.py:109} INFO - [2021-10-26 20:26:53,768] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:26:53,775] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.077 seconds
+[2021-10-26 20:28:10,337] {processor.py:163} INFO - Started process (PID=55761) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:28:10,338] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:28:10,338] {logging_mixin.py:109} INFO - [2021-10-26 20:28:10,338] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:28:10,374] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:28:10,387] {logging_mixin.py:109} INFO - [2021-10-26 20:28:10,387] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:28:10,393] {logging_mixin.py:109} INFO - [2021-10-26 20:28:10,393] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:28:10,399] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 20:29:23,521] {processor.py:163} INFO - Started process (PID=55836) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:29:23,522] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:29:23,522] {logging_mixin.py:109} INFO - [2021-10-26 20:29:23,522] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:29:23,566] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:29:23,582] {logging_mixin.py:109} INFO - [2021-10-26 20:29:23,581] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:29:23,588] {logging_mixin.py:109} INFO - [2021-10-26 20:29:23,588] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:29:23,595] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:30:36,308] {processor.py:163} INFO - Started process (PID=55921) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:30:36,309] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:30:36,309] {logging_mixin.py:109} INFO - [2021-10-26 20:30:36,309] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:30:36,354] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:30:36,370] {logging_mixin.py:109} INFO - [2021-10-26 20:30:36,370] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:30:36,377] {logging_mixin.py:109} INFO - [2021-10-26 20:30:36,377] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:30:36,383] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:31:51,500] {processor.py:163} INFO - Started process (PID=56000) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:31:51,501] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:31:51,501] {logging_mixin.py:109} INFO - [2021-10-26 20:31:51,501] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:31:51,545] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:31:51,560] {logging_mixin.py:109} INFO - [2021-10-26 20:31:51,559] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:31:51,566] {logging_mixin.py:109} INFO - [2021-10-26 20:31:51,566] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:31:51,573] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 20:33:06,416] {processor.py:163} INFO - Started process (PID=56076) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:33:06,416] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:33:06,417] {logging_mixin.py:109} INFO - [2021-10-26 20:33:06,417] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:33:06,461] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:33:06,476] {logging_mixin.py:109} INFO - [2021-10-26 20:33:06,476] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:33:06,483] {logging_mixin.py:109} INFO - [2021-10-26 20:33:06,483] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:33:06,490] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:34:23,603] {processor.py:163} INFO - Started process (PID=56334) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:34:23,603] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:34:23,604] {logging_mixin.py:109} INFO - [2021-10-26 20:34:23,603] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:34:23,647] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:34:23,662] {logging_mixin.py:109} INFO - [2021-10-26 20:34:23,662] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:34:23,668] {logging_mixin.py:109} INFO - [2021-10-26 20:34:23,668] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:34:23,675] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 20:35:42,984] {processor.py:163} INFO - Started process (PID=56418) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:35:42,984] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:35:42,984] {logging_mixin.py:109} INFO - [2021-10-26 20:35:42,984] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:35:43,024] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:35:43,038] {logging_mixin.py:109} INFO - [2021-10-26 20:35:43,038] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:35:43,043] {logging_mixin.py:109} INFO - [2021-10-26 20:35:43,043] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:35:43,049] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.066 seconds
+[2021-10-26 20:36:57,273] {processor.py:163} INFO - Started process (PID=56493) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:36:57,274] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:36:57,274] {logging_mixin.py:109} INFO - [2021-10-26 20:36:57,274] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:36:57,310] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:36:57,323] {logging_mixin.py:109} INFO - [2021-10-26 20:36:57,323] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:36:57,328] {logging_mixin.py:109} INFO - [2021-10-26 20:36:57,328] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:36:57,334] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.061 seconds
+[2021-10-26 20:38:12,861] {processor.py:163} INFO - Started process (PID=56567) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:38:12,861] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:38:12,861] {logging_mixin.py:109} INFO - [2021-10-26 20:38:12,861] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:38:12,898] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:38:12,911] {logging_mixin.py:109} INFO - [2021-10-26 20:38:12,910] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:38:12,916] {logging_mixin.py:109} INFO - [2021-10-26 20:38:12,916] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:38:12,923] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.063 seconds
+[2021-10-26 20:39:28,083] {processor.py:163} INFO - Started process (PID=56647) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:39:28,083] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:39:28,083] {logging_mixin.py:109} INFO - [2021-10-26 20:39:28,083] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:39:28,120] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:39:28,132] {logging_mixin.py:109} INFO - [2021-10-26 20:39:28,132] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:39:28,137] {logging_mixin.py:109} INFO - [2021-10-26 20:39:28,137] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:39:28,144] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 20:40:42,328] {processor.py:163} INFO - Started process (PID=56723) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:40:42,329] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:40:42,329] {logging_mixin.py:109} INFO - [2021-10-26 20:40:42,329] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:40:42,374] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:40:42,389] {logging_mixin.py:109} INFO - [2021-10-26 20:40:42,389] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:40:42,396] {logging_mixin.py:109} INFO - [2021-10-26 20:40:42,396] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:40:42,403] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:41:56,814] {processor.py:163} INFO - Started process (PID=56799) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:41:56,814] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:41:56,814] {logging_mixin.py:109} INFO - [2021-10-26 20:41:56,814] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:41:56,858] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:41:56,873] {logging_mixin.py:109} INFO - [2021-10-26 20:41:56,872] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:41:56,879] {logging_mixin.py:109} INFO - [2021-10-26 20:41:56,879] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:41:56,886] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 20:43:11,527] {processor.py:163} INFO - Started process (PID=56876) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:43:11,527] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:43:11,528] {logging_mixin.py:109} INFO - [2021-10-26 20:43:11,528] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:43:11,572] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:43:11,587] {logging_mixin.py:109} INFO - [2021-10-26 20:43:11,587] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:43:11,593] {logging_mixin.py:109} INFO - [2021-10-26 20:43:11,593] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:43:11,600] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 20:44:28,963] {processor.py:163} INFO - Started process (PID=56966) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:44:28,964] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:44:28,964] {logging_mixin.py:109} INFO - [2021-10-26 20:44:28,964] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:44:29,004] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:44:29,018] {logging_mixin.py:109} INFO - [2021-10-26 20:44:29,018] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:44:29,025] {logging_mixin.py:109} INFO - [2021-10-26 20:44:29,025] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:44:29,031] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.069 seconds
+[2021-10-26 20:45:43,825] {processor.py:163} INFO - Started process (PID=57047) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:45:43,826] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:45:43,826] {logging_mixin.py:109} INFO - [2021-10-26 20:45:43,826] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:45:43,871] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:45:43,886] {logging_mixin.py:109} INFO - [2021-10-26 20:45:43,886] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:45:43,892] {logging_mixin.py:109} INFO - [2021-10-26 20:45:43,892] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:45:43,899] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 20:47:05,631] {processor.py:163} INFO - Started process (PID=57124) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:47:05,632] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:47:05,633] {logging_mixin.py:109} INFO - [2021-10-26 20:47:05,633] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:47:05,673] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:47:05,685] {logging_mixin.py:109} INFO - [2021-10-26 20:47:05,685] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:47:05,691] {logging_mixin.py:109} INFO - [2021-10-26 20:47:05,691] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:47:05,697] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.066 seconds
+[2021-10-26 20:48:37,821] {processor.py:163} INFO - Started process (PID=57208) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:48:37,822] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:48:37,823] {logging_mixin.py:109} INFO - [2021-10-26 20:48:37,823] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:48:37,873] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:48:37,892] {logging_mixin.py:109} INFO - [2021-10-26 20:48:37,892] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:48:37,899] {logging_mixin.py:109} INFO - [2021-10-26 20:48:37,899] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:48:37,906] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.086 seconds
+[2021-10-26 20:50:08,794] {processor.py:163} INFO - Started process (PID=57289) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:50:08,795] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:50:08,795] {logging_mixin.py:109} INFO - [2021-10-26 20:50:08,795] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:50:08,842] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:50:08,859] {logging_mixin.py:109} INFO - [2021-10-26 20:50:08,859] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:50:08,867] {logging_mixin.py:109} INFO - [2021-10-26 20:50:08,867] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:50:08,874] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.080 seconds
+[2021-10-26 20:51:39,533] {processor.py:163} INFO - Started process (PID=57376) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:51:39,533] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:51:39,533] {logging_mixin.py:109} INFO - [2021-10-26 20:51:39,533] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:51:39,587] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:51:39,606] {logging_mixin.py:109} INFO - [2021-10-26 20:51:39,606] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:51:39,615] {logging_mixin.py:109} INFO - [2021-10-26 20:51:39,615] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:51:39,622] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.090 seconds
+[2021-10-26 20:53:16,593] {processor.py:163} INFO - Started process (PID=57469) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:53:16,593] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:53:16,594] {logging_mixin.py:109} INFO - [2021-10-26 20:53:16,594] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:53:16,647] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:53:16,665] {logging_mixin.py:109} INFO - [2021-10-26 20:53:16,665] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:53:16,673] {logging_mixin.py:109} INFO - [2021-10-26 20:53:16,673] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:53:16,681] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.089 seconds
+[2021-10-26 20:54:53,857] {processor.py:163} INFO - Started process (PID=57559) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:54:53,858] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:54:53,858] {logging_mixin.py:109} INFO - [2021-10-26 20:54:53,858] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:54:53,908] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:54:53,926] {logging_mixin.py:109} INFO - [2021-10-26 20:54:53,926] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:54:53,935] {logging_mixin.py:109} INFO - [2021-10-26 20:54:53,935] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:54:53,942] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.086 seconds
+[2021-10-26 20:56:28,446] {processor.py:163} INFO - Started process (PID=57647) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:56:28,447] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:56:28,447] {logging_mixin.py:109} INFO - [2021-10-26 20:56:28,447] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:56:28,498] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:56:28,542] {logging_mixin.py:109} INFO - [2021-10-26 20:56:28,542] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:56:28,568] {logging_mixin.py:109} INFO - [2021-10-26 20:56:28,568] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:56:28,575] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.129 seconds
+[2021-10-26 20:58:12,406] {processor.py:163} INFO - Started process (PID=57732) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:58:12,406] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:58:12,407] {logging_mixin.py:109} INFO - [2021-10-26 20:58:12,407] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:58:12,465] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:58:12,484] {logging_mixin.py:109} INFO - [2021-10-26 20:58:12,484] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:58:12,492] {logging_mixin.py:109} INFO - [2021-10-26 20:58:12,492] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:58:12,500] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.095 seconds
+[2021-10-26 20:59:52,074] {processor.py:163} INFO - Started process (PID=57816) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:59:52,074] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 20:59:52,075] {logging_mixin.py:109} INFO - [2021-10-26 20:59:52,075] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:59:52,130] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 20:59:52,160] {logging_mixin.py:109} INFO - [2021-10-26 20:59:52,160] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 20:59:52,169] {logging_mixin.py:109} INFO - [2021-10-26 20:59:52,169] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 20:59:52,176] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.103 seconds
+[2021-10-26 21:01:34,614] {processor.py:163} INFO - Started process (PID=57902) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:01:34,614] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:01:34,614] {logging_mixin.py:109} INFO - [2021-10-26 21:01:34,614] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:01:34,664] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:01:34,682] {logging_mixin.py:109} INFO - [2021-10-26 21:01:34,682] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:01:34,691] {logging_mixin.py:109} INFO - [2021-10-26 21:01:34,691] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:01:34,699] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.086 seconds
+[2021-10-26 21:03:14,057] {processor.py:163} INFO - Started process (PID=57986) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:03:14,058] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:03:14,058] {logging_mixin.py:109} INFO - [2021-10-26 21:03:14,058] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:03:14,119] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:03:14,142] {logging_mixin.py:109} INFO - [2021-10-26 21:03:14,142] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:03:14,153] {logging_mixin.py:109} INFO - [2021-10-26 21:03:14,153] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:03:14,161] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.104 seconds
+[2021-10-26 21:04:51,909] {processor.py:163} INFO - Started process (PID=58080) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:04:51,909] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:04:51,910] {logging_mixin.py:109} INFO - [2021-10-26 21:04:51,910] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:04:51,957] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:04:51,973] {logging_mixin.py:109} INFO - [2021-10-26 21:04:51,973] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:04:51,979] {logging_mixin.py:109} INFO - [2021-10-26 21:04:51,979] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:04:51,986] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.078 seconds
+[2021-10-26 21:06:12,625] {processor.py:163} INFO - Started process (PID=58158) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:06:12,625] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:06:12,625] {logging_mixin.py:109} INFO - [2021-10-26 21:06:12,625] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:06:12,670] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:06:12,686] {logging_mixin.py:109} INFO - [2021-10-26 21:06:12,686] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:06:12,694] {logging_mixin.py:109} INFO - [2021-10-26 21:06:12,694] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:06:12,702] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.078 seconds
+[2021-10-26 21:07:31,468] {processor.py:163} INFO - Started process (PID=58245) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:07:31,468] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:07:31,469] {logging_mixin.py:109} INFO - [2021-10-26 21:07:31,469] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:07:31,512] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:07:31,528] {logging_mixin.py:109} INFO - [2021-10-26 21:07:31,528] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:07:31,535] {logging_mixin.py:109} INFO - [2021-10-26 21:07:31,535] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:07:31,543] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.075 seconds
+[2021-10-26 21:08:50,714] {processor.py:163} INFO - Started process (PID=58324) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:08:50,715] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:08:50,715] {logging_mixin.py:109} INFO - [2021-10-26 21:08:50,715] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:08:50,759] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:08:50,774] {logging_mixin.py:109} INFO - [2021-10-26 21:08:50,774] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:08:50,781] {logging_mixin.py:109} INFO - [2021-10-26 21:08:50,781] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:08:50,788] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.074 seconds
+[2021-10-26 21:10:10,037] {processor.py:163} INFO - Started process (PID=58406) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:10:10,037] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:10:10,038] {logging_mixin.py:109} INFO - [2021-10-26 21:10:10,038] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:10:10,086] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:10:10,103] {logging_mixin.py:109} INFO - [2021-10-26 21:10:10,103] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:10:10,110] {logging_mixin.py:109} INFO - [2021-10-26 21:10:10,110] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:10:10,117] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.081 seconds
+[2021-10-26 21:11:29,180] {processor.py:163} INFO - Started process (PID=58481) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:11:29,180] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:11:29,180] {logging_mixin.py:109} INFO - [2021-10-26 21:11:29,180] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:11:29,218] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:11:29,231] {logging_mixin.py:109} INFO - [2021-10-26 21:11:29,231] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:11:29,237] {logging_mixin.py:109} INFO - [2021-10-26 21:11:29,237] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:11:29,243] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.064 seconds
+[2021-10-26 21:12:44,769] {processor.py:163} INFO - Started process (PID=58558) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:12:44,770] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:12:44,770] {logging_mixin.py:109} INFO - [2021-10-26 21:12:44,770] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:12:44,807] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:12:44,819] {logging_mixin.py:109} INFO - [2021-10-26 21:12:44,819] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:12:44,825] {logging_mixin.py:109} INFO - [2021-10-26 21:12:44,825] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:12:44,831] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 21:14:01,859] {processor.py:163} INFO - Started process (PID=58638) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:14:01,859] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:14:01,859] {logging_mixin.py:109} INFO - [2021-10-26 21:14:01,859] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:14:01,899] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:14:01,915] {logging_mixin.py:109} INFO - [2021-10-26 21:14:01,915] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:14:01,922] {logging_mixin.py:109} INFO - [2021-10-26 21:14:01,922] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:14:01,929] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.071 seconds
+[2021-10-26 21:15:18,284] {processor.py:163} INFO - Started process (PID=58723) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:15:18,284] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:15:18,284] {logging_mixin.py:109} INFO - [2021-10-26 21:15:18,284] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:15:18,323] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:15:18,336] {logging_mixin.py:109} INFO - [2021-10-26 21:15:18,336] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:15:18,341] {logging_mixin.py:109} INFO - [2021-10-26 21:15:18,341] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:15:18,349] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.065 seconds
+[2021-10-26 21:16:34,981] {processor.py:163} INFO - Started process (PID=58797) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:16:34,982] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:16:34,982] {logging_mixin.py:109} INFO - [2021-10-26 21:16:34,982] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:16:35,022] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:16:35,035] {logging_mixin.py:109} INFO - [2021-10-26 21:16:35,035] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:16:35,041] {logging_mixin.py:109} INFO - [2021-10-26 21:16:35,041] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:16:35,047] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.066 seconds
+[2021-10-26 21:17:52,039] {processor.py:163} INFO - Started process (PID=58873) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:17:52,040] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:17:52,040] {logging_mixin.py:109} INFO - [2021-10-26 21:17:52,040] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:17:52,084] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:17:52,099] {logging_mixin.py:109} INFO - [2021-10-26 21:17:52,099] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:17:52,105] {logging_mixin.py:109} INFO - [2021-10-26 21:17:52,105] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:17:52,112] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 21:19:09,928] {processor.py:163} INFO - Started process (PID=58949) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:19:09,928] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:19:09,929] {logging_mixin.py:109} INFO - [2021-10-26 21:19:09,929] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:19:09,977] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:19:09,993] {logging_mixin.py:109} INFO - [2021-10-26 21:19:09,993] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:19:09,999] {logging_mixin.py:109} INFO - [2021-10-26 21:19:09,999] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:19:10,006] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.079 seconds
+[2021-10-26 21:20:28,712] {processor.py:163} INFO - Started process (PID=59036) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:20:28,712] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:20:28,712] {logging_mixin.py:109} INFO - [2021-10-26 21:20:28,712] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:20:28,757] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:20:28,773] {logging_mixin.py:109} INFO - [2021-10-26 21:20:28,773] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:20:28,780] {logging_mixin.py:109} INFO - [2021-10-26 21:20:28,780] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:20:28,787] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.076 seconds
+[2021-10-26 21:21:46,535] {processor.py:163} INFO - Started process (PID=59111) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:21:46,535] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:21:46,536] {logging_mixin.py:109} INFO - [2021-10-26 21:21:46,536] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:21:46,584] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:21:46,599] {logging_mixin.py:109} INFO - [2021-10-26 21:21:46,599] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:21:46,605] {logging_mixin.py:109} INFO - [2021-10-26 21:21:46,605] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:21:46,612] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.078 seconds
+[2021-10-26 21:23:03,902] {processor.py:163} INFO - Started process (PID=59188) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:23:03,902] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:23:03,902] {logging_mixin.py:109} INFO - [2021-10-26 21:23:03,902] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:23:03,942] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:23:03,957] {logging_mixin.py:109} INFO - [2021-10-26 21:23:03,957] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:23:03,964] {logging_mixin.py:109} INFO - [2021-10-26 21:23:03,964] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:23:03,971] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.069 seconds
+[2021-10-26 21:24:21,722] {processor.py:163} INFO - Started process (PID=59275) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:24:21,722] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:24:21,722] {logging_mixin.py:109} INFO - [2021-10-26 21:24:21,722] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:24:21,759] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:24:21,771] {logging_mixin.py:109} INFO - [2021-10-26 21:24:21,771] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:24:21,777] {logging_mixin.py:109} INFO - [2021-10-26 21:24:21,776] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:24:21,783] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.062 seconds
+[2021-10-26 21:25:36,366] {processor.py:163} INFO - Started process (PID=59350) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:25:36,366] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:25:36,366] {logging_mixin.py:109} INFO - [2021-10-26 21:25:36,366] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:25:36,407] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:25:36,420] {logging_mixin.py:109} INFO - [2021-10-26 21:25:36,420] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:25:36,425] {logging_mixin.py:109} INFO - [2021-10-26 21:25:36,425] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:25:36,432] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.066 seconds
+[2021-10-26 21:26:51,056] {processor.py:163} INFO - Started process (PID=59428) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:26:51,056] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:26:51,056] {logging_mixin.py:109} INFO - [2021-10-26 21:26:51,056] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:26:51,100] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:26:51,115] {logging_mixin.py:109} INFO - [2021-10-26 21:26:51,115] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:26:51,121] {logging_mixin.py:109} INFO - [2021-10-26 21:26:51,121] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:26:51,128] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 21:28:05,612] {processor.py:163} INFO - Started process (PID=59502) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:28:05,612] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:28:05,612] {logging_mixin.py:109} INFO - [2021-10-26 21:28:05,612] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:28:05,656] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:28:05,671] {logging_mixin.py:109} INFO - [2021-10-26 21:28:05,671] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:28:05,677] {logging_mixin.py:109} INFO - [2021-10-26 21:28:05,677] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:28:05,684] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.073 seconds
+[2021-10-26 21:29:26,013] {processor.py:163} INFO - Started process (PID=59581) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:29:26,013] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:29:26,013] {logging_mixin.py:109} INFO - [2021-10-26 21:29:26,013] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:29:26,060] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:29:26,079] {logging_mixin.py:109} INFO - [2021-10-26 21:29:26,079] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:29:26,086] {logging_mixin.py:109} INFO - [2021-10-26 21:29:26,086] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:29:26,093] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.081 seconds
+[2021-10-26 21:31:03,922] {processor.py:163} INFO - Started process (PID=59677) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:31:03,923] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:31:03,924] {logging_mixin.py:109} INFO - [2021-10-26 21:31:03,924] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:31:03,984] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:31:04,005] {logging_mixin.py:109} INFO - [2021-10-26 21:31:04,004] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:31:04,013] {logging_mixin.py:109} INFO - [2021-10-26 21:31:04,013] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:31:04,022] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.101 seconds
+[2021-10-26 21:32:38,043] {processor.py:163} INFO - Started process (PID=59766) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:32:38,043] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:32:38,044] {logging_mixin.py:109} INFO - [2021-10-26 21:32:38,044] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:32:38,093] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:32:38,109] {logging_mixin.py:109} INFO - [2021-10-26 21:32:38,109] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:32:38,117] {logging_mixin.py:109} INFO - [2021-10-26 21:32:38,116] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:32:38,123] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.081 seconds
+[2021-10-26 21:34:23,933] {processor.py:163} INFO - Started process (PID=60045) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:34:23,934] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:34:23,934] {logging_mixin.py:109} INFO - [2021-10-26 21:34:23,934] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:34:23,999] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:34:24,020] {logging_mixin.py:109} INFO - [2021-10-26 21:34:24,020] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:34:24,029] {logging_mixin.py:109} INFO - [2021-10-26 21:34:24,029] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:34:24,038] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.106 seconds
+[2021-10-26 21:35:58,212] {processor.py:163} INFO - Started process (PID=60122) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:35:58,213] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:35:58,214] {logging_mixin.py:109} INFO - [2021-10-26 21:35:58,213] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:35:58,259] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:35:58,275] {logging_mixin.py:109} INFO - [2021-10-26 21:35:58,275] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:35:58,281] {logging_mixin.py:109} INFO - [2021-10-26 21:35:58,281] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:35:58,289] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.077 seconds
+[2021-10-26 21:37:30,595] {processor.py:163} INFO - Started process (PID=60200) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:37:30,596] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:37:30,596] {logging_mixin.py:109} INFO - [2021-10-26 21:37:30,596] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:37:30,647] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:37:30,666] {logging_mixin.py:109} INFO - [2021-10-26 21:37:30,666] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:37:30,675] {logging_mixin.py:109} INFO - [2021-10-26 21:37:30,674] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:37:30,682] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.087 seconds
+[2021-10-26 21:39:24,280] {processor.py:163} INFO - Started process (PID=60290) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:39:24,281] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:39:24,281] {logging_mixin.py:109} INFO - [2021-10-26 21:39:24,281] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:39:24,343] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:39:24,364] {logging_mixin.py:109} INFO - [2021-10-26 21:39:24,364] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:39:24,373] {logging_mixin.py:109} INFO - [2021-10-26 21:39:24,373] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:39:24,382] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.102 seconds
+[2021-10-26 21:41:20,994] {processor.py:163} INFO - Started process (PID=60382) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:41:20,995] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:41:20,995] {logging_mixin.py:109} INFO - [2021-10-26 21:41:20,995] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:41:21,059] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:41:21,081] {logging_mixin.py:109} INFO - [2021-10-26 21:41:21,080] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:41:21,090] {logging_mixin.py:109} INFO - [2021-10-26 21:41:21,090] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:41:21,099] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.106 seconds
+[2021-10-26 21:43:18,093] {processor.py:163} INFO - Started process (PID=60471) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:43:18,093] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:43:18,094] {logging_mixin.py:109} INFO - [2021-10-26 21:43:18,094] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:43:18,164] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:43:18,192] {logging_mixin.py:109} INFO - [2021-10-26 21:43:18,191] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:43:18,202] {logging_mixin.py:109} INFO - [2021-10-26 21:43:18,202] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:43:18,211] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.120 seconds
+[2021-10-26 21:45:15,550] {processor.py:163} INFO - Started process (PID=60577) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:45:15,551] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:45:15,551] {logging_mixin.py:109} INFO - [2021-10-26 21:45:15,551] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:45:15,621] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:45:15,645] {logging_mixin.py:109} INFO - [2021-10-26 21:45:15,644] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:45:15,655] {logging_mixin.py:109} INFO - [2021-10-26 21:45:15,655] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:45:15,665] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.116 seconds
+[2021-10-26 21:47:05,073] {processor.py:163} INFO - Started process (PID=60661) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:47:05,073] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:47:05,074] {logging_mixin.py:109} INFO - [2021-10-26 21:47:05,074] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:47:05,137] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:47:05,160] {logging_mixin.py:109} INFO - [2021-10-26 21:47:05,160] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:47:05,169] {logging_mixin.py:109} INFO - [2021-10-26 21:47:05,169] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:47:05,177] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.106 seconds
+[2021-10-26 21:49:03,344] {processor.py:163} INFO - Started process (PID=60748) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:49:03,345] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:49:03,346] {logging_mixin.py:109} INFO - [2021-10-26 21:49:03,345] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:49:03,424] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:49:03,450] {logging_mixin.py:109} INFO - [2021-10-26 21:49:03,450] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:49:03,464] {logging_mixin.py:109} INFO - [2021-10-26 21:49:03,464] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:49:03,475] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.132 seconds
+[2021-10-26 21:51:09,167] {processor.py:163} INFO - Started process (PID=60836) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:51:09,168] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:51:09,169] {logging_mixin.py:109} INFO - [2021-10-26 21:51:09,168] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:51:09,231] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:51:09,252] {logging_mixin.py:109} INFO - [2021-10-26 21:51:09,252] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:51:09,261] {logging_mixin.py:109} INFO - [2021-10-26 21:51:09,261] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:51:09,270] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.103 seconds
+[2021-10-26 21:53:00,551] {processor.py:163} INFO - Started process (PID=60922) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:53:00,552] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:53:00,552] {logging_mixin.py:109} INFO - [2021-10-26 21:53:00,552] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:53:00,619] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:53:00,641] {logging_mixin.py:109} INFO - [2021-10-26 21:53:00,641] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:53:00,651] {logging_mixin.py:109} INFO - [2021-10-26 21:53:00,651] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:53:00,660] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.110 seconds
+[2021-10-26 21:55:05,816] {processor.py:163} INFO - Started process (PID=61023) to work on /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:55:05,817] {processor.py:620} INFO - Processing file /Users/hardy/Desktop/boostcamp/dags/hello_word.py for tasks to queue
+[2021-10-26 21:55:05,817] {logging_mixin.py:109} INFO - [2021-10-26 21:55:05,817] {dagbag.py:500} INFO - Filling up the DagBag from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:55:05,892] {processor.py:632} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /Users/hardy/Desktop/boostcamp/dags/hello_word.py
+[2021-10-26 21:55:05,918] {logging_mixin.py:109} INFO - [2021-10-26 21:55:05,917] {dag.py:2389} INFO - Sync 1 DAGs
+[2021-10-26 21:55:05,928] {logging_mixin.py:109} INFO - [2021-10-26 21:55:05,928] {dag.py:2914} INFO - Setting next_dagrun for hello_world to 2021-10-26T06:00:00+00:00
+[2021-10-26 21:55:05,939] {processor.py:171} INFO - Processing /Users/hardy/Desktop/boostcamp/dags/hello_word.py took 0.124 seconds

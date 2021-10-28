@@ -1,0 +1,23 @@
+[2021-10-26 19:23:34,283] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: hello_world.print_world scheduled__2021-10-24T06:00:00+00:00 [queued]>
+[2021-10-26 19:23:34,290] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: hello_world.print_world scheduled__2021-10-24T06:00:00+00:00 [queued]>
+[2021-10-26 19:23:34,290] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-26 19:23:34,290] {taskinstance.py:1242} INFO - Starting attempt 1 of 4
+[2021-10-26 19:23:34,290] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-10-26 19:23:34,301] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): print_world> on 2021-10-24 06:00:00+00:00
+[2021-10-26 19:23:34,303] {standard_task_runner.py:52} INFO - Started process 52196 to run task
+[2021-10-26 19:23:34,309] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'hello_world', 'print_world', 'scheduled__2021-10-24T06:00:00+00:00', '--job-id', '4', '--raw', '--subdir', '/Users/hardy/Desktop/boostcamp/dags/hello_word.py', '--cfg-path', '/var/folders/bq/dbkq4_t56lnff573240fmxcw0000gn/T/tmphj_av26q', '--error-file', '/var/folders/bq/dbkq4_t56lnff573240fmxcw0000gn/T/tmpjzddtzwg']
+[2021-10-26 19:23:34,312] {standard_task_runner.py:77} INFO - Job 4: Subtask print_world
+[2021-10-26 19:23:34,346] {logging_mixin.py:109} INFO - Running <TaskInstance: hello_world.print_world scheduled__2021-10-24T06:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-10-26 19:23:34,378] {taskinstance.py:1412} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=heumsi
+AIRFLOW_CTX_DAG_ID=hello_world
+AIRFLOW_CTX_TASK_ID=print_world
+AIRFLOW_CTX_EXECUTION_DATE=2021-10-24T06:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-10-24T06:00:00+00:00
+[2021-10-26 19:23:34,379] {logging_mixin.py:109} INFO - world
+[2021-10-26 19:23:34,380] {python.py:152} INFO - Done. Returned value was: None
+[2021-10-26 19:23:34,387] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=hello_world, task_id=print_world, execution_date=20211024T060000, start_date=20211026T102334, end_date=20211026T102334
+[2021-10-26 19:23:34,403] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-10-26 19:23:34,418] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
