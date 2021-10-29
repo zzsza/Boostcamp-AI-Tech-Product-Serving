@@ -28,6 +28,7 @@ class Order(BaseModel):
     id: UUID = Field(default_factory=uuid4)
     products: List[Product] = Field(default_factory=list)
     created_at: datetime = Field(default_factory=datetime.now)
+    updated_at: datetime = Field(default_factory=datetime.now)
 
     @property
     def bill(self):
@@ -35,20 +36,25 @@ class Order(BaseModel):
 
 
 class OrderUpdate(BaseModel):
-    order_id: UUID
-    product_id: UUID
-    result: Optional[List]
+    products: List[Product] = Field(default_factory=list)
 
 
 def get_order_by_id(order_id: UUID) -> Order:
     return next((order for order in orders if order.id == order_id))
 
 
-def update_order_by_id(order_id: UUID, next_order: Order) -> Optional[Order]:
+def update_order_by_id(order_id: UUID, next_products: List[Product]) -> Optional[Order]:
     updated_order = None
     for index, order in enumerate(orders):
         if order.id == order_id:
-            updated_order = order.copy(update=next_order.dict(exclude_unset=True))
+            updated_order: Order = order.copy()
+            existing_product_ids = [product.id for product in updated_order.products]
+            new_products = [next_product for next_product in next_products if
+                            next_product.id not in existing_product_ids]
+            if not new_products:
+                break
+            updated_order.products += new_products
+            updated_order.updated_at = datetime.now()
             orders[index] = updated_order
     return updated_order
 
@@ -81,9 +87,9 @@ async def make_order(
     return new_order
 
 
-@app.patch("/order", description="주문을 수정합니다")
-async def update_order(order_id: UUID, next_order: Order):
-    return update_order_by_id(order_id=order_id, next_order=next_order)
+@app.patch("/order/{order_id}", description="주문을 수정합니다")
+async def update_order(order_id: UUID, order_update: OrderUpdate):
+    return update_order_by_id(order_id=order_id, next_products=order_update.products)
 
 
 @app.get("/bill/{order_id}", description="계산을 요청합니다")
