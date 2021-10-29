@@ -1,6 +1,14 @@
+import io
+from typing import List
+
+import albumentations
+import albumentations.pytorch
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from PIL import Image
 from efficientnet_pytorch import EfficientNet
 
 
@@ -31,3 +39,24 @@ def get_model(model_path: str = "../../assets/mask_task/model.pth") -> MyEfficie
         model.to(device)
     model.eval()
     return model
+
+
+def transform_image(image_bytes: bytes):
+    transform = albumentations.Compose(
+        [
+            albumentations.Resize(height=512, width=384),
+            albumentations.Normalize(mean=(0.5, 0.5, 0.5), std=(0.2, 0.2, 0.2)),
+            albumentations.pytorch.transforms.ToTensorV2(),
+        ]
+    )
+    image = Image.open(io.BytesIO(image_bytes))
+    image = image.convert("RGB")
+    image_array = np.array(image)
+    return transform(image=image_array)["image"].unsqueeze(0)
+
+
+def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet) -> List[int]:
+    transformed_image = transform_image(image_bytes)
+    outputs = model.forward(transformed_image)
+    _, y_hat = outputs.max(1)
+    return y_hat.tolist()
