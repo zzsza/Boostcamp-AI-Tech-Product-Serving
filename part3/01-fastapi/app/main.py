@@ -34,6 +34,14 @@ class Order(BaseModel):
     def bill(self):
         return sum([product.price for product in self.products])
 
+    def add_product(self, product: Product):
+        if product.id in [existing_product.id for existing_product in self.products]:
+            return self
+
+        self.products.append(product)
+        self.updated_at = datetime.now()
+        return self
+
 
 class OrderUpdate(BaseModel):
     products: List[Product] = Field(default_factory=list)
@@ -44,18 +52,10 @@ def get_order_by_id(order_id: UUID) -> Order:
 
 
 def update_order_by_id(order_id: UUID, next_products: List[Product]) -> Optional[Order]:
-    updated_order = None
-    for index, order in enumerate(orders):
-        if order.id == order_id:
-            updated_order: Order = order.copy()
-            existing_product_ids = [product.id for product in updated_order.products]
-            new_products = [next_product for next_product in next_products if
-                            next_product.id not in existing_product_ids]
-            if not new_products:
-                break
-            updated_order.products += new_products
-            updated_order.updated_at = datetime.now()
-            orders[index] = updated_order
+    existing_order = get_order_by_id(order_id=order_id)
+    updated_order = existing_order.copy()
+    for next_product in next_products:
+        updated_order = existing_order.add_product(next_product)
     return updated_order
 
 
@@ -89,7 +89,10 @@ async def make_order(
 
 @app.patch("/order/{order_id}", description="주문을 수정합니다")
 async def update_order(order_id: UUID, order_update: OrderUpdate):
-    return update_order_by_id(order_id=order_id, next_products=order_update.products)
+    try:
+        return update_order_by_id(order_id=order_id, next_products=order_update.products)
+    except StopIteration:
+        return {"message": "주문 정보를 찾을 수 없습니다"}
 
 
 @app.get("/bill/{order_id}", description="계산을 요청합니다")
