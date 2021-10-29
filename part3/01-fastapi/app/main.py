@@ -4,7 +4,6 @@ import albumentations
 import albumentations.pytorch
 import numpy as np
 
-
 from datetime import datetime
 from typing import List, Optional, Union
 from fastapi import FastAPI, File, UploadFile
@@ -70,6 +69,7 @@ class Order(BaseModel):
     def bill(self):
         return sum([product.price for product in self.products])
 
+
 class OrderUpdate(BaseModel):
     order_id: UUID
     product_id: UUID
@@ -82,9 +82,9 @@ def get_order_by_id(order_id: UUID) -> Order:
 
 def update_order_by_id(order_id: UUID, next_order: Order) -> Optional[Order]:
     updated_order = None
-    for index, item in enumerate(orders):
-        if item.id == order_id:
-            updated_order = item.copy(update=next_order.dict(exclude_unset=True))
+    for index, order in enumerate(orders):
+        if order.id == order_id:
+            updated_order = order.copy(update=next_order.dict(exclude_unset=True))
             orders[index] = updated_order
     return updated_order
 
@@ -103,8 +103,8 @@ async def get_order(order_id: UUID) -> Union[Order, dict]:
 
 
 @app.post("/order", description="주문을 요청합니다")
-async def order(
-    files: List[UploadFile] = File(...), model: MyEfficientNet = Depends(get_model)
+async def make_order(
+        files: List[UploadFile] = File(...), model: MyEfficientNet = Depends(get_model)
 ) -> Union[Order, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
     products = []
     for file in files:
