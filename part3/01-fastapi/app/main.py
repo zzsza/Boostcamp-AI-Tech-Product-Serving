@@ -47,14 +47,37 @@ class OrderUpdate(BaseModel):
     products: List[Product] = Field(default_factory=list)
 
 
-def get_order_by_id(order_id: UUID) -> Order:
-    return next((order for order in orders if order.id == order_id))
+def get_order_by_id(order_id: UUID) -> Optional[Order]:
+    """
+    Order ID로 Order를 조회합니다
+
+    Args:
+        order_id (UUID): order id
+
+    Returns:
+        Optional[Order]:
+
+    """
+    return next((order for order in orders if order.id == order_id), None)
 
 
-def update_order_by_id(order_id: UUID, next_products: List[Product]) -> Optional[Order]:
+def update_order_by_id(order_id: UUID, order_update: OrderUpdate) -> Optional[Order]:
+    """
+    Order를 업데이트 합니다
+
+    Args:
+        order_id (UUID): order id
+        order_update (OrderUpdate): Order Update DTO
+
+    Returns:
+        Optional[Order]: 업데이트 된 Order 또는 None
+    """
     existing_order = get_order_by_id(order_id=order_id)
+    if not existing_order:
+        return
+
     updated_order = existing_order.copy()
-    for next_product in next_products:
+    for next_product in order_update.products:
         updated_order = existing_order.add_product(next_product)
     return updated_order
 
@@ -64,12 +87,12 @@ async def get_orders() -> List[Order]:
     return orders
 
 
-@app.get("/order/{order_id}", description="주문 정보를 가져옵니다")
+@app.get("/order/{order_id}", description="주문 정보를 가져옵니다", response_model=Order)
 async def get_order(order_id: UUID) -> Union[Order, dict]:
-    try:
-        return get_order_by_id(order_id=order_id)
-    except StopIteration:
+    order = get_order_by_id(order_id=order_id)
+    if not order:
         return {"message": "주문 정보를 찾을 수 없습니다"}
+    return order
 
 
 @app.post("/order", description="주문을 요청합니다")
@@ -88,17 +111,16 @@ async def make_order(
 
 
 @app.patch("/order/{order_id}", description="주문을 수정합니다")
-async def update_order(order_id: UUID, order_update: OrderUpdate):
-    try:
-        return update_order_by_id(order_id=order_id, next_products=order_update.products)
-    except StopIteration:
+async def update_order(order_id: UUID, order_update: OrderUpdate) -> Union[Order, dict]:
+    updated_order = update_order_by_id(order_id=order_id, order_update=order_update)
+    if not updated_order:
         return {"message": "주문 정보를 찾을 수 없습니다"}
+    return updated_order
 
 
 @app.get("/bill/{order_id}", description="계산을 요청합니다")
-async def get_bill(order_id: UUID):
-    try:
-        found_order = next((order for order in orders if order.id == order_id))
-        return found_order.bill
-    except StopIteration:
+async def get_bill(order_id: UUID) -> Union[float, dict]:
+    found_order = get_order_by_id(order_id=order_id)
+    if not found_order:
         return {"message": "주문 정보를 찾을 수 없습니다"}
+    return found_order.bill
