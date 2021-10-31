@@ -127,10 +127,12 @@ class ModelInput03(BaseModel):
 
 
 if __name__ == "__main__":
+    import os
+
     VALID_INPUT = {
         "url": "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978",
         "rate": 4,
-        "target_dir": "/Users/humphreyahn/devs/personal/Boostcamp-AI-Tech-Product-Serving/part3/01-fastapi/examples",
+        "target_dir": os.path.join(os.getcwd(), "examples"),
     }
 
     INVALID_INPUT = {"url": "WRONG_URL", "rate": 11, "target_dir": "WRONG_DIR"}
