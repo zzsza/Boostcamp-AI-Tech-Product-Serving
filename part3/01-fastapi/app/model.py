@@ -1,5 +1,5 @@
 import io
-from typing import List
+from typing import List, Dict, Any
 
 import albumentations
 import albumentations.pytorch
@@ -32,16 +32,11 @@ def get_model(model_path: str = "../../assets/mask_task/model.pth") -> MyEfficie
     """Model을 가져옵니다"""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = MyEfficientNet(num_classes=18).to(device)
-    if str(device) == "cpu":
-        model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
-    else:
-        model.load_state_dict(torch.load(model_path))
-        model.to(device)
-    model.eval()
+    model.load_state_dict(torch.load(model_path, map_location=device))
     return model
 
 
-def transform_image(image_bytes: bytes):
+def _transform_image(image_bytes: bytes):
     transform = albumentations.Compose(
         [
             albumentations.Resize(height=512, width=384),
@@ -55,8 +50,17 @@ def transform_image(image_bytes: bytes):
     return transform(image=image_array)["image"].unsqueeze(0)
 
 
-def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet) -> List[int]:
-    transformed_image = transform_image(image_bytes)
+def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet, config: Dict[str, Any]) -> List[str]:
+    transformed_image = _transform_image(image_bytes)
     outputs = model.forward(transformed_image)
     _, y_hat = outputs.max(1)
-    return y_hat.tolist()
+    return config["classes"][y_hat.item()]
+
+
+def get_config(config_path: str = "../../assets/mask_task/config.yaml"):
+    import yaml
+
+    with open(config_path, "r") as f:
+        config = yaml.load(f, Loader=yaml.FullLoader)
+
+    return config
