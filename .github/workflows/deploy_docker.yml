@@ -9,7 +9,7 @@ jobs:
     name: Build and Push to GCP
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/streamlit:v$(git rev-parse --short HEAD)
+      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/streamlit
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
