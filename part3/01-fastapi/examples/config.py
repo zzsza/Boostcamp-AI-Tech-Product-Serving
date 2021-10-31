@@ -35,13 +35,7 @@ def load_config(config_path: str) -> Dict[str, Any]:
 config = load_config(config_path="dev_config.yaml")
 
 assert config["env"] == "dev"
-expected = {
-    "username": "user",
-    "password": "user",
-    "host": "localhost",
-    "port": 3306,
-    "database": "dev"
-}
+expected = {"username": "user", "password": "user", "host": "localhost", "port": 3306, "database": "dev"}
 assert config["db"] == expected
 
 
