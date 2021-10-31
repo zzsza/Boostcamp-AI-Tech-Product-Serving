@@ -43,7 +43,6 @@ def main():
 
 @cache_on_button_press('Authenticate')
 def authenticate(password) ->bool:
-    print(type(password))
     return password == root_password
 
 
