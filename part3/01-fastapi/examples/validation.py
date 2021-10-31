@@ -1,9 +1,5 @@
 class ModelInput01:
-    url: str
-    rate: int
-    target_dir: str
-
-    def __init__(self, url: str, rate: int, target_dir: str):
+    def __init__(self, url: str, rate: int, target_dir: str) -> None:
         self.url = url
         self.rate = rate
         self.target_dir = target_dir
@@ -37,6 +33,7 @@ class ModelInput01:
             bool: 검증 성공/실패 여부
         """
         import os
+
         return os.path.isdir(directory_like)
 
     def validate(self) -> bool:
@@ -46,8 +43,11 @@ class ModelInput01:
         Returns:
             bool: 검증/성공 실패 여부
         """
-        validation_results = [self._validate_url(self.url), 1 <= self.rate <= 10,
-                              self._validate_directory(self.target_dir)]
+        validation_results = [
+            self._validate_url(self.url),
+            1 <= self.rate <= 10,
+            self._validate_directory(self.target_dir),
+        ]
         return all(validation_results)
 
 
@@ -95,6 +95,7 @@ class ModelInput02:
             bool: 검증 성공/실패 여부
         """
         import os
+
         return os.path.isdir(directory_like)
 
     def validate(self) -> bool:
@@ -104,8 +105,11 @@ class ModelInput02:
         Returns:
             bool: 검증/성공 실패 여부
         """
-        validation_results = [self._validate_url(self.url), 1 <= self.rate <= 10,
-                              self._validate_directory(self.target_dir)]
+        validation_results = [
+            self._validate_url(self.url),
+            1 <= self.rate <= 10,
+            self._validate_directory(self.target_dir),
+        ]
         return all(validation_results)
 
     def __post_init__(self):
@@ -122,18 +126,14 @@ class ModelInput03(BaseModel):
     target_dir: DirectoryPath
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     VALID_INPUT = {
         "url": "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978",
         "rate": 4,
-        "target_dir": "/Users/humphreyahn/devs/personal/Boostcamp-AI-Tech-Product-Serving/part3/01-fastapi/examples"
+        "target_dir": "/Users/humphreyahn/devs/personal/Boostcamp-AI-Tech-Product-Serving/part3/01-fastapi/examples",
     }
 
-    INVALID_INPUT = {
-        "url": "WRONG_URL",
-        "rate": 11,
-        "target_dir": "WRONG_DIR"
-    }
+    INVALID_INPUT = {"url": "WRONG_URL", "rate": 11, "target_dir": "WRONG_DIR"}
 
     valid_python_class_model_input = ModelInput01(**VALID_INPUT)
     assert valid_python_class_model_input.validate() is True
