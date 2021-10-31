@@ -97,4 +97,15 @@ config_with_pydantic = AppConfig()
 assert config_with_pydantic.env == "dev"
 assert config_with_pydantic.db.dict() == expected
 
+# 환경 변수로 필드를 오버라이딩합니다.
+os.environ["ENV"] = "prod"
+os.environ["DB_HOST"] = "mysql"
+os.environ["DB_USERNAME"] = "admin"
+os.environ["DB_PASSWORD"] = "SOME_SAFE_PASSWORD"
+
+prod_config_with_pydantic = AppConfig()
+assert prod_config_with_pydantic.env == "prod"
+assert prod_config_with_pydantic.dict() != expected
+
+# cleanup
 os.remove("dev_config.yaml")
