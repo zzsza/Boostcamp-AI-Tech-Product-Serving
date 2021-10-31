@@ -1,11 +1,11 @@
 from datetime import datetime
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Any, Dict
 from fastapi import FastAPI, File, UploadFile
 from fastapi.param_functions import Depends
 from pydantic import BaseModel, Field
 from uuid import UUID, uuid4
 
-from app.model import MyEfficientNet, get_model, predict_from_image_byte
+from app.model import MyEfficientNet, get_model, predict_from_image_byte, get_config
 
 app = FastAPI()
 
@@ -97,12 +97,14 @@ async def get_order(order_id: UUID) -> Union[Order, dict]:
 
 @app.post("/order", description="주문을 요청합니다")
 async def make_order(
-        files: List[UploadFile] = File(...), model: MyEfficientNet = Depends(get_model)
+    files: List[UploadFile] = File(...),
+    model: MyEfficientNet = Depends(get_model),
+    config: Dict[str, Any] = Depends(get_config),
 ) -> Union[Order, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
     products = []
     for file in files:
         image_bytes = await file.read()
-        inference_result = predict_from_image_byte(image_bytes=image_bytes, model=model)
+        inference_result = predict_from_image_byte(image_bytes=image_bytes, model=model, config=config)
         product = InferenceImageProduct(result=inference_result)
         products.append(product)
     new_order = Order(products=products)
