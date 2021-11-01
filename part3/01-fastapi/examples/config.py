@@ -92,7 +92,10 @@ class AppConfig(BaseSettings):
     db: DBConfig = DBConfig()
 
 
-config_with_pydantic = AppConfig()
+with open("dev_config.yaml", "r") as f:
+    config = load(f, FullLoader)
+
+config_with_pydantic = AppConfig(**config)
 
 assert config_with_pydantic.env == "dev"
 assert config_with_pydantic.db.dict() == expected
