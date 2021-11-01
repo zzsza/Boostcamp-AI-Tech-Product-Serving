@@ -24,7 +24,7 @@ jobs:
       - name: Move model file
         run: |
           cd part2/04-cicd
-          sh docker_deploy.sh
+          sh deploy_docker.sh
 
       - name: Build Docker image
         run: docker build part2/04-cicd -t $IMAGE_NAME

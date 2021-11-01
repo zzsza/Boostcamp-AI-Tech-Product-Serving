@@ -49,7 +49,7 @@
       ```
   1. 실행하려는 경로로 이동한 뒤에 virtualenv를 설정한 뒤에 웹사이트가 돌아가는지 확인합니다.
       ```
-      cd github-action-test/part2/04-cicd
+      cd <YOUR_REPOSITORY>/part2/04-cicd
       python3 -m venv venv
       source venv/bin/activate
       pip install -r requirements.txt
@@ -141,7 +141,7 @@ st.title("Mask Classification Model CICD TEST")
         - name: Move model file
             run: |
             cd part2/04-cicd
-            sh docker_deploy.sh
+            sh deploy_docker.sh
 
         - name: Build Docker image
             run: docker build part2/04-cicd -t $IMAGE_NAME

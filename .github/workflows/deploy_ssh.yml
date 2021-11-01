@@ -12,10 +12,10 @@ jobs:
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.GCP_HOST }} 
-        username: ${{ secrets.GCP_USERNAME }}
-        key: ${{ secrets.GCP_SSH_KEY }}
+        host: ${{ secrets.HOST }} 
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-            cd github-action-test/part2/04-cicd
-            sh deploy.sh
+            cd ${{ github.event.repository.name }}/part2/04-cicd
+            sh deploy_ssh.sh
