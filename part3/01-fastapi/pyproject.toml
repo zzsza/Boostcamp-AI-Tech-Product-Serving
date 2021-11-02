@@ -14,6 +14,8 @@ efficientnet-pytorch = "^0.7.1"
 python-multipart = "^0.0.5"
 albumentations = "^1.1.0"
 torchvision = "^0.10.1"
+requests = "^2.26.0"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
