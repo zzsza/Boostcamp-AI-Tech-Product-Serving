@@ -47,8 +47,12 @@ class BigqueryHandler(StreamHandler):
             print(errors)
 
 
-def get_ml_logger(config_path: os.PathLike, credential_json_path: os.PathLike,
-                  table_ref: bigquery.TableReference, logger_name: str = "MLLogger") -> logging.Logger:
+def get_ml_logger(
+    config_path: os.PathLike,
+    credential_json_path: os.PathLike,
+    table_ref: bigquery.TableReference,
+    logger_name: str = "MLLogger",
+) -> logging.Logger:
     """
     MLLogger를 가져옵니다
 
@@ -78,7 +82,7 @@ def get_ml_logger(config_path: os.PathLike, credential_json_path: os.PathLike,
     bigquery_handler_config = BigqueryHandlerConfig(
         credentials=credentials,
         table=table_ref,
-        formatter=jsonlogger.JsonFormatter(fmt=BigqueryLogSchema().to_log_format())
+        formatter=jsonlogger.JsonFormatter(fmt=BigqueryLogSchema().to_log_format()),
     )
     bigquery_handler = BigqueryHandler(config=bigquery_handler_config)
     _logger.addHandler(bigquery_handler)
@@ -87,8 +91,10 @@ def get_ml_logger(config_path: os.PathLike, credential_json_path: os.PathLike,
 
 
 if __name__ == "__main__":
-    logger = get_ml_logger(config_path=os.getenv("LOGGING_CONFIG_YAML_PATH"),
-                           credential_json_path=os.getenv("LOGGING_BIGQUERY_CREDENTIAL_JSON_PATH"),
-                           table_ref=os.getenv("LOGGING_BIGQUERY_TABLE_REF"))
+    logger = get_ml_logger(
+        config_path=os.getenv("LOGGING_CONFIG_YAML_PATH"),
+        credential_json_path=os.getenv("LOGGING_BIGQUERY_CREDENTIAL_JSON_PATH"),
+        table_ref=os.getenv("LOGGING_BIGQUERY_TABLE_REF"),
+    )
     for _ in range(10):
         logger.info("hello world")
