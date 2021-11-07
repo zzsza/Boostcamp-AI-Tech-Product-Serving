@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "03-logging"
+version = "0.1.0"
+description = ""
+authors = ["ahnsv <ahnsv@bc.edu>"]
+
+[tool.poetry.dependencies]
+python = ">=3.6.2,<3.10"
+google-cloud-bigquery = "^2.30.1"
+PyYAML = "^6.0"
+python-json-logger = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.10b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
