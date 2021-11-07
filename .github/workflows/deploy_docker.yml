@@ -1,0 +1,36 @@
+name: Build and Push Python Image to Google Cloud Platform
+on:
+  push:
+      branches: [ deploy_docker ]
+      paths:
+        - 'part2/04-cicd/**'
+jobs:
+  build-push-gcr:
+    name: Build and Push to GCP
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/streamlit
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Login
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+      - name: Configure Docker
+        run: gcloud auth configure-docker --quiet
+
+      - name: Move model file
+        run: |
+          cd part2/04-cicd
+          sh deploy_docker.sh
+
+      - name: Build Docker image
+        run: docker build part2/04-cicd -t $IMAGE_NAME
+
+      - name: Push Docker image
+        run: docker push $IMAGE_NAME
+
+      - name: Deploy Docker image
+        run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region asia-northeast3 --platform managed --memory 4096Mi --allow-unauthenticated
