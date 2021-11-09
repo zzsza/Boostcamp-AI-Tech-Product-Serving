@@ -9,15 +9,26 @@ from bentoml.artifact import PytorchModelArtifact
 from efficientnet_pytorch import EfficientNet
 from imageio.core.util import Array
 
-classes = {0: ['Wear', 'Male', 'under 30'], 1: ['Wear', 'Male', 'between 30 and 60'], 2: ['Wear', 'Male', 'over 60'],
-           3: ['Wear', 'Female', 'under 30'], 4: ['Wear', 'Female', 'between 30 and 60'],
-           5: ['Wear', 'Female', 'over 60'], 6: ['Incorrect', 'Male', 'under 30'],
-           7: ['Incorrect', 'Male', 'between 30 and 60'], 8: ['Incorrect', 'Male', 'over 60'],
-           9: ['Incorrect', 'Female', 'under 30'], 10: ['Incorrect', 'Female', 'between 30 and 60'],
-           11: ['Incorrect', 'Female', 'over 60'], 12: ['Not Wear', 'Male', 'under 30'],
-           13: ['Not Wear', 'Male', 'between 30 and 60'], 14: ['Not Wear', 'Male', 'over 60'],
-           15: ['Not Wear', 'Female', 'under 30'], 16: ['Not Wear', 'Female', 'between 30 and 60'],
-           17: ['Not Wear', 'Female', 'over 60']}
+classes = {
+    0: ["Wear", "Male", "under 30"],
+    1: ["Wear", "Male", "between 30 and 60"],
+    2: ["Wear", "Male", "over 60"],
+    3: ["Wear", "Female", "under 30"],
+    4: ["Wear", "Female", "between 30 and 60"],
+    5: ["Wear", "Female", "over 60"],
+    6: ["Incorrect", "Male", "under 30"],
+    7: ["Incorrect", "Male", "between 30 and 60"],
+    8: ["Incorrect", "Male", "over 60"],
+    9: ["Incorrect", "Female", "under 30"],
+    10: ["Incorrect", "Female", "between 30 and 60"],
+    11: ["Incorrect", "Female", "over 60"],
+    12: ["Not Wear", "Male", "under 30"],
+    13: ["Not Wear", "Male", "between 30 and 60"],
+    14: ["Not Wear", "Male", "over 60"],
+    15: ["Not Wear", "Female", "under 30"],
+    16: ["Not Wear", "Female", "between 30 and 60"],
+    17: ["Not Wear", "Female", "over 60"],
+}
 
 
 class MyEfficientNet(nn.Module):
@@ -28,7 +39,9 @@ class MyEfficientNet(nn.Module):
 
     def __init__(self, num_classes: int = 1000):
         super(MyEfficientNet, self).__init__()
-        self.EFF = EfficientNet.from_pretrained("efficientnet-b4", in_channels=3, num_classes=num_classes)
+        self.EFF = EfficientNet.from_pretrained(
+            "efficientnet-b4", in_channels=3, num_classes=num_classes
+        )
 
     def forward(self, x) -> torch.Tensor:
         x = self.EFF(x)
@@ -37,7 +50,7 @@ class MyEfficientNet(nn.Module):
 
 
 @env(infer_pip_packages=True)
-@artifacts([PytorchModelArtifact('model')])
+@artifacts([PytorchModelArtifact("model")])
 class MaskAPIService(BentoService):
     def transform(self, image_array: Array):
         _transform = albumentations.Compose(
@@ -60,14 +73,16 @@ class MaskAPIService(BentoService):
         return self.get_label_from_class(class_=y_hats.item())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import torch
 
     bento_svc = MaskAPIService()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = MyEfficientNet(num_classes=18).to(device)
-    state_dict = torch.load("../../../assets/mask_task/model.pth", map_location=torch.device("cpu"))
+    state_dict = torch.load(
+        "../../../assets/mask_task/model.pth", map_location=torch.device("cpu")
+    )
     model.load_state_dict(state_dict=state_dict)
-    bento_svc.pack('model', model)
+    bento_svc.pack("model", model)
     saved_path = bento_svc.save()
     print(saved_path)
