@@ -1,11 +1,11 @@
 import json
 import logging.config
 import os
-import pytz
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, tzinfo
+from datetime import datetime
 from logging import StreamHandler, LogRecord
 
+import pytz
 import yaml
 from google.cloud import bigquery
 from google.oauth2 import service_account
