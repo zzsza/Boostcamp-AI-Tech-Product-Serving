@@ -1,8 +1,9 @@
 import json
 import logging.config
 import os
-from dataclasses import dataclass, field
-from datetime import datetime
+import pytz
+from dataclasses import dataclass, field, asdict
+from datetime import datetime, tzinfo
 from logging import StreamHandler, LogRecord
 
 import yaml
@@ -17,10 +18,17 @@ class BigqueryLogSchema:
     levelname: str = field(default=None)
     name: str = field(default=None)
     message: str = field(default=None)
-    asctime: datetime = field(default_factory=datetime.now)
+    created: datetime = field(default_factory=datetime.now)
 
     def to_log_format(self):
         return ", ".join([f"%({key})s" for key in sorted(self.__dict__.keys())])
+
+
+@dataclass
+class BigqueryLogIn:
+    level: str
+    message: str
+    timestamp: datetime
 
 
 @dataclass
@@ -32,7 +40,7 @@ class BigqueryHandlerConfig:
 
 
 class BigqueryHandler(StreamHandler):
-    def __init__(self, config: BigqueryHandlerConfig):
+    def __init__(self, config: BigqueryHandlerConfig) -> None:
         StreamHandler.__init__(self)
         self.config = config
         self.bigquery_client = bigquery.Client(credentials=self.config.credentials)
@@ -42,9 +50,21 @@ class BigqueryHandler(StreamHandler):
     def emit(self, record: LogRecord) -> None:
         message = self.format(record)
         json_message = json.loads(message)
-        errors = self.bigquery_client.insert_rows(self.config.table, [json_message])
+        log_input = BigqueryLogIn(
+            level=json_message["levelname"],
+            message=json_message["message"],
+            timestamp=datetime.fromtimestamp(
+                json_message["created"], tz=pytz.timezone("Asia/Seoul")
+            ),
+        )
+        json_serializable_log_input = json.loads(
+            json.dumps(asdict(log_input), default=str)
+        )
+        errors = self.bigquery_client.insert_rows_json(
+            self.config.table, [json_serializable_log_input]
+        )
         if errors:
-            print(errors)
+            print(errors)  # 에러가 발생해도 Logging이 정상적으로 동작하게 하기 위해, 별도의 에러 핸들링을 추가하지 않습니다
 
 
 def get_ml_logger(
