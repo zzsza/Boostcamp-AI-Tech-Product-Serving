@@ -1,9 +1,9 @@
 name: Build and Push Python Image to Google Cloud Platform
 on:
   push:
-      branches: [ deploy_docker ]
+      branches: [ main ]
       paths:
-        - 'part2/04-cicd/**'
+        - 'part3/02-docker/**'
 jobs:
   build-push-gcr:
     name: Build and Push to GCP
