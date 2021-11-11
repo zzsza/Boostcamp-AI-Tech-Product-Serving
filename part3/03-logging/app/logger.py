@@ -13,7 +13,12 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 from pythonjsonlogger import jsonlogger
 
-log_format = ", ".join([f"%({key})s" for key in sorted(["filename", "levelname", "name", "message", "created"])])
+log_format = ", ".join(
+    [
+        f"%({key})s"
+        for key in sorted(["filename", "levelname", "name", "message", "created"])
+    ]
+)
 
 
 class BigqueryLogSchema(BaseModel):
@@ -58,10 +63,10 @@ class BigqueryHandler(StreamHandler):
 
 
 def get_ml_logger(
-        config_path: os.PathLike,
-        credential_json_path: os.PathLike,
-        table_ref: bigquery.TableReference,
-        logger_name: str = "MLLogger",
+    config_path: os.PathLike,
+    credential_json_path: os.PathLike,
+    table_ref: bigquery.TableReference,
+    logger_name: str = "MLLogger",
 ) -> logging.Logger:
     """
     MLLogger를 가져옵니다
