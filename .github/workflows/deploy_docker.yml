@@ -1,36 +1,56 @@
-name: Build and Push Python Image to Google Cloud Platform
+name: Build and Deploy to Google Compute Engine
+
 on:
   push:
       branches: [ main ]
       paths:
-        - 'part3/02-docker/**'
+        - 'part2/04-cicd/**'
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  DOCKER_IMAGE_NAME: streamlit
+  GCE_INSTANCE: ${{ secrets.GCE_INSTANCE }}
+  GCE_INSTANCE_ZONE: ${{ secrets.GCE_INSTANCE_ZONE }}
+
 jobs:
-  build-push-gcr:
-    name: Build and Push to GCP
+  setup-build-publish-deploy:
+    name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
-    env:
-      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/streamlit
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Login
-        uses: google-github-actions/setup-gcloud@master
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-      - name: Configure Docker
-        run: gcloud auth configure-docker --quiet
+    - name: Checkout
+      uses: actions/checkout@v2
 
-      - name: Move model file
-        run: |
-          cd part2/04-cicd
-          sh deploy_docker.sh
+    # gcloud CLI 설정
+    - uses: google-github-actions/setup-gcloud@master
+      with:
+        version: '290.0.1'
+        service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      - name: Build Docker image
-        run: docker build part2/04-cicd -t $IMAGE_NAME
+    # gcloud에서 Docker 사용할 수 있도록 설정
+    - run: |-
+        gcloud --quiet auth configure-docker
 
-      - name: Push Docker image
-        run: docker push $IMAGE_NAME
+    # Model 파일 복사
+    - name: Copy model file
+      run: |
+        cd part2/04-cicd
+        sh copy_asset.sh
 
-      - name: Deploy Docker image
-        run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region asia-northeast3 --platform managed --memory 4096Mi --allow-unauthenticated
+    # Docker Image Build
+    - name: Build
+      run: |-
+        docker build --tag "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA" .
+
+    # Docker Image Push
+    - name: Publish
+      run: |-
+        docker push "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA"
+
+    # Deploy : update-container로 업데이트 요청
+    - name: Deploy
+      run: |-
+        gcloud compute instances update-container "$GCE_INSTANCE" \
+          --zone "$GCE_INSTANCE_ZONE" \
+          --container-image "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA"

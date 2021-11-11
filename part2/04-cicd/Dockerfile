@@ -1,7 +1,12 @@
-FROM python:3.8
+FROM python:3.8.7-slim-buster
+COPY requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt
+
 COPY . /app
 WORKDIR /app
-RUN pip install -r requirements.txt
-EXPOSE 8080
-ENTRYPOINT ["streamlit","run", "--server.port","8080"]
-CMD ["app.py"]
+
+EXPOSE 8501
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port", "8501"]
+
+
+
