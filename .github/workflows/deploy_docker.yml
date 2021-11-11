@@ -41,7 +41,7 @@ jobs:
     # Docker Image Build
     - name: Build
       run: |-
-        docker build --tag "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA" .
+        docker build part2/04-cicd --tag "gcr.io/$PROJECT_ID/$DOCKER_IMAGE_NAME:$GITHUB_SHA"
 
     # Docker Image Push
     - name: Publish
