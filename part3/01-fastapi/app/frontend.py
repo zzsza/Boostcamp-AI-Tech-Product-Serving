@@ -19,10 +19,6 @@ root_password = 'password'
 
 def main():
     st.title("Mask Classification Model")
-
-    with open(os.path.join(ASSETS_DIR_PATH, "mask_task/config.yaml")) as f:
-        config = yaml.load(f, Loader=yaml.FullLoader)
-
     uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
     if uploaded_file:
@@ -37,7 +33,6 @@ def main():
                        uploaded_file.type))
         ]
         response = requests.post("http://localhost:8001/order", files=files)
-        print(response)
         label = response.json()["products"][0]["result"]
         st.write(f'label is {label}')
 

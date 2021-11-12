@@ -56,6 +56,10 @@ FastAPI을 이용한 모델 온라인 서빙
        INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
 
       ```  
+   4. Frontend(Streamlit)와 Server를 같이 실행합니다
+      ```shell
+      $ make -j 2 run_app
+      ```
 
 ## Q&A
 질문 사항 및 버그 관련한 내용은 Issue로 남겨주세요!
