@@ -1,39 +1,45 @@
 import json
 import logging.config
 import os
-from dataclasses import dataclass, field
+from typing import Union
+
+from pydantic import BaseModel, BaseSettings, Field
 from datetime import datetime
 from logging import StreamHandler, LogRecord
 
+import pytz
 import yaml
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from pythonjsonlogger import jsonlogger
 
-
-@dataclass
-class BigqueryLogSchema:
-    filename: str = field(default=None)
-    levelname: str = field(default=None)
-    name: str = field(default=None)
-    message: str = field(default=None)
-    asctime: datetime = field(default_factory=datetime.now)
-
-    def to_log_format(self):
-        return ", ".join([f"%({key})s" for key in sorted(self.__dict__.keys())])
+log_format = ", ".join(
+    [
+        f"%({key})s"
+        for key in sorted(["filename", "levelname", "name", "message", "created"])
+    ]
+)
 
 
-@dataclass
-class BigqueryHandlerConfig:
+class BigqueryLogSchema(BaseModel):
+    level: str
+    message: str
+    created_at: datetime
+
+
+class BigqueryHandlerConfig(BaseSettings):
     credentials: service_account.Credentials
-    table: bigquery.TableReference
-    formatter: logging.Formatter = jsonlogger.JsonFormatter()
-    level: int = logging.INFO
+    table: Union[str, bigquery.TableReference]
+    formatter: logging.Formatter = Field(default_factory=jsonlogger.JsonFormatter)
+    level: int = Field(default=logging.INFO)
+
+    class Config:
+        arbitrary_types_allowed = True
 
 
 class BigqueryHandler(StreamHandler):
-    def __init__(self, config: BigqueryHandlerConfig):
-        StreamHandler.__init__(self)
+    def __init__(self, config: BigqueryHandlerConfig) -> None:
+        super().__init__()
         self.config = config
         self.bigquery_client = bigquery.Client(credentials=self.config.credentials)
         self.setLevel(config.level)
@@ -42,9 +48,18 @@ class BigqueryHandler(StreamHandler):
     def emit(self, record: LogRecord) -> None:
         message = self.format(record)
         json_message = json.loads(message)
-        errors = self.bigquery_client.insert_rows(self.config.table, [json_message])
+        log_input = BigqueryLogSchema(
+            level=json_message["levelname"],
+            message=json_message["message"],
+            created_at=datetime.fromtimestamp(
+                json_message["created"], tz=pytz.timezone("Asia/Seoul")
+            ),
+        )
+        errors = self.bigquery_client.insert_rows_json(
+            self.config.table, [json.loads(log_input.json())]
+        )
         if errors:
-            print(errors)
+            print(errors)  # 에러가 발생해도 Logging이 정상적으로 동작하게 하기 위해, 별도의 에러 핸들링을 추가하지 않습니다
 
 
 def get_ml_logger(
@@ -82,7 +97,7 @@ def get_ml_logger(
     bigquery_handler_config = BigqueryHandlerConfig(
         credentials=credentials,
         table=table_ref,
-        formatter=jsonlogger.JsonFormatter(fmt=BigqueryLogSchema().to_log_format()),
+        formatter=jsonlogger.JsonFormatter(fmt=log_format),
     )
     bigquery_handler = BigqueryHandler(config=bigquery_handler_config)
     _logger.addHandler(bigquery_handler)
