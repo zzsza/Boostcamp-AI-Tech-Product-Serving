@@ -37,7 +37,7 @@ class MyEfficientNet(nn.Module):
     한번에 18개의 Class를 예측하는 형태의 Model입니다.
     """
 
-    def __init__(self, num_classes: int = 1000):
+    def __init__(self, num_classes: int = 18):
         super(MyEfficientNet, self).__init__()
         self.EFF = EfficientNet.from_pretrained(
             "efficientnet-b4", in_channels=3, num_classes=num_classes
@@ -78,9 +78,9 @@ if __name__ == "__main__":
 
     bento_svc = MaskAPIService()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = MyEfficientNet(num_classes=18).to(device)
+    model = MyEfficientNet().to(device)
     state_dict = torch.load(
-        "../../../assets/mask_task/model.pth", map_location=torch.device("cpu")
+        "../../../assets/mask_task/model.pth", map_location=device
     )
     model.load_state_dict(state_dict=state_dict)
     bento_svc.pack("model", model)
