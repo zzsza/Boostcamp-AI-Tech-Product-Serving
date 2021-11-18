@@ -1,0 +1,3 @@
+bentoml==0.13.1
+pandas==1.2.2
+scikit-learn==1.0.1
