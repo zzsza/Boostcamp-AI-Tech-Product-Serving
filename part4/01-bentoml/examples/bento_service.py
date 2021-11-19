@@ -5,6 +5,7 @@ from bentoml import env, artifacts, api, BentoService
 from bentoml.adapters import DataframeInput
 from bentoml.frameworks.sklearn import SklearnModelArtifact
 
+
 @env(infer_pip_packages=True)
 @artifacts([SklearnModelArtifact('model')])
 class IrisClassifier(BentoService):
