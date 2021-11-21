@@ -133,7 +133,7 @@ async def get_orders() -> List[Order]:
     return orders
 
 
-@app.get("/order/{order_id}", description="주문 정보를 가져옵니다", response_model=Order)
+@app.get("/order/{order_id}", description="주문 정보를 가져옵니다")
 async def get_order(order_id: UUID) -> Union[Order, dict]:
     order = get_order_by_id(order_id=order_id)
     if not order:
