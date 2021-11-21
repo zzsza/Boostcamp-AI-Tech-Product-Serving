@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "zzsza",
+      "name": "Sung Yun Byeon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18207755?v=4",
+      "profile": "http://zzsza.github.io",
+      "contributions": [
+        "projectManagement",
+        "maintenance",
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Boostcamp-AI-Tech-Product-Serving",
+  "projectOwner": "zzsza",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
