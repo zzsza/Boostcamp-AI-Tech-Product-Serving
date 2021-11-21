@@ -51,6 +51,14 @@ def validate_uuid(val: T.Any) -> bool:
             "POST",
             {"files": get_test_image_input(filename="mask_input_2.jpg")},
         ),
+        (
+            "/order",
+            "POST",
+            [
+                ("files", get_test_image_input(filename="mask_input_1.jpg")),
+                ("files2", get_test_image_input(filename="mask_input_2.jpg")),
+            ],
+        ),
     ],
 )
 def test_online_serving_api_make_order_return_order_id(

@@ -1,6 +1,7 @@
+import asyncio
 from datetime import datetime
-from enum import Enum, IntEnum
-from typing import List, Optional, Union, Any, Dict, BinaryIO, IO
+from enum import IntEnum
+from typing import List, Optional, Union, Any, Dict
 from fastapi import FastAPI, File, UploadFile, BackgroundTasks
 from fastapi.param_functions import Depends
 from pydantic import BaseModel, Field
@@ -17,13 +18,23 @@ class Product(BaseModel):
     id: UUID = Field(default_factory=uuid4)
     name: str
     price: float
+    output: Any
+    created_at: datetime = Field(default_factory=datetime.now)
+    updated_at: datetime = Field(default_factory=datetime.now)
+
+    def update_output(self, output) -> ...:
+        ...
 
 
 class InferenceImageProduct(Product):
     name: str = "inference_image_product"
     price: float = 100.0
     input_image: UploadFile
-    result: Optional[List]
+    output: Optional[List]
+
+    def update_output(self, output) -> None:
+        self.output = output
+        self.updated_at = datetime.now()
 
     class Config:
         arbitrary_types_allowed = True
@@ -101,6 +112,7 @@ def update_order_by_id(order_id: UUID, order_update: OrderUpdate) -> Optional[Or
 async def get_prediction_result(order_id: UUID, model, config):
     order = get_order_by_id(order_id=order_id)
     order.update_status(status=OrderStatus.IN_PROGRESS)
+    await asyncio.sleep(3)
     for product in order.products:
         if not getattr(product, "input_image"):
             continue
@@ -109,7 +121,7 @@ async def get_prediction_result(order_id: UUID, model, config):
         inference_result = predict_from_image_byte(
             image_bytes=image_bytes, model=model, config=config
         )
-        product.result = inference_result
+        product.update_output(output=inference_result)
     order.update_status(status=OrderStatus.DONE)
     return update_order_by_id(
         order_id=order_id, order_update=OrderUpdate(products=order.products)
@@ -135,7 +147,7 @@ async def make_order(
     files: List[UploadFile] = File(...),
     model: MyEfficientNet = Depends(get_model),
     config: Dict[str, Any] = Depends(get_config),
-) -> Union[UUID, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
+) -> Union[UUID, dict]:
     new_order = Order(
         products=[InferenceImageProduct(input_image=file) for file in files],
         status=OrderStatus.PENDING,
