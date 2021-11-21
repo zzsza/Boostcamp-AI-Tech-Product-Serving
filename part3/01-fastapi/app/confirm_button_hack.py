@@ -27,8 +27,8 @@ def cache_on_button_press(label, **cache_kwargs):
     ...     st.error('Incorrect username or password')
     """
     internal_cache_kwargs = dict(cache_kwargs)
-    internal_cache_kwargs['allow_output_mutation'] = True
-    internal_cache_kwargs['show_spinner'] = False
+    internal_cache_kwargs["allow_output_mutation"] = True
+    internal_cache_kwargs["show_spinner"] = False
 
     def function_decorator(func):
         @functools.wraps(func)

@@ -42,7 +42,9 @@ def run_tasks_in_fastapi(app: FastAPI, tasks: List):
     with server.run_in_thread():
         responses = []
         for task in tasks:
-            response = requests.post("http://127.0.0.1:5000/task", data=json.dumps(task))
+            response = requests.post(
+                "http://127.0.0.1:5000/task", data=json.dumps(task)
+            )
             if not response.ok:
                 continue
             responses.append(response.json())
@@ -77,9 +79,12 @@ print(f"Simple Tasks: Took {(end_time - start_time).seconds}")
 app_2 = FastAPI()
 
 
-@app_2.post("/task",
-            status_code=202)  # 비동기 작업이 등록됐을 때, HTTP Response 202 (Accepted)를 보통 리턴합니다. https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202
-async def create_task_in_background(task_input: TaskInput, background_tasks: BackgroundTasks):
+@app_2.post(
+    "/task", status_code=202
+)  # 비동기 작업이 등록됐을 때, HTTP Response 202 (Accepted)를 보통 리턴합니다. https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202
+async def create_task_in_background(
+    task_input: TaskInput, background_tasks: BackgroundTasks
+):
     background_tasks.add_task(cpu_bound_task, task_input.wait_time)
     return "ok"
 
@@ -110,8 +115,12 @@ def cpu_bound_task_2(id_: UUID, wait_time: int):
 
 
 @app_3.post("/task", status_code=202)
-async def create_task_in_background_2(task_input: TaskInput2, background_tasks: BackgroundTasks):
-    background_tasks.add_task(cpu_bound_task_2, id_=task_input.id_, wait_time=task_input.wait_time)
+async def create_task_in_background_2(
+    task_input: TaskInput2, background_tasks: BackgroundTasks
+):
+    background_tasks.add_task(
+        cpu_bound_task_2, id_=task_input.id_, wait_time=task_input.wait_time
+    )
     return task_input.id_
 
 

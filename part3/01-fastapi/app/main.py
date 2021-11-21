@@ -1,6 +1,7 @@
 from datetime import datetime
-from typing import List, Optional, Union, Any, Dict
-from fastapi import FastAPI, File, UploadFile
+from enum import Enum, IntEnum
+from typing import List, Optional, Union, Any, Dict, BinaryIO, IO
+from fastapi import FastAPI, File, UploadFile, BackgroundTasks
 from fastapi.param_functions import Depends
 from pydantic import BaseModel, Field
 from uuid import UUID, uuid4
@@ -21,26 +22,41 @@ class Product(BaseModel):
 class InferenceImageProduct(Product):
     name: str = "inference_image_product"
     price: float = 100.0
+    input_image: UploadFile
     result: Optional[List]
+
+    class Config:
+        arbitrary_types_allowed = True
+
+
+class OrderStatus(IntEnum):
+    PENDING = 0
+    IN_PROGRESS = 1
+    DONE = 2
 
 
 class Order(BaseModel):
     id: UUID = Field(default_factory=uuid4)
     products: List[Product] = Field(default_factory=list)
+    status: OrderStatus
     created_at: datetime = Field(default_factory=datetime.now)
     updated_at: datetime = Field(default_factory=datetime.now)
 
     @property
-    def bill(self):
+    def bill(self) -> int:
         return sum([product.price for product in self.products])
 
-    def add_product(self, product: Product):
+    def add_product(self, product: Product) -> "Order":
         if product.id in [existing_product.id for existing_product in self.products]:
             return self
 
         self.products.append(product)
         self.updated_at = datetime.now()
         return self
+
+    def update_status(self, status: OrderStatus) -> None:
+        self.status = status
+        self.updated_at = datetime.now()
 
 
 class OrderUpdate(BaseModel):
@@ -82,6 +98,24 @@ def update_order_by_id(order_id: UUID, order_update: OrderUpdate) -> Optional[Or
     return updated_order
 
 
+async def get_prediction_result(order_id: UUID, model, config):
+    order = get_order_by_id(order_id=order_id)
+    order.update_status(status=OrderStatus.IN_PROGRESS)
+    for product in order.products:
+        if not getattr(product, "input_image"):
+            continue
+        input_image: UploadFile = product.input_image
+        image_bytes = await input_image.read()
+        inference_result = predict_from_image_byte(
+            image_bytes=image_bytes, model=model, config=config
+        )
+        product.result = inference_result
+    order.update_status(status=OrderStatus.DONE)
+    return update_order_by_id(
+        order_id=order_id, order_update=OrderUpdate(products=order.products)
+    ).id
+
+
 @app.get("/order", description="주문 리스트를 가져옵니다")
 async def get_orders() -> List[Order]:
     return orders
@@ -97,17 +131,18 @@ async def get_order(order_id: UUID) -> Union[Order, dict]:
 
 @app.post("/order", description="주문을 요청합니다")
 async def make_order(
+    background_tasks: BackgroundTasks,
     files: List[UploadFile] = File(...),
     model: MyEfficientNet = Depends(get_model),
     config: Dict[str, Any] = Depends(get_config),
 ) -> Union[UUID, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
-    products = []
-    for file in files:
-        image_bytes = await file.read()
-        inference_result = predict_from_image_byte(image_bytes=image_bytes, model=model, config=config)
-        product = InferenceImageProduct(result=inference_result)
-        products.append(product)
-    new_order = Order(products=products)
+    new_order = Order(
+        products=[InferenceImageProduct(input_image=file) for file in files],
+        status=OrderStatus.PENDING,
+    )
+    background_tasks.add_task(
+        get_prediction_result, order_id=new_order.id, model=model, config=config
+    )
     orders.append(new_order)
     return new_order.id
 

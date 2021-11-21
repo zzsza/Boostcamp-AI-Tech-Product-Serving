@@ -12,7 +12,9 @@ HERE = Path(__file__)
 TEST_INPUT_DIR = os.path.join(HERE.parent, "images")
 
 
-def get_test_image_input(filename: str, base_dir: str = TEST_INPUT_DIR) -> T.Tuple[str, T.BinaryIO, str]:
+def get_test_image_input(
+    filename: str, base_dir: str = TEST_INPUT_DIR
+) -> T.Tuple[str, T.BinaryIO, str]:
     if not os.path.isdir(base_dir):
         raise NotADirectoryError()
 
@@ -36,14 +38,27 @@ def validate_uuid(val: T.Any) -> bool:
     return str(uuid_obj) == val
 
 
-@pytest.mark.parametrize(["endpoint", "method", "req_body"], [
-    ('/order', 'POST', {"files": get_test_image_input(filename="mask_input_1.jpg")}),
-    ('/order', 'POST', {"files": get_test_image_input(filename="mask_input_2.jpg")}),
-])
-def test_online_serving_api_make_order_return_order_id(endpoint: str,
-                                                       method: str,
-                                                       req_body: T.Optional[T.Dict[str, T.Any]],
-                                                       client: TestClient):
+@pytest.mark.parametrize(
+    ["endpoint", "method", "req_body"],
+    [
+        (
+            "/order",
+            "POST",
+            {"files": get_test_image_input(filename="mask_input_1.jpg")},
+        ),
+        (
+            "/order",
+            "POST",
+            {"files": get_test_image_input(filename="mask_input_2.jpg")},
+        ),
+    ],
+)
+def test_online_serving_api_make_order_return_order_id(
+    endpoint: str,
+    method: str,
+    req_body: T.Optional[T.Dict[str, T.Any]],
+    client: TestClient,
+):
     # given
 
     # when

@@ -27,7 +27,9 @@ class MyEfficientNet(nn.Module):
 
     def __init__(self, num_classes: int = 1000):
         super(MyEfficientNet, self).__init__()
-        self.EFF = EfficientNet.from_pretrained("efficientnet-b4", in_channels=3, num_classes=num_classes)
+        self.EFF = EfficientNet.from_pretrained(
+            "efficientnet-b4", in_channels=3, num_classes=num_classes
+        )
 
     def forward(self, x) -> torch.Tensor:
         x = self.EFF(x)
@@ -57,7 +59,9 @@ def _transform_image(image_bytes: bytes):
     return transform(image=image_array)["image"].unsqueeze(0)
 
 
-def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet, config: Dict[str, Any]) -> List[str]:
+def predict_from_image_byte(
+    image_bytes: bytes, model: MyEfficientNet, config: Dict[str, Any]
+) -> List[str]:
     transformed_image = _transform_image(image_bytes)
     outputs = model.forward(transformed_image)
     _, y_hat = outputs.max(1)

@@ -14,7 +14,7 @@ ASSETS_DIR_PATH = os.path.join(Path(__file__).parent.parent.parent.parent, "asse
 
 st.set_page_config(layout="wide")
 
-root_password = 'password'
+root_password = "password"
 
 
 def main():
@@ -25,28 +25,25 @@ def main():
         image_bytes = uploaded_file.getvalue()
         image = Image.open(io.BytesIO(image_bytes))
 
-        st.image(image, caption='Uploaded Image')
+        st.image(image, caption="Uploaded Image")
         st.write("Classifying...")
 
-        files = [
-            ('files', (uploaded_file.name, image_bytes,
-                       uploaded_file.type))
-        ]
+        files = [("files", (uploaded_file.name, image_bytes, uploaded_file.type))]
         response = requests.post("http://localhost:8001/order", files=files)
         label = response.json()["products"][0]["result"]
-        st.write(f'label is {label}')
+        st.write(f"label is {label}")
 
 
-@cache_on_button_press('Authenticate')
+@cache_on_button_press("Authenticate")
 def authenticate(password) -> bool:
     print(type(password))
     return password == root_password
 
 
-password = st.text_input('password', type="password")
+password = st.text_input("password", type="password")
 
 if authenticate(password):
-    st.success('You are authenticated!')
+    st.success("You are authenticated!")
     main()
 else:
-    st.error('The password is invalid.')
+    st.error("The password is invalid.")

@@ -2,11 +2,7 @@ from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 
-items = {
-    1: "Boostcamp",
-    2: "AI",
-    3: "Tech"
-}
+items = {1: "Boostcamp", 2: "AI", 3: "Tech"}
 
 
 @app.get("/v1/{item_id}")
