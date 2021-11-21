@@ -28,6 +28,18 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "ahnsv",
+      "name": "humphrey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24207964?v=4",
+      "profile": "https://humphreyahn.dev/",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
