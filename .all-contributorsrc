@@ -52,6 +52,18 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "Ykmoon",
+      "name": "YkMoon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45195471?v=4",
+      "profile": "https://www.linkedin.com/in/ykmoon/",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
