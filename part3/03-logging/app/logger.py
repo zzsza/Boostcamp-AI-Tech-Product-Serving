@@ -63,10 +63,10 @@ class BigqueryHandler(StreamHandler):
 
 
 def get_ml_logger(
-    config_path: os.PathLike,
-    credential_json_path: os.PathLike,
-    table_ref: bigquery.TableReference,
-    logger_name: str = "MLLogger",
+        config_path: Union[os.PathLike, str],
+        credential_json_path: Union[os.PathLike, str],
+        table_ref: Union[bigquery.TableReference, str],
+        logger_name: str = "MLLogger",
 ) -> logging.Logger:
     """
     MLLogger를 가져옵니다
@@ -106,10 +106,15 @@ def get_ml_logger(
 
 
 if __name__ == "__main__":
+    from pathlib import Path
+
+    here = Path(__file__)
+    config_yaml_path = os.path.join(here.parent, "config.yaml")
+
     logger = get_ml_logger(
-        config_path=os.getenv("LOGGING_CONFIG_YAML_PATH"),
-        credential_json_path=os.getenv("LOGGING_BIGQUERY_CREDENTIAL_JSON_PATH"),
-        table_ref=os.getenv("LOGGING_BIGQUERY_TABLE_REF"),
+        config_path=config_yaml_path,
+        credential_json_path="서비스 계정 JSON 파일 경로",  # FIXME
+        table_ref="빅쿼리 테이블 주소",  # FIXME: e.g., boostcamp-ai-tech-serving.online_serving_logs.mask_classification
     )
     for _ in range(10):
         logger.info("hello world")
