@@ -63,10 +63,10 @@ class BigqueryHandler(StreamHandler):
 
 
 def get_ml_logger(
-        config_path: Union[os.PathLike, str],
-        credential_json_path: Union[os.PathLike, str],
-        table_ref: Union[bigquery.TableReference, str],
-        logger_name: str = "MLLogger",
+    config_path: Union[os.PathLike, str],
+    credential_json_path: Union[os.PathLike, str],
+    table_ref: Union[bigquery.TableReference, str],
+    logger_name: str = "MLLogger",
 ) -> logging.Logger:
     """
     MLLogger를 가져옵니다
