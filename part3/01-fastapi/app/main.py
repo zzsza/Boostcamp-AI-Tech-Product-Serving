@@ -100,7 +100,7 @@ async def make_order(
     files: List[UploadFile] = File(...),
     model: MyEfficientNet = Depends(get_model),
     config: Dict[str, Any] = Depends(get_config),
-) -> Union[Order, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
+) -> Union[UUID, dict]:  # TODO(humphrey): multiple file upload를 가능하게 한다
     products = []
     for file in files:
         image_bytes = await file.read()
@@ -109,7 +109,7 @@ async def make_order(
         products.append(product)
     new_order = Order(products=products)
     orders.append(new_order)
-    return new_order
+    return new_order.id
 
 
 @app.patch("/order/{order_id}", description="주문을 수정합니다")

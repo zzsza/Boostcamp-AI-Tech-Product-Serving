@@ -1,4 +1,6 @@
 import io
+import os.path
+from pathlib import Path
 from typing import List, Dict, Any
 
 import albumentations
@@ -10,6 +12,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
 from efficientnet_pytorch import EfficientNet
+
+HERE = Path(__file__)
+ASSETS_DIR = os.path.join(HERE.parent.parent.parent.parent, "assets")
+MODEL_PTH_PATH = os.path.join(ASSETS_DIR, "mask_task/model.pth")
+CONFIG_PATH = os.path.join(ASSETS_DIR, "mask_task/config.yaml")
 
 
 class MyEfficientNet(nn.Module):
@@ -28,7 +35,7 @@ class MyEfficientNet(nn.Module):
         return x
 
 
-def get_model(model_path: str = "../../assets/mask_task/model.pth") -> MyEfficientNet:
+def get_model(model_path: str = MODEL_PTH_PATH) -> MyEfficientNet:
     """Model을 가져옵니다"""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = MyEfficientNet(num_classes=18).to(device)
@@ -57,7 +64,7 @@ def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet, config: D
     return config["classes"][y_hat.item()]
 
 
-def get_config(config_path: str = "../../assets/mask_task/config.yaml"):
+def get_config(config_path: str = CONFIG_PATH):
     import yaml
 
     with open(config_path, "r") as f:
