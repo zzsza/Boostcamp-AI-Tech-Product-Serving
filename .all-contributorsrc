@@ -16,6 +16,18 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "thejungwon",
+      "name": "Jungwon Seo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12247655?v=4",
+      "profile": "https://codethief.io",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
