@@ -3,19 +3,68 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-부스트캠프 AI Tech - Product Serving 자료
+- [부스트캠프 AI Tech](https://boostcamp.connect.or.kr/program_ai.html) - Product Serving 자료
+
+
+<br />
+<br />
+
+---
+
+## Repository 구조
+- part1(MLOps 개론, Model Serving, 머신러닝 프로젝트 라이프 사이클은 별도의 코드가 없으며, part2 ~ part4는 강의 자료에서 사용한 코드가 저장되어 있습니다
+- `assets`엔 예제로 사용할 Mask Classification Model이 저장되어 있습니다
+  - 만약 실무였다면 part 아래에 있는 폴더들에 같이 저장되는 것이 조금 더 좋지만, 교육용 Github Repo라서 중복 저장을 피하기 위해 이렇게 저장했습니다
+
+
+```
+├── README.md
+├── .github/workflows : Github Action Workflow
+├── assets : Mask Classification Model
+│   └── mask_task
+├── part2
+│   ├── 01-voila
+│   ├── 02-streamlit
+│   └── 04-cicd
+├── part3
+│   ├── 01-fastapi
+│   ├── 02-docker
+│   ├── 03-logging
+│   └── 04-mlflow
+└── part4
+    ├── 01-bentoml
+    └── 02-airflow
+```
+
+
+<br />
+
+## 추천 학습 방식
+- 강의를 수강한 후, 강의에서 나온 공식 문서를 보며 코드를 작성합니다
+- 강의에서 활용한 코드를 그대로 복사 붙여넣기하지 말고, **직접 타이핑해주세요**
+  - 오류를 많이 경험하고, 오류가 발생했다면 그 이유와 해결 방법을 별도로 기록해주세요
+- 강의에서 진행된 코드를 더 좋게 개선해도 좋아요 :)
+
+
+<br />
+
+## 만약 이슈가 생겼다면
+- 슬랙 채널에서 어떤 상황에서 어떤 오류가 발생했는지 공유해주세요! 같이 해결해보아요
+
+
+<br />
 
 ## 협업 규칙
 
-- 커밋 메시지 컨벤션은 [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)을 따릅니다. 
-  - [commitizen](https://github.com/commitizen-tools/commitizen)을 사용하면 더욱 쉽게 커밋할 수 있습니다.
-- 작업은 기본적으로 별도의 브랜치를 생성하여 작업합니다. 작업이 완료되면 PR로 리뷰 받습니다.
-- PR 리뷰 후 머지 방식은 Squash & Merge를 따릅니다. 
-  - Merge 전에 PR 제목을 되도록이면 convetional commit 형태로 만들어주세요.
+- 커밋 메시지 컨벤션은 [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)을 따릅니다 
+  - [commitizen](https://github.com/commitizen-tools/commitizen)을 사용하면 더욱 쉽게 커밋할 수 있습니다
+- 작업은 기본적으로 별도의 브랜치를 생성하여 작업합니다. 작업이 완료되면 PR로 리뷰 받습니다
+- PR 리뷰 후 머지 방식은 Squash & Merge를 따릅니다
+  - Merge 전에 PR 제목을 되도록이면 convetional commit 형태로 만들어주세요
 
-## 참고 자료
 
-- [Image Classification Github](https://github.com/MoMentum99/pstage_01_image_classification)
+
+<br />
 
 ## Contributors ✨
 
