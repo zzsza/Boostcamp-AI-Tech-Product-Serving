@@ -40,6 +40,18 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "heumsi",
+      "name": "heumsi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31306282?v=4",
+      "profile": "http://dailyheumsi.tistory.com",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,

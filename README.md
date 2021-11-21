@@ -1,6 +1,6 @@
 # Boostcamp-AI-Tech-Product-Serving
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 부스트캠프 AI Tech - Product Serving 자료
@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://zzsza.github.io"><img src="https://avatars.githubusercontent.com/u/18207755?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sung Yun Byeon</b></sub></a><br /><a href="#projectManagement-zzsza" title="Project Management">📆</a> <a href="#maintenance-zzsza" title="Maintenance">🚧</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=zzsza" title="Code">💻</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=zzsza" title="Documentation">📖</a></td>
     <td align="center"><a href="https://codethief.io"><img src="https://avatars.githubusercontent.com/u/12247655?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jungwon Seo</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=thejungwon" title="Code">💻</a> <a href="#content-thejungwon" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=thejungwon" title="Documentation">📖</a> <a href="#example-thejungwon" title="Examples">💡</a></td>
     <td align="center"><a href="https://humphreyahn.dev/"><img src="https://avatars.githubusercontent.com/u/24207964?v=4?s=100" width="100px;" alt=""/><br /><sub><b>humphrey</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=ahnsv" title="Code">💻</a> <a href="#content-ahnsv" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=ahnsv" title="Documentation">📖</a> <a href="#example-ahnsv" title="Examples">💡</a></td>
+    <td align="center"><a href="http://dailyheumsi.tistory.com"><img src="https://avatars.githubusercontent.com/u/31306282?v=4?s=100" width="100px;" alt=""/><br /><sub><b>heumsi</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=heumsi" title="Code">💻</a> <a href="#content-heumsi" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=heumsi" title="Documentation">📖</a> <a href="#example-heumsi" title="Examples">💡</a></td>
   </tr>
 </table>
 
