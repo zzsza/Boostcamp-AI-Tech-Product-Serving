@@ -42,7 +42,10 @@ def get_models():
 @app.get("/model/{model_id}")
 def get_model(model_id: int):
     # TODO: model 리스트로 부터 model_id가 일치하는 model을 가져와 리턴합니다
-    pass
+    for model in models:
+        if model.id == model_id:
+            return model
+    # TODO: 일치하는 model_id가 없을 때 404 에러와 에러 메시지를 추가해봅니다.
 
 
 @app.get("/model")
@@ -58,8 +61,10 @@ def create_model(new_model: CreateModelIn):
 
 
 @app.patch("/model/{model_id}")
-def update_model(update_data: UpdateModelIn):
+def update_model(model_id: int, update_data: UpdateModelIn):
     # TODO: 매칭되는 model_id를 가지고 있는 모델을 업데이트합니다
+
+    # TODO: 매칭 되는 id를 가진 모델이 없을 때 404 에러와 메시지를 추가합니다.
     pass
 
 
