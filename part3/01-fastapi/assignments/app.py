@@ -54,13 +54,13 @@ def get_model_by_name(model_name: str):
     pass
 
 
-@app.post("/model") # TODO: CreateModelOut이라는 class를 만들고, 새로운 모델의 id 만을 응답하도록 바꿔보기
+@app.post("/model")  # TODO: CreateModelOut이라는 class를 만들고, 새로운 모델의 id 만을 응답하도록 바꿔보기
 def create_model(new_model: CreateModelIn):
     # TODO: model을 새로 만들고 model 리스트에 저장합니다
     pass
 
 
-@app.patch("/model/{model_id}") # TODO: UpdateModelOut이라는 class를 만들어서, 업데이트된 모델의 id를 제외한 모든 정보 보여주도록 바꿔보기
+@app.patch("/model/{model_id}")  # TODO: UpdateModelOut이라는 class를 만들어서, 업데이트된 모델의 id를 제외한 모든 정보 보여주도록 바꿔보기
 def update_model(model_id: int, update_data: UpdateModelIn):
     # TODO: 매칭되는 model_id를 가지고 있는 모델을 업데이트합니다
 
@@ -68,7 +68,13 @@ def update_model(model_id: int, update_data: UpdateModelIn):
     pass
 
 
-@app.delete("/model/{model_id}") # TODO: status code를 204로 바꿔보기
+@app.delete("/model/{model_id}")  # TODO: status code를 204로 바꿔보기
 def delete_model(model_id: int):
     # TODO: 매칭되는 model_id를 가지고 있는 모델을 model 리스트로 부터 삭제합니다
     pass
+
+
+if __name__ == '__main__':
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0")
