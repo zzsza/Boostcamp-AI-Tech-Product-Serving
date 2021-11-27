@@ -45,6 +45,12 @@ def get_model(model_id: int):
     pass
 
 
+@app.get("/model")
+def get_model_by_name(model_name: str):
+    # TODO: model 리스트로 부터 model_name이 일치하는 model을 가져와 리턴합니다
+    pass
+
+
 @app.post("/model")
 def create_model(new_model: CreateModelIn):
     # TODO: model을 새로 만들고 model 리스트에 저장합니다
