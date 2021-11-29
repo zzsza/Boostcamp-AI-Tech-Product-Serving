@@ -17,6 +17,7 @@ torchvision = "^0.10.1"
 requests = "^2.26.0"
 gunicorn = "^20.1.0"
 streamlit = "^1.2.0"
+opencv-python-headless = "4.5.1.48"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
