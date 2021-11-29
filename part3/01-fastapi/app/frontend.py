@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 
 import requests
-import yaml
 from PIL import Image
 
 import streamlit as st
@@ -28,6 +27,9 @@ def main():
         st.image(image, caption='Uploaded Image')
         st.write("Classifying...")
 
+        # 기존 stremalit 코드
+        # _, y_hat = get_prediction(model, image_bytes)
+        # label = config['classes'][y_hat.item()]
         files = [
             ('files', (uploaded_file.name, image_bytes,
                        uploaded_file.type))
@@ -39,7 +41,6 @@ def main():
 
 @cache_on_button_press('Authenticate')
 def authenticate(password) -> bool:
-    print(type(password))
     return password == root_password
 
 
