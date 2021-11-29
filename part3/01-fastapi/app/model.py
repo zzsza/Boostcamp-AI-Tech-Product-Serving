@@ -18,7 +18,7 @@ class MyEfficientNet(nn.Module):
     한번에 18개의 Class를 예측하는 형태의 Model입니다.
     """
 
-    def __init__(self, num_classes: int = 1000):
+    def __init__(self, num_classes: int = 18):
         super(MyEfficientNet, self).__init__()
         self.EFF = EfficientNet.from_pretrained("efficientnet-b4", in_channels=3, num_classes=num_classes)
 
@@ -50,7 +50,7 @@ def _transform_image(image_bytes: bytes):
     return transform(image=image_array)["image"].unsqueeze(0)
 
 
-def predict_from_image_byte(image_bytes: bytes, model: MyEfficientNet, config: Dict[str, Any]) -> List[str]:
+def predict_from_image_byte(model: MyEfficientNet, image_bytes: bytes, config: Dict[str, Any]) -> List[str]:
     transformed_image = _transform_image(image_bytes)
     outputs = model.forward(transformed_image)
     _, y_hat = outputs.max(1)
