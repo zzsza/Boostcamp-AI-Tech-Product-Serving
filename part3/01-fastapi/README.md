@@ -1,4 +1,4 @@
-# 01-fastapi
+# FastAPI
 FastAPI을 이용한 모델 온라인 서빙 
 
 ## Getting Started
@@ -58,11 +58,9 @@ FastAPI을 이용한 모델 온라인 서빙
       ```  
    4. Frontend(Streamlit)와 Server를 같이 실행합니다
       ```shell
-      $ make -j 2 run_app
+      make -j 2 run_app
       ```
 
-## Q&A
-질문 사항 및 버그 관련한 내용은 Issue로 남겨주세요!
 
 ## Reference
 - [나의 파이썬 환경 구축기 2 - pyenv + poetry](https://dailyheumsi.tistory.com/244?category=799302)
