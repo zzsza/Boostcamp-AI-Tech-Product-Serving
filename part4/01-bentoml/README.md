@@ -1,14 +1,16 @@
 # BentoML
 
-## Installation
+
+
+## 환경 설정
 ```shell
-$ poetry install
+poetry install
 # or
 $ pip install -r requirements.txt
 ```
 
 ## Frontend + Backend
 ```shell
-$ bentoml serve MaskAPIService:latest
-$ python -m streamlit run app/frontend.py
+bentoml serve MaskAPIService:latest
+python -m streamlit run app/frontend.py
 ```

@@ -1,0 +1,6 @@
+streamlit==1.1.0
+albumentations==1.1.0
+torch==1.10.0
+torchvision==0.11.1
+efficientnet-pytorch==0.7.1
+PyYAML==6.0
