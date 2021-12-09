@@ -1,5 +1,4 @@
 #!/bin/bash
 git pull origin main
-PWD=`pwd`
-. $PWD/venv/bin/activate
-pip install -r requirements.txt
+`conda activate model_serving`
+pip3 install -r requirements.txt
