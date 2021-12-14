@@ -8,3 +8,6 @@ run_client:
 	python3 -m streamlit run app/frontend.py
 
 run_app: run_server run_client
+
+run_assignment_tests:
+	poetry run pytest assignments/app_test.py
