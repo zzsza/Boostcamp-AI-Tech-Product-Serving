@@ -1,0 +1,1 @@
+{'kernel': ('linear', 'rbf'), 'C': [1, 10]}

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/jsy/Desktop/dev/Boostcamp-AI-Tech-Product-Serving/part3/04-mlflow/mlruns/1/f8b64606c24d4ddda0a8cf097557cdaf/artifacts
+end_time: 1645156307216
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: f8b64606c24d4ddda0a8cf097557cdaf
+run_uuid: f8b64606c24d4ddda0a8cf097557cdaf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1645156288527
+status: 3
+tags: []
+user_id: jsy

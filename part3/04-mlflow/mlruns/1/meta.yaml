@@ -1,0 +1,4 @@
+artifact_location: file:///C:/Users/jsy/Desktop/dev/Boostcamp-AI-Tech-Product-Serving/part3/04-mlflow/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: my-first-experiment
