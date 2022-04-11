@@ -51,7 +51,8 @@ def _transform_image(image_bytes: bytes):
 
 
 def predict_from_image_byte(model: MyEfficientNet, image_bytes: bytes, config: Dict[str, Any]) -> List[str]:
-    transformed_image = _transform_image(image_bytes)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    transformed_image = _transform_image(image_bytes).to(device)
     outputs = model.forward(transformed_image)
     _, y_hat = outputs.max(1)
     return config["classes"][y_hat.item()]
