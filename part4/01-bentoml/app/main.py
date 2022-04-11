@@ -67,7 +67,9 @@ class MaskAPIService(BentoService):
 
     @api(input=ImageInput(), output=JsonOutput())
     def predict(self, image_array: Array):
-        transformed_image = self.transform(image_array)
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    
+        transformed_image = self.transform(image_array).to(device)
         outputs = self.artifacts.model.forward(transformed_image)
         _, y_hats = outputs.max(1)
         return self.get_label_from_class(class_=y_hats.item())
