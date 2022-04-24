@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
+from airflow.operators.bash import BashOperator
 from datetime import datetime, timedelta
 
 default_args = {
@@ -33,7 +33,3 @@ task3 = BashOperator(
 
 task1 >> task2
 task1 >> task3
-
-
-# Airflow DAG 생성하기
-# hello_world.py
