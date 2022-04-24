@@ -1,215 +1,55 @@
-# Airflow
+## Airflow
+- Airflow를 처음 학습할 때는 Local 환경에서 DAG 작성에 집중하시는 것을 추천합니다
+    - 그 후, 익숙해지면 Docker 환경에서 설정하고 DAG 작성을 해보시는 것을 추천합니다
+    - Docker 환경을 설정하는 방법은 [Docker README](https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/blob/main/part4/02-airflow/docker-readme.md)에 작성해두었습니다
+    - Docker 환경에선 VS Code Server를 활용하는 것도 추가했으니, 이 부분도 꼭 보시는 것을 추천드립니다
 
-## 실행 방법
 
-### Docker
+---
 
-#### Docker Network 생성하기
+### 01-bash-operator
+- 배우는 내용
+    - Airflow에서 Bash 명령어 실행
+    - Airflow Task 병렬(Parallel) 실행
+    - Airflow 기초 내용 
 
-Airflow의 모든 컴포넌트가 Docker 컨테이너로 배포될텐데, 이 컨테이너들간의 통신할 네트워크를 먼저 생성합니다.
 
-다음 명령어로 Docker Network를 생성합니다.
+### 02-python-operator
+- 배우는 내용
+    - Airflow에서 Python 함수 실행
 
-```bash
-$ docker network create airflow
-```
+### 03-python-operator-with-context
+- 배우는 내용
+    - Airflow에서 Python 함수 실행
+    - Airflow에서 DAG이 실행되는 시간과 연관해서 실행하는 방법에 대해 학습
+    - 예 : 20220402 날짜로 실행하면 해당 날짜의 데이터를 처리하고, 20220403 날짜로 실행하면 해당 날짜의 데이터를 처리
 
-잘 생성되었는지 다음처럼 확인해볼 수 있습니다.
+### 04-python-operator-with-jinja
+- 배우는 내용
+    - 03에서 학습한 내용을 Jinja Template을 활용해 구현
+- 참고 자료
+    - [Airflow Jinja Template](https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html)
 
-```bash
-$ docker network ls
-NETWORK ID     NAME      DRIVER    SCOPE
-b8f5eb31452e   airflow   bridge    local
-```
 
-#### Meta Database 배포하기
+### 05-simple-etl
+- 배우는 내용
+    - 간단한 데이터 처리 ETL(Extract, Transform, Load) 파이프라인 학습
+    - 어떤 흐름으로 데이터를 처리하는지 가이드
+    - Airflow Provider 패키지 설치
+    - Airflow Connection에 GCP Service Account 설정하기
+- 시나리오
+    - 매일 아침 10시에 Google Cloud Storage에 CSV 파일이 저장
+    - CSV 파일을 데이터 웨어하우스인 BigQuery에 Load
+    - Load한 데이터에 SQL 쿼리문을 실행해서 별도의 집계 Table로 저장
+    - 매일 작업 실행
 
-Meta Database로 PostgreSQL를 사용하겠습니다.
 
-:::tip
-만약 이미 배포하여 사용 중인 Database가 있다면, 이 작업은 스킵하셔도 좋습니다.
-:::
-
-Postgres 컨테이너에 Volume 마운트할 디렉토리를 다음처럼 만들어둡니다.
-
-```bash
-$ mkdir data
-```
-
-다음 명령어로 Postgres 컨테이너를 실행합니다.
-
-```bash
-$ docker run \
-  --name airflow-database \
-  -d \
-  --network airflow \
-  -v $(pwd)/data:/var/lib/postgresql/data \
-  -e POSTGRES_USER=airflow \
-  -e POSTGRES_PASSWORD=1234 \
-  postgres:13
-```
-
-컨테이너가 제대로 배포되었는지 다음처럼 확인할 수 있습니다.
-
-```bash
-$ docker ps
-
-CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS              PORTS                    NAMES
-c0b60f349279   postgres:13   "docker-entrypoint.s…"   3 minutes ago   Up About a minute   5432/tcp   airflow-database
-```
-
-#### Meta Database 초기화 하기
-
-다음 명령어로 Meta Database를 초기화합니다.
-
-```bash
-$ docker run \
-  --name airflow-init \
-  --network airflow \
-  --entrypoint /bin/bash \
-  -e AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow \
-  apache/airflow:2.2.3-python3.8 \
-  -c " \
-    airflow db init && \
-    airflow users create \
-      --username admin \
-      --password 1234 \
-      --firstname heumsi \
-      --lastname jeon \
-      --role Admin \
-      --email heumsi@naver.com \
-  "
-```
-
-#### Scheduler 배포하기
-
-다음 명령어로 Scheduler를 배포합니다.
-
-```bash
-$ docker run \
-  --name airflow-scheduler \
-  --network airflow \
-  -d \
-  -e AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow \
-  -e AIRFLOW__CORE__EXECUTOR=LocalExecutor \
-  -v $PWD/dags:/opt/airflow/dags \
-  apache/airflow:2.2.3-python3.8 \
-  airflow scheduler
-```
-
-컨테이너가 제대로 배포되었는지 다음처럼 확인할 수 있습니다.
-
-```bash
-$ docker ps
-
-CONTAINER ID   IMAGE                            COMMAND                  CREATED          STATUS          PORTS      NAMES
-f2ac94182d39   apache/airflow:2.2.3-python3.8   "/usr/bin/dumb-init …"   45 seconds ago   Up 44 seconds   8080/tcp   airflow-scheduler
-...
-```
-
-#### Webserver 배포하기
-
-다음 명령어로 Webserver를 배포합니다.
-
-```bash
-$ docker run \
-  --name airflow-webserver \
-  --network airflow \
-  -d \
-  -p 8080:8080 \
-  -e AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow \
-  -v $PWD/dags:/opt/airflow/dags \
-  apache/airflow:2.2.3-python3.8 \
-  airflow webserver
-```
-
-```bash
-$ docker ps
-
-CONTAINER ID   IMAGE                            COMMAND                  CREATED          STATUS          PORTS      NAMES
-e8dd306789f6   apache/airflow:2.2.3-python3.8   "/usr/bin/dumb-init …"   45 seconds ago   Up 41 seconds   0.0.0.0:8080->8080/tcp   airflow-webserver...
-...
-```
-
-#### Code Server 배포하기
-
-Code Server는 VSCode의 Web Browser 버전입니다.
-서버에 직접 접속하여 DAG 파일을 작성하지 않고, 이 Code Server를 이용하여 작성할 수 있도록 해봅시다.
-
-다음처럼 Docker 컨테이너로 배포합니다. 이 때 `dags/` 디렉토리를 마운트합니다.
-
-```bash
-$ docker run -it --name code-server \
-    --name airflow-code-server \
-    -d \
-    -v "$(pwd)/dags:/home/coder/project" \
-    -p 8888:8888 \
-    -e PASSWORD=1234 \
-    -e HOST=0.0.0.0 \
-    -e PORT=8888 \
-    codercom/code-server:4.0.2
-```
-
-컨테이너가 제대로 배포되었는지 다음처럼 확인할 수 있습니다.
-
-```bash
-$ docker ps
-
-CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS                    NAMES
-88608ae21d39   codercom/code-server:latest   "/usr/bin/entrypoint…"   7 seconds ago   Up 6 seconds   8080/tcp, 0.0.0.0:8888->8888/tcp   airflow-code-server
-```
-
-#### 정리
-
-배포한 모든 컨테이너를 확인해보면 다음과 같습니다.
-
-```bash
-$ docker ps
-
-CONTAINER ID   IMAGE                            COMMAND                  CREATED              STATUS              PORTS                              NAMES
-e8dd306789f6   apache/airflow:2.2.3-python3.8   "/usr/bin/dumb-init …"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp             airflow-webserver
-bb7e13d1f4c5   apache/airflow:2.2.3-python3.8   "/usr/bin/dumb-init …"   4 minutes ago        Up 4 minutes        8080/tcp                           airflow-scheduler
-42736f3bf287   postgres:13                      "docker-entrypoint.s…"   5 minutes ago        Up 5 minutes        5432/tcp                           airflow-database
-88608ae21d39   codercom/code-server:latest      "/usr/bin/entrypoint…"   7 seconds ago        Up 6 seconds        8080/tcp, 0.0.0.0:8888->8888/tcp   airflow-code-server
-```
-
-### Docker-compose
-
-아래 명령어로 Docker Compose를 실행합니다.
-
-```bash
-$ docker-compose up
-```
-
-배포한 모든 컨테이너를 확인해보면 다음과 같습니다.
-
-```bash
-$ docker-compose ps
-
-      Name                     Command               State            Ports
-------------------------------------------------------------------------------------
-airflow-code-server   /usr/bin/entrypoint.sh --b ... Up       8080/tcp, 0.0.0.0:8888->8888/tcp
-airflow-database    docker-entrypoint.sh postgres    Up       5432/tcp
-airflow-init        /bin/bash -c  \                  Exit 0
-                      airflow  ...
-airflow-scheduler   /usr/bin/dumb-init -- /ent ...   Up       8080/tcp
-airflow-webserver   /usr/bin/dumb-init -- /ent ...   Up       0.0.0.0:8080->8080/tcp
-```
-
-## 사용 방법
-
-### Airflow Webserver
-
-브라우저에서 `http://localhost:8080` 에 접속하면 다음처럼 Airflow Webserver 화면을 볼 수 있습니다.
-
-![airflow-webserver](./assets/images/airflow-webserver.png)
-
-초기 계정 정보는 `admin` / `1234` 입니다.
-
-### Code Server
-
-브라우저에서 `http://localhost:8888` 에 접속하면 다음처럼 Code Server 화면을 볼 수 있습니다.
-
-![code-server](./assets/images/code-server.png)
-
-초기 비밀번호는 `1234` 입니다.
+### 추가 학습 자료
+- Local에서 위 실습을 모두 완료했다면, Docker 환경에서 실행해보는 것을 추천합니다(강의에서는 따로 다루진 않지만 꼭 실행해보세요) - [Docker README](https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/blob/main/part4/02-airflow/docker-readme.md)
+- 그 이후엔 멘토 전시흠님이 만드신 [Apache Airflow Tutorials for Beginner](https://heumsi.github.io/apache-airflow-tutorials-for-beginner/)을 처음부터 보면서 따라가시면 Airflow를 더 잘 이해할 수 있을거에요 :) 
+- 꼭 해보길 추천하는 부분(검색해서 추가 학습해서 개인 블로그에 정리하면 Best)
+    - Airflow Variables
+    - Airflow Task Fail인 경우 슬랙 메세지 보내기
+    - 조건에 따라 다른 함수 실행하기 : BranchPythonOperator
+    - Task 끼리 데이터를 주고 받아야 하는 경우 : XCom
+- [Apache Airflow 기반의 데이터 파이프라인](http://www.yes24.com/Product/Goods/107878326) 이 책도 매우 추천합니다! :) 
