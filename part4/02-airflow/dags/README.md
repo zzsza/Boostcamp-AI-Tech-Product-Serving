@@ -1,0 +1,49 @@
+## Airflow DAG
+- Airflow 실습 DAG
+
+
+
+### 01-bash-operator
+- 배우는 내용
+    - Airflow에서 Bash 명령어 실행
+    - Airflow Task 병렬(Parallel) 실행
+    - Airflow 기초 내용 
+
+
+### 02-python-operator
+- 배우는 내용
+    - Airflow에서 Python 함수 실행
+
+### 03-python-operator-with-context
+- 배우는 내용
+    - Airflow에서 Python 함수 실행
+    - Airflow에서 DAG이 실행되는 시간과 연관해서 실행하는 방법에 대해 학습
+    - 예 : 20220402 날짜로 실행하면 해당 날짜의 데이터를 처리하고, 20220403 날짜로 실행하면 해당 날짜의 데이터를 처리
+
+### 04-python-operator-with-jinja
+- 배우는 내용
+    - 03에서 학습한 내용을 Jinja Template을 활용해 구현
+- 참고 자료
+    - [Airflow Jinja Template](https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html)
+
+
+### 05-simple-etl
+- 배우는 내용
+    - 간단한 데이터 처리 ETL(Extract, Transform, Load) 파이프라인 학습
+    - 어떤 흐름으로 데이터를 처리하는지 가이드
+    - Airflow Provider 패키지 설치
+    - Airflow Connection에 GCP Service Account 설정하기
+- 시나리오
+    - 매일 아침 10시에 Google Cloud Storage에 CSV 파일이 저장
+    - CSV 파일을 데이터 웨어하우스인 BigQuery에 Load
+    - Load한 데이터에 SQL 쿼리문을 실행해서 별도의 집계 Table로 저장
+    - 매일 작업 실행
+
+
+### 추가 학습 자료
+- 위 실습을 모두 완료했다면, 멘토이신 전시흠님이 만드신 [Apache Airflow Tutorials for Beginner](https://heumsi.github.io/apache-airflow-tutorials-for-beginner/)을 처음부터 보면서 따라가시면 Airflow를 더 잘 이해할 수 있을거에요 :) 
+- 꼭 해보길 추천하는 부분(검색해서 추가 학습해서 개인 블로그에 정리하면 Best)
+    - Airflow Variables
+    - Airflow Task Fail인 경우 슬랙 메세지 보내기
+    - 조건에 따라 다른 함수 실행하기 : BranchPythonOperator
+    - Task 끼리 데이터를 주고 받아야 하는 경우 : XCom
