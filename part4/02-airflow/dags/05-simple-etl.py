@@ -1,7 +1,8 @@
 from airflow import DAG
 from datetime import datetime, timedelta
-from airflow.contrib.operators.gcs_to_bq import GoogleCloudStorageToBigQueryOperator
-from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+
+from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
+from airflow.providers.google.cloud.operators.bigquery import BigQueryExecuteQueryOperator
 
 # Google Cloud Provider 추가 설치가 필요합니다
   # pip3 install apache-airflow-providers-google
@@ -29,7 +30,7 @@ dag = DAG('simple_etl_storage_to_bigquery',
 execution_date = '{{ ds_nodash }}'
 
 
-storage_to_bigquery_task = GoogleCloudStorageToBigQueryOperator(
+storage_to_bigquery_task = GCSToBigQueryOperator(
     dag=dag,
     google_cloud_storage_conn_id='google_cloud_default',
     bigquery_conn_id='google_cloud_default',
@@ -50,7 +51,7 @@ FROM `{PROJECT_ID}.temp.bike_{execution_date}`
 GROUP BY dummy_date, start_station_id, end_station_id
 """
 
-query_task = BigQueryOperator(
+query_task = BigQueryExecuteQueryOperator(
         dag=dag,
         task_id="query_to_table",
         bigquery_conn_id='google_cloud_default',
