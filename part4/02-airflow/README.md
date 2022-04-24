@@ -92,6 +92,7 @@ $ docker run \
   -d \
   -e AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow \
   -e AIRFLOW__CORE__EXECUTOR=LocalExecutor \
+  -v $PWD/dags:/opt/airflow/dags \
   apache/airflow:2.2.3-python3.8 \
   airflow scheduler
 ```
@@ -117,6 +118,7 @@ $ docker run \
   -d \
   -p 8080:8080 \
   -e AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow \
+  -v $PWD/dags:/opt/airflow/dags \
   apache/airflow:2.2.3-python3.8 \
   airflow webserver
 ```
