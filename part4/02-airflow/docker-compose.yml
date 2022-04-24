@@ -70,7 +70,7 @@ services:
     container_name: airflow-code-server
     depends_on:
       - airflow-init
-    image: codercom/code-server:4.0.2
+    image: codercom/code-server:4.0.1
     environment:
       - PASSWORD=1234
       - HOST=0.0.0.0
