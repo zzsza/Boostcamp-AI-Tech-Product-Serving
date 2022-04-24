@@ -31,19 +31,6 @@
     - [Airflow Jinja Template](https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html)
 
 
-### 05-simple-etl
-- 배우는 내용
-    - 간단한 데이터 처리 ETL(Extract, Transform, Load) 파이프라인 학습
-    - 어떤 흐름으로 데이터를 처리하는지 가이드
-    - Airflow Provider 패키지 설치
-    - Airflow Connection에 GCP Service Account 설정하기
-- 시나리오
-    - 매일 아침 10시에 Google Cloud Storage에 CSV 파일이 저장
-    - CSV 파일을 데이터 웨어하우스인 BigQuery에 Load
-    - Load한 데이터에 SQL 쿼리문을 실행해서 별도의 집계 Table로 저장
-    - 매일 작업 실행
-
-
 ### 추가 학습 자료
 - Local에서 위 실습을 모두 완료했다면, Docker 환경에서 실행해보는 것을 추천합니다(강의에서는 따로 다루진 않지만 꼭 실행해보세요) - [Docker README](https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/blob/main/part4/02-airflow/docker-readme.md)
 - 그 이후엔 멘토 전시흠님이 만드신 [Apache Airflow Tutorials for Beginner](https://heumsi.github.io/apache-airflow-tutorials-for-beginner/)을 처음부터 보면서 따라가시면 Airflow를 더 잘 이해할 수 있을거에요 :) 
