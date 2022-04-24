@@ -45,6 +45,8 @@ services:
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     command: airflow scheduler
+    volumes:
+      - ./dags:/opt/airflow/dags
     restart: always
     networks:
       - airflow
@@ -57,6 +59,8 @@ services:
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     command: airflow webserver
+    volumes:
+      - ./dags:/opt/airflow/dags
     ports:
       - 8080:8080
     restart: always
