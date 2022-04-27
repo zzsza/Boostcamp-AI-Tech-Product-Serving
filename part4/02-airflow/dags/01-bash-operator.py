@@ -42,4 +42,3 @@ with DAG(
 
     task1 >> task2  # task1 이후에 task2 실행
     task1 >> task3  # task1 이후에 task3 실행(2와 3을 병렬로 실행)
-
