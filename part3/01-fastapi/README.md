@@ -59,6 +59,11 @@ FastAPI을 이용한 모델 온라인 서빙
    4. Frontend(Streamlit)와 Server를 같이 실행합니다
       ```shell
       make -j 2 run_app
+      # or
+      
+      python3 -m app
+      # in other shell
+      python3 -m streamlit run app/frontend.py
       ```
 
 
