@@ -5,6 +5,7 @@ from pythonjsonlogger import jsonlogger
 
 
 logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
 
 logHandler = logging.StreamHandler()
 formatter = jsonlogger.JsonFormatter()
