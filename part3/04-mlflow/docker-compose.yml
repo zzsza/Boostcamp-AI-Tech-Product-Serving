@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  web_ui:
+    image: mlflow:1.24.0
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/mlflow
