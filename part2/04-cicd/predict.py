@@ -18,7 +18,8 @@ def load_model() -> MyEfficientNet:
 
 
 def get_prediction(model:MyEfficientNet, image_bytes: bytes) -> Tuple[torch.Tensor, torch.Tensor]:
-    tensor = transform_image(image_bytes=image_bytes)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    tensor = transform_image(image_bytes=image_bytes).to(device)
     outputs = model.forward(tensor)
     _, y_hat = outputs.max(1)
     return tensor, y_hat

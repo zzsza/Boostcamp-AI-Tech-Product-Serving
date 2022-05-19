@@ -1,0 +1,84 @@
+version: '3'
+networks:
+  airflow:
+    driver: bridge
+services:
+  airflow-database:
+    container_name: airflow-database
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=1234
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - airflow
+  airflow-init:
+    container_name: airflow-init
+    depends_on:
+      - airflow-database
+    image: apache/airflow:2.2.3-python3.8
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow
+    entrypoint: /bin/bash
+    command: |-
+      -c " \
+        airflow db init && \
+        airflow users create \
+          --username admin \
+          --password 1234 \
+          --firstname heumsi \
+          --lastname jeon \
+          --role Admin \
+          --email heumsi@naver.com \
+        "
+    restart: on-failure
+    networks:
+      - airflow
+  airflow-scheduler:
+    container_name: airflow-scheduler
+    depends_on:
+      - airflow-init
+    image: apache/airflow:2.2.3-python3.8
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    command: airflow scheduler
+    volumes:
+      - ./dags:/opt/airflow/dags
+    restart: always
+    networks:
+      - airflow
+  airflow-webserver:
+    container_name: airflow-webserver
+    depends_on:
+      - airflow-init
+    image: apache/airflow:2.2.3-python3.8
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:1234@airflow-database:5432/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    command: airflow webserver
+    volumes:
+      - ./dags:/opt/airflow/dags
+    ports:
+      - 8080:8080
+    restart: always
+    networks:
+      - airflow
+  airflow-code-server:
+    container_name: airflow-code-server
+    depends_on:
+      - airflow-init
+    image: codercom/code-server:4.0.1
+    environment:
+      - PASSWORD=1234
+      - HOST=0.0.0.0
+      - PORT=8888
+    volumes:
+      - ./dags:/home/coder/project
+    ports:
+      - 8888:8888
+    restart: always
+    networks:
+      - airflow
