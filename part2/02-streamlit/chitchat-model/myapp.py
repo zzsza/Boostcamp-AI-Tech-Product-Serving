@@ -23,3 +23,5 @@ def main():
         answer = get_prediction(input_sent, model=model, tokenizer=tokenizer)
 
         st.write(answer)
+
+main()

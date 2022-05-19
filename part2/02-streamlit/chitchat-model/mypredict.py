@@ -1,22 +1,22 @@
 import torch
 import streamlit as st
 from typing import *
-from transformers import GPT2Config
-from mymodel import MyChatbot, MyTokenizer
+from transformers import GPT2Config, GPT2LMHeadModel
+# from mymodel import MyChatbot, MyTokenizer
+from tokenizers import SentencePieceBPETokenizer
 
 torch.manual_seed(42)
 
-@st.cache
-def load_model() -> MyChatbot:
+# @st.cache
+def load_model() -> GPT2LMHeadModel:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     config = GPT2Config(vocab_size=50000)
-    model = MyChatbot(config)
+    model = GPT2LMHeadModel(config).to(device)
     model.load_state_dict(torch.load("chitchat_model.pth", map_location=device))
-
     return model
 
-def load_tokenizer() -> MyTokenizer:
-    tokenizer = MyTokenizer("./tokenizerUtils/vocab.json", "./tokenizerUtils/merges.txt")
+def load_tokenizer() -> SentencePieceBPETokenizer:
+    tokenizer = SentencePieceBPETokenizer("./tokenizerUtils/vocab.json", "./tokenizerUtils/merges.txt")
     tokenizer.add_special_tokens(['<s>', '</s>'])
     pad_id = tokenizer.token_to_id("<pad>")
     tokenizer.enable_padding(pad_id=pad_id, pad_token="<pad>")
@@ -24,11 +24,11 @@ def load_tokenizer() -> MyTokenizer:
     
     return tokenizer
 
-def get_prediction(input_sent:str, model:MyChatbot, tokenizer:MyTokenizer) -> str:
-
+def get_prediction(input_sent:str, model:GPT2LMHeadModel, tokenizer:SentencePieceBPETokenizer) -> str:
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     def encoding(text):
         text = '<s>'+text+'</s><s>'
-        return torch.tensor(tokenizer.encode(text).ids).unsqueeze(0).to('cuda')
+        return torch.tensor(tokenizer.encode(text).ids).unsqueeze(0).to(device)
 
     def decoding(ids):
         return tokenizer.decode_batch(ids)
