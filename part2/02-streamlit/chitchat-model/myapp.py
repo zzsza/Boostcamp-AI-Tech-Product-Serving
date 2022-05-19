@@ -14,14 +14,12 @@ def main():
     model.eval()
 
     uploaded_text = st.text_input("대화를 시작하세요.")
-
     if uploaded_text:
         input_sent = uploaded_text
 
         st.write("Understanding chat...")
 
         answer = get_prediction(input_sent, model=model, tokenizer=tokenizer)
-
-        st.write(answer)
+        answered_text = st.text_input("챗봇의 대답:", answer)
 
 main()
