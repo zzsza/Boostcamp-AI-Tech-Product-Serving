@@ -54,4 +54,5 @@ def get_prediction(input_sent:str, model:GPT2LMHeadModel, tokenizer:SentencePiec
     )
 
     decoded_result = decoding(sample_outputs.tolist())
-    return decoded_result[0]
+    answer = decoded_result[0][len(input_sent):]
+    return answer
