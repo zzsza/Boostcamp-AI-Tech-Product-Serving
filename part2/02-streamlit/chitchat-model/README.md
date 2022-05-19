@@ -1,4 +1,4 @@
-# streamlit에서 챗봇 실행하기
+# streamlit에서 챗봇 구현
 
 1. `KoGPT_2_based_Chatbot.ipynb` 실행
 
@@ -11,3 +11,17 @@
 ```shell
 커맨드창에서 위 명령어를 실행시켜 챗봇 모델을 시연해 볼 수 있는 streamlit 페이지로 이동합니다.
 ```
+
+# 실행 화면
+
+## 초기 화면
+
+<img src="./img/initial_view.png" width=80% height=80%>
+
+## 실행 예시 1
+
+<img src="./img/ex1.png" width=80% height=80%>
+
+## 실행 예시 2
+
+<img src="./img/ex2.png" width=80% height=80%>
