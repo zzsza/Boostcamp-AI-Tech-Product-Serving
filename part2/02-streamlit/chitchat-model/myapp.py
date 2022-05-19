@@ -4,10 +4,10 @@ from mypredict import load_model, load_tokenizer, get_prediction
 torch.manual_seed(42)
 
 # SETTING PAGE CONFIG TO WIDE MODE
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 def main():
-    st.title("Chatbot Model")
+    st.title("Streamlit ChatBot")
 
     model = load_model()
     tokenizer = load_tokenizer()
