@@ -31,7 +31,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/service-account-file
 
 <br/>
 
-### 4. 코드 적용
+# Example
 
 참고 링크는 [여기](https://cloud.google.com/storage/docs/samples/storage-download-file?hl=ko)<br/>
 아래 코드는 txt 파일(주석 처리 하였음)과 sh 파일 모두 읽어들일 수 있는 코드입니다.
