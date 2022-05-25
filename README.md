@@ -22,7 +22,8 @@
 ├── part2
 │   ├── 01-voila
 │   ├── 02-streamlit
-│   └── 04-cicd
+|   ├── 03-cloud
+│   └── 04-cicd
 ├── part3
 │   ├── 01-fastapi
 │   ├── 02-docker
