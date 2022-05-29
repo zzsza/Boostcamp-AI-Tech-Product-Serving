@@ -2,7 +2,7 @@
 name = "test-fastapi"
 version = "0.1.0"
 description = "FastAPI Test"
-authors = ["Sung Yun Byeon <zzsza@naver.com>"]
+authors = ["Jo Seol A <jaramrammm@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
