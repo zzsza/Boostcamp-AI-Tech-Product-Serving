@@ -18,7 +18,7 @@ root_password = 'password'
 
 
 def main():
-    st.title("Mask Classification Model - Docker Build Deploy")
+    st.title("Mask Classification Model - Docker Build Deploy-5.30 changed")
 
     with open("config.yaml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
