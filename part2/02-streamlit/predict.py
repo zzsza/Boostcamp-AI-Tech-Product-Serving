@@ -5,7 +5,7 @@ from utils import transform_image
 import yaml
 from typing import Tuple
 
-@st.cache
+@st.cache_resource
 def load_model() -> MyEfficientNet:
     with open("config.yaml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)

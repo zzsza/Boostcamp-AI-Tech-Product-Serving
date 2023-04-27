@@ -35,7 +35,7 @@ def cache_on_button_press(label, **cache_kwargs):
     def function_decorator(func):
         @functools.wraps(func)
         def wrapped_func(*args, **kwargs):
-            @st.cache(**internal_cache_kwargs)
+            @st.cache_data(**internal_cache_kwargs)
             def get_cache_entry(func, args, kwargs):
                 class ButtonCacheEntry:
                     def __init__(self):
@@ -53,7 +53,7 @@ def cache_on_button_press(label, **cache_kwargs):
                 if st.button(label):
                     cache_entry.evaluate()
                 else:
-                    raise st.script_runner.StopException
+                    raise st.stop()
             return cache_entry.return_value
 
         return wrapped_func
