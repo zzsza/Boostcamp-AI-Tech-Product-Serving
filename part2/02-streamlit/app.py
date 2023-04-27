@@ -1,51 +1,79 @@
 import streamlit as st
-import io
-import yaml
-from PIL import Image
+import pandas as pd
 from predict import load_model, get_prediction
 
-# SETTING PAGE CONFIG TO WIDE MODE
-st.set_page_config(layout="wide")
-
-# password
-root_password = 'password'
-
 def main():
-    st.title("Mask Classification Model")
+    st.title('Semantic Textual Similarity')
+    st.caption('*원하는 문장 두 개를 입력해보세요!*:sunglasses:')
 
-    with open("config.yaml") as f:
-        config = yaml.load(f, Loader=yaml.FullLoader)
-    
     model = load_model()
     model.eval()
 
-    uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
+    # 측정 결과들 모아두는 df
+    if "df" not in st.session_state:
+        st.session_state.df = pd.DataFrame({
+            'sentence 1': [],
+            'sentence 2' : [],
+            'similarity' : []
+        })
 
-    if uploaded_file is not None:
-        image_bytes = uploaded_file.getvalue()
-        image = Image.open(io.BytesIO(image_bytes))
-        st.image(image, caption='Uploaded Image')
-        st.write("Classifying...")
-        _, y_hat = get_prediction(model, image_bytes)
-        label = config['classes'][y_hat.item()]
+    with st.form(key='문장입력 form'):
+        sentence1 = st.text_input("Enter Sentence 1:")
+        sentence2 = st.text_input("Enter Sentence 2:")
+        form_submitted = st.form_submit_button('유사도 측정')
 
-        st.write(f'label is {label}')
+    if form_submitted:
+        if sentence1 and sentence2:
+            similarity_score = get_prediction(model, sentence1, sentence2)
 
-def authenticate(password) -> bool:
-    return password == root_password
+            # df에 이미 있는 유사도 쌍이면 추가 안함
+            if not ((st.session_state.df['sentence 1'] == sentence1) & (st.session_state.df['sentence 2'] == sentence2)).any():
+                # 새로운 데이터를 기존 df에 합치기 
+                new_data = pd.DataFrame({
+                    'sentence 1': [sentence1],
+                    'sentence 2': [sentence2],
+                    'similarity': [similarity_score]
+                })
+                st.session_state.df = st.session_state.df.append(new_data, ignore_index=True)
+                
+                # similarity 기준으로 순위 매기기
+                st.session_state.df = st.session_state.df.sort_values(by='similarity', ascending=False).reset_index(drop=True)
+                
+                # rank 컬럼 추가
+                st.session_state.df['rank'] = st.session_state.df.index + 1
 
-if "authenticated" not in st.session_state:
-    st.session_state.authenticated = False
-
-if not st.session_state.authenticated:
-    password = st.text_input('password', type="password")
-
-    with st.form(key='my_form'):
-        submit_button = st.form_submit_button(label='Authenticate')
-        if authenticate(password):
-            st.success('You are authenticated!')
-            st.session_state.authenticated = True
+            st.write(f"두 문장의 유사도 : {similarity_score}")
+            st.success('성공!')
         else:
-            st.error('The password is invalid.')
-else:
-    main()
+            st.write("Please enter both sentences.")
+            st.error('다시 한번 생각해보세요!')
+
+    st.divider()
+    col1, col2, col3 = st.columns(3)
+    
+    # df 크기 조절
+    col1.checkbox("창 크기조절", value=True, key="use_container_width")
+
+    # df 리셋 버튼
+    if col2.button("데이터 리셋하기"):
+        st.session_state.df = pd.DataFrame({
+            'sentence 1': [],
+            'sentence 2' : [],
+            'similarity' : []
+        })
+
+    # df csv로 다운로드
+    @st.cache_data
+    def convert_df(df):
+        return df.to_csv(index=False, header=True).encode('cp949')
+    csv = convert_df(st.session_state.df)
+    col3.download_button(
+        label="CSV로 다운받기",
+        data=csv,
+        file_name='sts_data_outputs.csv',
+        mime='text/csv',
+    )
+
+    st.dataframe(st.session_state.df, use_container_width=st.session_state.use_container_width)
+
+main()
