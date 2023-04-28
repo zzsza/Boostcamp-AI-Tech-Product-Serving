@@ -5,7 +5,8 @@ from utils import transform_image
 import yaml
 from typing import Tuple
 
-@st.cache
+
+@st.cache_resource
 def load_model() -> MyEfficientNet:
     with open("config.yaml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
@@ -17,7 +18,7 @@ def load_model() -> MyEfficientNet:
     return model
 
 
-def get_prediction(model:MyEfficientNet, image_bytes: bytes) -> Tuple[torch.Tensor, torch.Tensor]:
+def get_prediction(model: MyEfficientNet, image_bytes: bytes) -> Tuple[torch.Tensor, torch.Tensor]:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     tensor = transform_image(image_bytes=image_bytes).to(device)
     outputs = model.forward(tensor)
