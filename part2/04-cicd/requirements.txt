@@ -5,3 +5,5 @@ torchvision==0.11.1
 efficientnet-pytorch==0.7.1
 PyYAML==6.0
 protobuf==3.20.1
+altair<5
+numpy==1.24.3
