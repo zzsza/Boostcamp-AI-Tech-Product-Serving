@@ -42,7 +42,7 @@ def main():
 
 
 @cache_on_button_press('Authenticate')
-def authenticate(password) ->bool:
+def authenticate(password) -> bool:
     return password == root_password
 
 
