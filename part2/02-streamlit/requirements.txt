@@ -4,5 +4,6 @@ matplotlib==3.2.1
 opencv-python==4.5.1.48
 streamlit==1.1.0
 torch==1.10.0
-torchvision==0.11.1
+torchvision==0.11.2
 PyYAML==6.0
+altair<5
