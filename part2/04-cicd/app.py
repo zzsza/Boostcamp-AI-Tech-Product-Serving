@@ -13,12 +13,11 @@ from confirm_button_hack import cache_on_button_press
 # SETTING PAGE CONFIG TO WIDE MODE
 st.set_page_config(layout="wide")
 
-
 root_password = 'password'
 
 
 def main():
-    st.title("Mask Classification Model - Deploy Test")
+    st.title("Mask Classification Model - Github action deploy test")
 
     with open("config.yaml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
