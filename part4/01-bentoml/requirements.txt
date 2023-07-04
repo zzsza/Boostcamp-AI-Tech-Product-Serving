@@ -134,7 +134,7 @@ tifffile==2020.9.3; python_version >= "3.6"
 toml==0.10.2; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" and python_version >= "3.6"
 toolz==0.11.2; python_version >= "3.6"
 torch==1.10.0; python_full_version >= "3.6.2"
-torchvision==0.11.1
+torchvision==0.11.2
 tornado==6.1; python_full_version >= "3.6.1" and python_version >= "3.6"
 traitlets==4.3.3; python_full_version >= "3.6.1" and python_version >= "3.6"
 types-dataclasses==0.6.1; python_version < "3.7.0" and python_full_version >= "3.6.1"
