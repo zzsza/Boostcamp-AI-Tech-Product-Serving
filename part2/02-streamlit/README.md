@@ -1,16 +1,23 @@
 # Streamlit
 
-## 환경 설정
+## 사전 준비
 
-```
-virtualenv --python=python3 env
-source env/bin/activate
-pip3 install --upgrade pip
-pip3 install -r requirements.txt
+- Python 3.8 이상 3.10 미만
+
+## 설치
+
+```bash
+# 가상환경 생성 및 활성화
+python -m venv .venv
+source .venv/bin/activate
+
+# 패키지 설치
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-## Streamlit 실행
+## 실행
 
-```
+```bash
 streamlit run app.py
 ```
