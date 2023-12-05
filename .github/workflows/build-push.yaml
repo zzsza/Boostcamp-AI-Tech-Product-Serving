@@ -1,10 +1,8 @@
 name: Build & Push New Model
 on:
   push:
-    paths:
-      - new/model_deploy
     branches:
-      - "!main"
+      - "ci/new-model-deploy"
 env:
   PROJECT_ID: boostcamp-ai-tech-serving # TODO: replace this with your project
   GAR_REGION: ap-norhteast3
