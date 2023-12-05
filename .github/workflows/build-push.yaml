@@ -1,0 +1,40 @@
+name: Build & Push New Model
+on:
+  push:
+    paths:
+      - new/model_deploy
+    branches:
+      - "!main"
+env:
+  PROJECT_ID: boostcamp-ai-tech-serving # TODO: replace this with your project
+  GAR_REGION: ap-norhteast3
+  REPOSITORY: model_deploy
+  IMAGE: main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Docker build'
+        run: |-
+          docker build \
+            --tag "$GAR_REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE:$GITHUB_SHA" \
+            .
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v0.6.0'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+          token_format: 'access_token'
+
+      - uses: 'docker/login-action@v1'
+        name: 'Docker login'
+        with:
+          registry: '${{ env.GAR_REGION }}-docker.pkg.dev'
+          username: 'oauth2accesstoken'
+          password: '${{ steps.auth.outputs.access_token }}'
+
+      - name: 'Docker push'
+        run: |-
+          docker push "$GAR_REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE:$GITHUB_SHA"
