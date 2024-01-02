@@ -1,0 +1,551 @@
+id,source,sentence_1,sentence_2,label,binary-label
+boostcamp-sts-v1-dev-000,nsmc-sampled,액션은개뿔 총몇번쏘고 끝입니다,액션은 흉내만 내고 그마저도 후반부에는 슬로우모션 처리,2.0,0.0
+boostcamp-sts-v1-dev-001,slack-rtt,감격스러워 입막으심?,너무 감동해서 입 다물어?,3.4,1.0
+boostcamp-sts-v1-dev-002,nsmc-rtt,이번 년도에 본 영화 중 가장 최악의 영화......,올해 본 영화 중 최악...,4.0,1.0
+boostcamp-sts-v1-dev-003,slack-rtt,특히 평소 뮤직채널에 많은 영감을 불어넣어주시는!,"특히, 당신은 항상 많은 음악 채널에 영감을 줍니다!",3.4,1.0
+boostcamp-sts-v1-dev-004,slack-sampled,다음 밥스테이지가 기대됩니다~ ㅎ,다음 후기도 기대됩니다~~,1.4,0.0
+boostcamp-sts-v1-dev-005,slack-rtt,사진 간지.. ㅋㅋ 축하드립니다,사진이 나왔어요..ㅋㅋㅋ 축하드립니다.,2.4,0.0
+boostcamp-sts-v1-dev-006,nsmc-sampled,영화보면서 기분전환이 되었어요,영화 보는 내내 뭔가 모를 편안함을 느꼈어요,2.0,0.0
+boostcamp-sts-v1-dev-007,slack-sampled,건강하게 자라기를!!,얼른 건강 회복하기를요!!!,1.2,0.0
+boostcamp-sts-v1-dev-008,slack-rtt,고수님들의 많은 가르침 부탁드립니다 <PERSON>,고수님들의 많은 지도 부탁드립니다 <PERSON>,4.6,1.0
+boostcamp-sts-v1-dev-009,slack-rtt,러닝화 신었더니 뒤꿈치가 푹신해서 자꾸 앞으로 힘이 쏠리고 뒤꿈치 들리네요,런닝화를 신고 발 뒤꿈치가 부드러워서 계속 힘을 빼고 발뒤꿈치를 들어 올렸다.,3.0,1.0
+boostcamp-sts-v1-dev-010,slack-rtt,우리 회사 대박을 향해 ㄱ ㄱ,우리 회사의 성공을 향해 a,3.4,1.0
+boostcamp-sts-v1-dev-011,slack-rtt,영양분 편차가 균등해짐.,영양소 변화가 균일해집니다.,2.8,1.0
+boostcamp-sts-v1-dev-012,petition-sampled,"한,미 미래연합사령부 논의 불가^^",한미 미래연합사령부 논의 불가 청원^^,3.2,1.0
+boostcamp-sts-v1-dev-013,slack-sampled,오! 사이즈가 딱 맞나용??,오… 거기서… 프로포즈하신 걸까요!..?,0.0,0.0
+boostcamp-sts-v1-dev-014,nsmc-sampled,액션도 별로고 긴장감도 없었네요,"스토리는 기대도 안했고, 액션도 그닥이다.",2.2,0.0
+boostcamp-sts-v1-dev-015,petition-sampled,이제 경제에 집중해야합니다,이 경제를 제발 살게 해주세요,2.2,0.0
+boostcamp-sts-v1-dev-016,nsmc-sampled,가슴이 먹먹해서 어쩔 바를 모르겠습니다.,가슴이 너무 먹먹하다,2.6,1.0
+boostcamp-sts-v1-dev-017,slack-sampled,진짜 고기 짱맛이었습니다 ㅋㅋㅋ,역시나 짱짱이었습니다,2.6,1.0
+boostcamp-sts-v1-dev-018,slack-rtt,코파일럿은 사랑입니다,조종사는 사랑입니다,3.2,1.0
+boostcamp-sts-v1-dev-019,nsmc-sampled,매튜본 대단한 감독이엇다는걸 새삼절감,어메이징 보다가 이걸 보면 샘 레이미가 얼마나 쩌는 감독인지 새삼 느끼게 됨...,1.2,0.0
+boostcamp-sts-v1-dev-020,petition-rtt,법무장관처럼 강력한 소신이 있는 정책자가 필요합니다.,법무장관처럼 확고한 신념을 가진 정책 입안자가 필요합니다.,4.0,1.0
+boostcamp-sts-v1-dev-021,nsmc-rtt,영화의 야한얘기가 한편으로 우리가 생각하는 무엇인가와 통하는것같다.,한편으로 이 영화의 음란한 이야기는 우리가 생각하는 것과 관련이 있는 것 같습니다.,3.8,1.0
+boostcamp-sts-v1-dev-022,slack-sampled,끄앙! ㅋㅋ 2017년부터의 인연이면… 너무 짧아요?,17년부터의 인연도 상당합니다.,1.6,0.0
+boostcamp-sts-v1-dev-023,nsmc-sampled,스님의 말씀이 듣고 싶어졌습니다.,"스님, 벌써 그립습니다.",0.8,0.0
+boostcamp-sts-v1-dev-024,nsmc-sampled,미국판은 제임스 맥어보이 에밀리 블런트던데..,에이미 애덤스와 에밀리 블런트를 동시에 볼 수 있다니 :) 평점 .,0.6,0.0
+boostcamp-sts-v1-dev-025,slack-sampled,오늘자 하늘! 입니다,아 오늘 하늘 정말 예뻤죠!!!!,2.6,1.0
+boostcamp-sts-v1-dev-026,petition-rtt,전기차 정부혜택 시급합니다.,전기차에 대한 정부의 혜택이 시급합니다.,4.6,1.0
+boostcamp-sts-v1-dev-027,nsmc-rtt,초등학생 졸업 작품?,초등학교 졸업작품?,4.4,1.0
+boostcamp-sts-v1-dev-028,slack-rtt,당연히 둘다 먹는거 아닌가요!,물론 둘 다 먹지는 않는다!,0.8,0.0
+boostcamp-sts-v1-dev-029,slack-sampled,엥 제가 2등인가요? ㅋㅋ,엥 은메달인가요 제가? ㅋㅋ,2.6,1.0
+boostcamp-sts-v1-dev-030,petition-sampled,국회의원을 명예직으로 전환후 기본급 조정,공무원 퇴직후 재취업시 연금 지급을 중지하거나 최소화,0.0,0.0
+boostcamp-sts-v1-dev-031,nsmc-sampled,진짜 마이클 베이 역작이네요... 폭풍감동,보다가감동...진짜울뻔,1.6,0.0
+boostcamp-sts-v1-dev-032,slack-rtt,그래서 그 회사는 외부하고는 리쿠르팅 인터뷰 시간 잡을 때 정도 쓴다고 했었습니다ㅎㅎ,그래서 회사에서는 외부인과의 인터뷰를 모집할 때 사용한다고 합니다.,3.4,1.0
+boostcamp-sts-v1-dev-033,petition-sampled,여기에 청원글 열심히 써봣자 아무것도 안바뀌니까 고생하며 글쓰지말고 나가세요 여러분,가상화폐투기분들 여기에 글그만 올리고 그만들 빠져나오세요,0.8,0.0
+boostcamp-sts-v1-dev-034,slack-sampled,운동화도 새로 장만했습니다.,운동부족으로 집에서도 할 수 있는 스텝퍼 장만했습니다.,1.0,0.0
+boostcamp-sts-v1-dev-035,slack-sampled,스터디도 함께 일정이 정리되어 있으면 좋겠습니다.,이번주 스터디는 잠시 쉬어갑니다~,1.2,0.0
+boostcamp-sts-v1-dev-036,slack-rtt,음악룸들 만들어 봅시다.,음악실을 만들어 봅시다.,3.8,1.0
+boostcamp-sts-v1-dev-037,slack-sampled,조만간 또 오프에서 뵈어요 ㅎㅎㅎ,네! ㅋㅋ 아님 다음에 오프에서 뵐때 제꺼 체험해보세요 ㅋㅋ,1.8,0.0
+boostcamp-sts-v1-dev-038,petition-sampled,이국종교수님 지원해주세요,이국종 교수님을 지원해주세요,5.0,1.0
+boostcamp-sts-v1-dev-039,petition-sampled,선거관련 문자 전화,선거 후보자 관련 청원,0.6,0.0
+boostcamp-sts-v1-dev-040,slack-sampled,전쟁부터 먼저 멈추어야할텐데요...,와... 전쟁과 금리 ㅠㅠㅠ,0.8,0.0
+boostcamp-sts-v1-dev-041,nsmc-rtt,그래도뭐...볼만은했음 이휘재씨덕분에..,암튼.. 볼만했어요 이휘재님 덕분에...,4.2,1.0
+boostcamp-sts-v1-dev-042,slack-sampled,학기 잘 마무리하시고 다음에 기회 되면 또 뵀으면 좋겠습니다,일하면서 길게 얘기할 기회가 많지 않았는데 다음에 또 뵀으면 좋겠습니다,2.2,0.0
+boostcamp-sts-v1-dev-043,nsmc-rtt,"원작이 좋은지는 모르겠으나,개인적으로 이영화만본 나는 지루함+영화의 어색함을 느꼈다.",원작이 좋은지는 모르겠지만 개인적으로 이 영화를 보고 나서 영화의 지루함 + 어색함을 느꼈다.,4.6,1.0
+boostcamp-sts-v1-dev-044,slack-rtt,ㅋㅋ두분 남매 바이브,ㅎㅎ 두 남매 분위기,3.6,1.0
+boostcamp-sts-v1-dev-045,petition-rtt,여성인권을 위협하는 현 상태의 특정 게임 시스템에 대하여 엄중한 처벌을 요구합니다.,여성의 인권을 위협하는 현행 특정 게임 시스템에 대한 강력한 처벌이 요구된다.,4.2,1.0
+boostcamp-sts-v1-dev-046,petition-sampled,불법난민 불법체류자 추방합시다,가짜난민 불법체류자 모두 추방합시다,3.6,1.0
+boostcamp-sts-v1-dev-047,nsmc-sampled,난 애라서 재밌네요...그럭저럭,그냥 그럭저럭 재밌긴한데 스토리를 너무꼬아놔서 머리아프다~,2.2,0.0
+boostcamp-sts-v1-dev-048,slack-sampled,허걱 ㅋㅋ 즐거운 대화였습니다.,눈물 살짝 훔치며 즐거운 이야기 나누었습니다! ㅋㅋㅋ,2.0,0.0
+boostcamp-sts-v1-dev-049,nsmc-sampled,다시 한번 가족의 정을 느낄 수 있었습니다^^,지금 사랑하는 사람과 가족이 얼마나 소중한지 다시 한 번 느낄 수 있었습니다..,2.6,1.0
+boostcamp-sts-v1-dev-050,petition-sampled,외국인 무비자 입국페지요망,제주도 중국인 무비자 폐지 바랍니다.,3.0,1.0
+boostcamp-sts-v1-dev-051,petition-rtt,여자지만 군가산점제도 부활해주시고 무고죄 형량 강화해주시길 바랍니다,저는 여자지만 병역가점제가 되살아나 무죄가 선고되기를 바랍니다.,1.8,0.0
+boostcamp-sts-v1-dev-052,nsmc-sampled,지겨운면도 있었지만 흥미진진했음.,줄거리도 재밌고 나름 흥미진진함.,2.4,0.0
+boostcamp-sts-v1-dev-053,nsmc-sampled,평점대비 너무 하네요~,평점 너무 낮아..,1.2,0.0
+boostcamp-sts-v1-dev-054,nsmc-sampled,고성희누나 힘내세요ㅎㅎ,하휘동님 힘내세요~,1.8,0.0
+boostcamp-sts-v1-dev-055,nsmc-sampled,만들어진 년도를 감안해도 정말 살떨리는 유지판타지 주인공들의 연기력역시 바닥ㅋㅋ 어쩔 ㅋㅋ,진짜 배우들연기력이 대박이다..,0.4,0.0
+boostcamp-sts-v1-dev-056,nsmc-sampled,올 여름 모두 신나게 즐길만한 영화인듯해요~!!!!,ㅋㅋ 정말 잼있었던 영화!!!!,2.0,0.0
+boostcamp-sts-v1-dev-057,petition-rtt,"여성가족부의 돌봄정책 운영실패와 방만하고 무책임한 운영에 대해 특별감사를 실시하고, 가족과 다문화정책 운영을 보건복지부로 이관해주세요!","여성가족부의 돌봄정책 운영실패와 그 소홀하고 무책임한 운영에 대해 특별감사를 실시하고, 가족 및 다문화정책 운영을 보건복지부로 이관해주세요!",4.8,1.0
+boostcamp-sts-v1-dev-058,nsmc-rtt,제발 진짜 무한도전 ㅠ 이름처럼 계속 이어가면 좋겠어요..ㅠ,제발 진짜 무한도전이다 ㅠ 이름처럼 계속 이어졌으면 좋겠다.. ㅠ,4.4,1.0
+boostcamp-sts-v1-dev-059,petition-sampled,밀양화재사건으로 인한 직원들 산재처리,산업재해로 인한 우울증을 겪다 자살한 아버지,0.0,0.0
+boostcamp-sts-v1-dev-060,slack-rtt,이게 그렇게 인기라면서요. ㅋㅋ,이것은 인기가 많기 때문입니다. ㅋ,2.4,0.0
+boostcamp-sts-v1-dev-061,petition-sampled,선별적 살인제 소급적용,상가 임대 10년 보장 소급적용,0.6,0.0
+boostcamp-sts-v1-dev-062,petition-sampled,남북 아이스하키 단일팀 반대합니다,여자아이스하키팀 단일팀 반대합니다,3.0,1.0
+boostcamp-sts-v1-dev-063,slack-rtt,곧.. 다시 만나요!!,곧.. 또 만나요!!,4.0,1.0
+boostcamp-sts-v1-dev-064,nsmc-rtt,"인류의 기원, 불의 사용, 자본주의에 대한 비판, 맑시즘에 대한 영화만의 해석, 자연 회기의 필요성 등 정말 한 영화에서 보여줄 수 있는 최고의 재미를 선사한다.","인류의 기원, 불의 사용, 자본주의에 대한 비판, 마르크스주의에 대한 이 영화의 유일한 해석, 그리고 자연적 재회의 필요성은 진정 한 편의 영화가 보여줄 수 있는 최고의 재미를 선사한다.",4.0,1.0
+boostcamp-sts-v1-dev-065,slack-rtt,ㅋㅋ 실습까지 ㅋㅋ,ㅎㅎ 연습까지,1.8,0.0
+boostcamp-sts-v1-dev-066,petition-rtt,"사대강 국민들이 그렇게 반대 했는데( 제주도 무사증, 난민법 ) 사대강 처럼 됩니다.","4대강 국민이 반대했지만(제주도 무사증, 난민법) 4대강처럼 된다.",4.5,1.0
+boostcamp-sts-v1-dev-067,petition-sampled,공천 이라는 제도를 나라의 주권인 국민이 가져옵시다~~,문재인 대통령님은 역대 대통령중에~가장 훌륭한 대통령님 입니다~~~~~~~~~~~,0.0,0.0
+boostcamp-sts-v1-dev-068,petition-sampled,수능 연기로 인한 피해에 대해,수능 연기로 인한 이후 상황에 대한 대책 마련,1.8,0.0
+boostcamp-sts-v1-dev-069,slack-sampled,다들 환영해주셔서 감사합니다.,다들 환영해주셔서 감사합니다,5.0,1.0
+boostcamp-sts-v1-dev-070,slack-sampled,이번 주 금메달 입니닷!,금메달 오브 금메달!,1.4,0.0
+boostcamp-sts-v1-dev-071,slack-sampled,ㅋㅋ 최신유행머리하셨군요,ㅋㅋ 정말 구매하셨군여 ㅋㅋㅋ,0.0,0.0
+boostcamp-sts-v1-dev-072,petition-sampled,식약처 개혁 청원합니다,식약처 압수수색이 필요합니다,1.5,0.0
+boostcamp-sts-v1-dev-073,slack-sampled,좋은 제안해주셔서 감사합니다 <PERSON> 님!,선물 발송 도와주신 <PERSON> 님 감사합니다,0.8,0.0
+boostcamp-sts-v1-dev-074,slack-rtt,어떤 블로그에서 이 노래 해석에 인상깊은 시를 함께 써놨길래 줍줍해왔습니당,어떤 블로그에서 이 노래의 해석을 위해 인상적인 시를 적어서 가져왔습니다.,3.2,1.0
+boostcamp-sts-v1-dev-075,petition-rtt,위대하신 문대통령님!,위대한 문재인 대통령!,4.8,1.0
+boostcamp-sts-v1-dev-076,petition-sampled,문재인 대통령을 하야시켜주세요,문재인 대통령을 사퇴를 청원합니다.,3.0,1.0
+boostcamp-sts-v1-dev-077,slack-sampled,다음에 또 뵐게요~~,다음에 또 뵐게요~~~,5.0,1.0
+boostcamp-sts-v1-dev-078,petition-sampled,살기 좋은 나라 만들어주세요....,부동산 불로소득 없는 나라를 만들어 주세요~~~^,1.0,0.0
+boostcamp-sts-v1-dev-079,slack-sampled,진짜 대박입니다 ㅋㅋㅋ,냥이는 대박. ㅋㅋ,1.8,0.0
+boostcamp-sts-v1-dev-080,slack-rtt,"클라이밍 체험기를 공유했는데요, 저는 정말 그 실내 센터의 알량한 높이마저도 조금..ㅋㅋ 무서웠습니다..",등반 경험담을 공유했는데 실내 센터의 낮은 높이에서도 정말 무서웠어요..ㅋㅋㅋㅋ,4.2,1.0
+boostcamp-sts-v1-dev-081,slack-rtt,와- 뮤직페스티벌 가는 거 고려해볼 수 있는 세상이 다시 오다니~~~,와우~ 가요대축제가 생각나는 세상이 돌아온다~~~,1.8,0.0
+boostcamp-sts-v1-dev-082,nsmc-sampled,혹시나 했는데 역시나 OOO...,혹시나 했는데 역시나..,3.8,1.0
+boostcamp-sts-v1-dev-083,slack-rtt,꼭 가보고 싶어졌습니다 ㅎㅎ,정말 가고 싶었습니다.,3.2,1.0
+boostcamp-sts-v1-dev-084,petition-rtt,국토부가 초래한 진에의 손실과 불이익을 책임져야합니다,진에게 입힌 손실과 불이익은 국토교통부가 책임져야 한다.,4.4,1.0
+boostcamp-sts-v1-dev-085,petition-sampled,무단횡단 법 더욱 강회시켜주세요,무단횡단 처벌을 강화하여 주십시요.,4.2,1.0
+boostcamp-sts-v1-dev-086,nsmc-sampled,복잡해서 이해가 안되는여오하,이해하기어렵고저한텐별로,2.2,0.0
+boostcamp-sts-v1-dev-087,nsmc-sampled,좀 신박하긴한데 마마가 날뛸때 웃으면서봄,좀 지루할지도 모르지만 난 딱 이정도로 봤다,0.0,0.0
+boostcamp-sts-v1-dev-088,petition-sampled,국가고시 가산점 폐지,518 공무원 가산제 폐지,2.4,0.0
+boostcamp-sts-v1-dev-089,slack-sampled,와 사진.. 멋져요!!ㅎㅎ,와..오랜만에 사진열어보니.. 너무 다시 가고싶네요!!ㅎㅎ,1.4,0.0
+boostcamp-sts-v1-dev-090,petition-sampled,청소년보호법 개정해주세요,청소년 보호법 개정해주세요,5.0,1.0
+boostcamp-sts-v1-dev-091,nsmc-sampled,이렇게 모든 면에서 완벽한 영화는 본 적이 없다.,이제까지 본 영화중 최악의 영화로 손색이 없다.,1.0,0.0
+boostcamp-sts-v1-dev-092,petition-sampled,부산청소년폭행 강력하게 처벌을 청원합니다,부산여중생 가해학생들 강력한 처벌을 청원합니다.,3.5,1.0
+boostcamp-sts-v1-dev-093,nsmc-sampled,편에 이어서 요게 갑인듯....,d 입체효과는 갑인듯....,1.4,0.0
+boostcamp-sts-v1-dev-094,petition-rtt,청와대 사이트 청원시스템 개선청원,청와대 홈페이지 청원 제도 개선 청원,4.8,1.0
+boostcamp-sts-v1-dev-095,slack-rtt,완전 딴사람 같아요!!,완전 다른사람같아요!!,4.6,1.0
+boostcamp-sts-v1-dev-096,nsmc-rtt,영화는 진짜 후회안할 만큼 매력적이다,후회하지 않을 만큼 매력적인 영화다.,4.2,1.0
+boostcamp-sts-v1-dev-097,nsmc-sampled,명절때 보던 기억이 난다,군복무 시절 명절 날 봤음,1.8,0.0
+boostcamp-sts-v1-dev-098,nsmc-sampled,한때 한예슬에게 미쳤었는데... 스파이명월때 뻘짓 했을때도 좋았는데 후아..,예전에 아이큐점프에 연재될 때 무지 재미있었던 기억이...,0.0,0.0
+boostcamp-sts-v1-dev-099,slack-sampled,특히 캐글 경험이 인상적이었는데요!,오늘 달이 아주 인상적이네요!!!,1.0,0.0
+boostcamp-sts-v1-dev-100,petition-rtt,원금 -70프로에요.,원금은 -70%입니다.,4.4,1.0
+boostcamp-sts-v1-dev-101,petition-rtt,도대체 문제인대통령님 부동산 정책으로 17년 8.2대책으로 서울 부동산 폭등시키시고 언제까지 서민 주거 안정화 시키는겁니까?,문제가 되는 대통령의 부동산 정책대로 17년 만에 서울 부동산을 8.2로 치솟게 하고 서민의 주거를 안정시키겠다는 겁니까?,3.4,1.0
+boostcamp-sts-v1-dev-102,nsmc-sampled,개인적으로 ost가 좋아서,영화자체도 나쁘지 않지만 ost가 idm뮤직의 걸작이므로 +점.,2.6,1.0
+boostcamp-sts-v1-dev-103,nsmc-rtt,내몸의 세포가 모두 죽는 느낌이 들었다.,내 몸의 모든 세포가 죽어가는 것 같았다.,4.2,1.0
+boostcamp-sts-v1-dev-104,nsmc-sampled,개인적으로 편보다 내용적인 면에서 만족했다.,"일단, 개인적으로 편보다 낫다고 생각한다.",2.6,1.0
+boostcamp-sts-v1-dev-105,slack-sampled,상현 오피스에서 진행하자,상현 오피스에서 진행하자!,4.8,1.0
+boostcamp-sts-v1-dev-106,nsmc-sampled,....난또 단편 영화인줄알았는데 이뭐병 에니안보신분은 보지마세요 돈날려요,어우 완전 오글거리고 재미도없고....이건 뭐 진심 돈아까웠다,2.4,0.0
+boostcamp-sts-v1-dev-107,petition-rtt,주류 광고에 음주에대한 경고문을 크게 만들도록 법으로 정해주세요.,주류 광고에서 음주 관련 경고를 크게 하는 법을 만들어주세요.,4.4,1.0
+boostcamp-sts-v1-dev-108,nsmc-sampled,꽤 지루하지 않고 재밌게 본 영화.,꽤 긴 영화 시간임에도 불구하고 전혀 지루하지 않은 스토리 전개가 놀랍다고 느꼈습니다.,3.0,1.0
+boostcamp-sts-v1-dev-109,slack-sampled,관심 있는 분은 쓱 보시면 재밌습니다 ㅎㅎ,혹시 관심있으신 분은 들어보셔도 좋을 것 같습니다 ㅎㅎ,2.0,0.0
+boostcamp-sts-v1-dev-110,nsmc-sampled,새벽에보고 눈물콧물 쏟았네..ㅠㅠ,오늘은...좀 눈물고였다..ㅠㅠ,3.0,1.0
+boostcamp-sts-v1-dev-111,petition-sampled,국민 청원 및 제안 플랫폼 관련 의견,국민 청원 및 제안 플랫폼에 반대 댓글 쓸수 있게 해주세요,2.4,0.0
+boostcamp-sts-v1-dev-112,nsmc-sampled,기대안하고 보았다가 언제가 기억속에 있는 영화,기대안하고 보았는데 최고였던 영화,2.6,1.0
+boostcamp-sts-v1-dev-113,nsmc-sampled,되게 집중해서 봤다,처음엔 집중해서 봤는데 갈수록개막장,1.4,0.0
+boostcamp-sts-v1-dev-114,slack-rtt,오.. 이런 기업들 점점 더 다양해지고 잘됐으면 좋겠네요.,"아, 이런 기업들이 더 다양해지고 번창했으면 좋겠어요.",4.4,1.0
+boostcamp-sts-v1-dev-115,petition-rtt,문재인 대통령님 국민들이 마지막으로 기회주실때 잡으셔야합니다.,"문재인 대통령, 국민이 주는 마지막 기회를 잡아야 합니다.",4.2,1.0
+boostcamp-sts-v1-dev-116,slack-sampled,"혹여나 빠진 정보가 있다면, 댓글로 의견주시면 감사하겠습니다 !",만약 더 신박한 디자인이 생각나시는 분은 댓글로 이미지 남겨주시면 감사하겠습니다~!,1.5,0.0
+boostcamp-sts-v1-dev-117,petition-sampled,전명규빙상연맹임원퇴출,빙상연맹비리및전명규 백철기수사촉구,1.6,0.0
+boostcamp-sts-v1-dev-118,nsmc-rtt,이 영화를 보실 분은 이 영화보다 파라노말액티비티를 보실 것을 권합니다.,이 영화를 보고 싶다면 이 영화보다 파라노말 액티비티를 보는 것을 추천한다.,4.4,1.0
+boostcamp-sts-v1-dev-119,slack-rtt,저희 방과 룸메이트를 정하는 사다리타기였습니다ㅋㅋㅎㅋㅎㅋㅎ,우리 방과 룸메이트를 결정하기 위해 사다리를 오르는 것이 었습니다 하하하하하하하,3.4,1.0
+boostcamp-sts-v1-dev-120,petition-sampled,후보 단독 출마에 따른 무투표 당선을 개선해 주세요,"국회의원 및 지자체장(광역, 기초의원 등 포함)의 선거 출마 연령을 낮추어 주세요.",0.6,0.0
+boostcamp-sts-v1-dev-121,nsmc-rtt,비록사고로인해장애인이되엇던분들용기를잃지않을려는모습이가슴에와닳앗네요,사고로 인해 장애인이 된 분들의 용기를 잃지 않으려고 애쓰는 모습이 마음에 와도 닳고 맙니다.,3.6,1.0
+boostcamp-sts-v1-dev-122,slack-rtt,봄이오는 중입니다.,봄이 와요.,3.4,1.0
+boostcamp-sts-v1-dev-123,nsmc-sampled,그런데 나는 왜이렇게 눈물이나는지,너무 좋아서 눈물이 난다 ㅠㅠ,2.4,0.0
+boostcamp-sts-v1-dev-124,petition-sampled,국회의원 자격조건 요청합니다,국회의원 최저시급제로 전환 요청합니다,1.0,0.0
+boostcamp-sts-v1-dev-125,petition-sampled,대한민국을 지켜주세요,대한민국을 살려주세요.,3.8,1.0
+boostcamp-sts-v1-dev-126,petition-sampled,문제인대통령 치밀하게~~~,문재인 대통령님~~~~새해 복 많이 받으세요~~~~~~~~~~~~~~~~~~~~,0.8,0.0
+boostcamp-sts-v1-dev-127,nsmc-sampled,무섭지가 않아!!..,전혀 공포스럽지 않다-_-....,3.4,1.0
+boostcamp-sts-v1-dev-128,slack-rtt,팀플랜해도 기능이 거의 비슷하고 조금 더 주는 정도라 고민이네요,팀플랜으로 해도 기능은 거의 비슷한데 조금 더 드려야 하나 고민입니다.,3.2,1.0
+boostcamp-sts-v1-dev-129,petition-sampled,북한 예술단에 합류 하길 청원 합니다,"평양 예술공연에 ""백지영 제외"" 청원합니다.",1.2,0.0
+boostcamp-sts-v1-dev-130,petition-sampled,국회의원 월급 삭감,국회의원 급여 미지급,1.8,0.0
+boostcamp-sts-v1-dev-131,petition-sampled,우체국 안양물류집중국을 고밥합니다.,택배 물류센터 현장 대폭 추가건설하라.,0.2,0.0
+boostcamp-sts-v1-dev-132,nsmc-sampled,어른이 보기에도 잼남...,역시 어른들이 보기에는 별로였다..ㅋ,1.2,0.0
+boostcamp-sts-v1-dev-133,nsmc-rtt,액션과 신파에 의존하는 그의 영화 중 머리 비우고 볼 수 있는 영화가 있어서 좋지만 이 영화는 유치해서 못볼 지경.,액션과 뉴 웨이브에 의존하는 그의 영화 중에는 머리를 비우고 볼 수 있는 영화가 있지만 이 영화는 너무 유치하다.,3.6,1.0
+boostcamp-sts-v1-dev-134,petition-sampled,어버이날 휴일지정 반대합니다,어버이날 공휴일 지정 반대합니다,4.8,1.0
+boostcamp-sts-v1-dev-135,nsmc-sampled,보다는 개연성 있는 줄거리와 볼수록 매혹되는 남 주인공~!!!,"처음엔 정말 허접해 보이지만, 보면 볼수록 빠져드는 매력적인 영화~!!",0.6,0.0
+boostcamp-sts-v1-dev-136,nsmc-sampled,확실히 재미는 없당,그나마 첫번째 빼고는 재미도 없다.,2.8,1.0
+boostcamp-sts-v1-dev-137,slack-rtt,오늘은 하이브 (전 빅히트) 의 자회사인 쏘스뮤직에서 르세라핌 이 첫 곡 낸다고도 하네요.,오늘 르세라핌은 하이브(구 빅히트)의 자회사인 쏘스뮤직에서 첫 번째 곡을 발매한다고 합니다.,4.5,1.0
+boostcamp-sts-v1-dev-138,petition-rtt,건전한 연애관을 위해 하트시그널 방송 폐지를 청원합니다.,건전한 사랑관을 위해 하트시그널 방송 폐지를 청원합니다.,4.2,1.0
+boostcamp-sts-v1-dev-139,slack-rtt,"OCR 을 포함한 회사와 관련된 주제부터, 서로의 관심사인 운동 이야기까지 공감대가 많았던 대화였습니다 ㅋㅋ",OCR을 비롯해 회사와 관련된 주제부터 상호 관심사에 맞는 스포츠 이야기까지 많은 공감이 가는 대화였다.,4.0,1.0
+boostcamp-sts-v1-dev-140,petition-rtt,나경원 당장 짤라라,나경원 파면해주세요,3.6,1.0
+boostcamp-sts-v1-dev-141,nsmc-sampled,분을 두시간으로 늘리고싶다면 이 영화를 추천.,인생에서 두시간을 쓰레기통에 버리고싶다면 보세요.,2.8,1.0
+boostcamp-sts-v1-dev-142,slack-sampled,저도 동일현상이었어요,저도 같은 마음입니다.,1.4,0.0
+boostcamp-sts-v1-dev-143,slack-sampled,오늘의 날씨와 잘 어울리는 BGM,와 저도 오늘의 BGM으로…!,1.8,0.0
+boostcamp-sts-v1-dev-144,petition-rtt,자유 한국당 해산심판 요청,자유한국당 해산심판 청구,3.8,1.0
+boostcamp-sts-v1-dev-145,slack-rtt,ㅋㅋ 그때처럼 급속도로 부활하셨습니다,그는 그때만큼 빨리 부활했습니다.,3.2,1.0
+boostcamp-sts-v1-dev-146,petition-sampled,부동산 정책 8.2 이후,8.2 부동산 대책에 대하여..,2.4,0.0
+boostcamp-sts-v1-dev-147,slack-sampled,다음에는 좀 더 캐주얼한 내용으로 이야기 나눠요~,다음에는 조금 더 일상적이고 재미있는 주제로 대화 나눠요! ㅎㅎ,3.4,1.0
+boostcamp-sts-v1-dev-148,nsmc-sampled,따뜻한 미소가 너무 좋은 영화,보는 내내 순수한 느낌이 너무 좋은 영화,2.2,0.0
+boostcamp-sts-v1-dev-149,nsmc-sampled,아이들이랑 재미있게 시청했어요,아이가 재미있게 봤어요,3.4,1.0
+boostcamp-sts-v1-dev-150,slack-rtt,한국에서도 싼 브랜드들이 있어서 왠지 이번 주 내로 제 방에 찾아올 것 같네요,한국에 싼 브랜드가 있어서 이번 주 안에 내 방에 올 것 같다.,3.8,1.0
+boostcamp-sts-v1-dev-151,petition-sampled,유은혜교육부총리 적극 지지합니다,"비리유치원의 장상화, 유은혜 장관을 지지합니다.",2.8,1.0
+boostcamp-sts-v1-dev-152,petition-sampled,게시판 개편 요청의 건,게시판 기능 개선 요청,3.6,1.0
+boostcamp-sts-v1-dev-153,slack-sampled,비록 화상이지만 만나봬서 너무 반가웠습니다 .,오랜만에 봬서 너무 반가웠습니다,2.8,1.0
+boostcamp-sts-v1-dev-154,nsmc-rtt,남들과다르다는이유만으로 억울한 죽음을 당한 브랜든 티나의 명복을 빕니다,다른 사람들과 다르다는 이유로 부당한 죽음을 당하신 나머지 Brandon Tina를 위해 기도합니다.,4.6,1.0
+boostcamp-sts-v1-dev-155,slack-sampled,진라이 중국음식에 커스텀 라떼 커피 조합으로 즐거운 시간 가졌습니다~,오랜만에 회사에서 뵈어서 회사앞 샤브샤브에 커스텀커피까지 풀코스 수다로 채웠습니다 ㅋㅋ,0.8,0.0
+boostcamp-sts-v1-dev-156,petition-sampled,문재인 대통님게 청원합니다,문제인 대통령님깨 청원합니다,5.0,1.0
+boostcamp-sts-v1-dev-157,petition-rtt,소년법 폐지를 청원합니.,소년법 폐지를 청원합니다.,4.6,1.0
+boostcamp-sts-v1-dev-158,slack-sampled,일단 우리 회사 세일즈로 모시고 와야…?,우리 회사 웰컴선물로 제작해보고 싶은....?,0.8,0.0
+boostcamp-sts-v1-dev-159,slack-sampled,우리 회사만의 멋진 교육을 만들어나가기 위한 여러 이야기를 함께 나누면서 우리 회사 뿐만 아니라 제 스스로의 성장에 대해서도 생각해볼 수 있었던 시간이었습니다,그리고 앞으로 저희 회사가 나아가야 할 방향성과 단기 목표에 대해서 보다 명확하게 들을 수 있는 시간이었습니다.,1.2,0.0
+boostcamp-sts-v1-dev-160,petition-sampled,여성들도 어떤 식으로든 국방의무 이행 청원합니다,여성들도 어떤 식으로든 국방의무 이행 촉구합니다,3.8,1.0
+boostcamp-sts-v1-dev-161,slack-sampled,어머 너무 예쁘네요.,아 넘 이쁘다..ㅠㅠ,4.0,1.0
+boostcamp-sts-v1-dev-162,petition-sampled,조두순 출소반대!!,조두순 출소반대!!!!!,5.0,1.0
+boostcamp-sts-v1-dev-163,slack-sampled,오늘 안에 가장 많은 표를 받으신 분께는 상품권을 전달드리도록 하겠습니다!,채택된 아이디어를 내주시는 분께는 을 보내드리겠습니다아~ㅊㅋㅊㅋ!!,1.5,0.0
+boostcamp-sts-v1-dev-164,slack-rtt,날이 더 추워지기 전에 한번 야외 모임 하기 좋은 타이밍이였던 것 같지만 다음 기회에!,날이 쌀쌀해지기 전에 야외모임 하기 좋은 시기인 것 같지만 다음에는!,2.8,1.0
+boostcamp-sts-v1-dev-165,slack-sampled,즐거운 오후 보내세요!,즐거운 하루 보내세요!,2.6,1.0
+boostcamp-sts-v1-dev-166,petition-rtt,대한민국 축구선수단,대한민국 축구대표팀,3.8,1.0
+boostcamp-sts-v1-dev-167,nsmc-sampled,진지함과 유머러스함이균형적으로 다뤄진 연출력과연기..... 그냥 짱 재밌다.,그냥.. 파워레인져같은거 영화같지도않게만듦...,0.0,0.0
+boostcamp-sts-v1-dev-168,nsmc-sampled,그나마 케이블에서 공짜로 봐서 다행입니다,오랜만에 케이블에서 방영 하고 있어서 보았다.,2.0,0.0
+boostcamp-sts-v1-dev-169,petition-sampled,나경원 평창 올림픽 위원직 사퇴 청원,나경원 평창올림픽 위원회 파면시켜주세요,3.5,1.0
+boostcamp-sts-v1-dev-170,petition-rtt,제발 아무것도‥하지마세요,제발 아무것도 하지마...,4.5,1.0
+boostcamp-sts-v1-dev-171,petition-rtt,(선언만 해두고 차후에 적정시점 실행),(나중에 적절한 시점에 선언하고 실행하면 됨),1.2,0.0
+boostcamp-sts-v1-dev-172,petition-sampled,이명박 출국금지 및 구속 청원,이명박 출국금지 및 구속수사 요청합니다,4.2,1.0
+boostcamp-sts-v1-dev-173,slack-sampled,너무 귀엽네요 ㅋㅋ,스몰 u 너무 귀엽네요ㅋㅋ,2.4,0.0
+boostcamp-sts-v1-dev-174,nsmc-sampled,그당시 독일의 사회적 모습이 잘 반영되 어서 좋았다,영화가순수하고 좋았다,0.6,0.0
+boostcamp-sts-v1-dev-175,petition-rtt,북한 미사일기지에 대한 해명은 청와대 대변인이 아니라..,북한 미사일 기지에 대한 설명은 청와대 대변인이 아니라...,4.4,1.0
+boostcamp-sts-v1-dev-176,slack-sampled,일단 개인법인카드로 결재하고 정산하면..?,아고 ㅠㅠ 개인카드도 정산신청 해주시면 처리해드리겠습니다.,2.0,0.0
+boostcamp-sts-v1-dev-177,petition-rtt,국민님들한테 걷은 세금을 우선 먼저 국민들의 건강을 진정 지켜주고 생활고을 만들지 않는 ''국민님복지건강의료비지원''과 국민님복지연금 운용됨 제도를 헌정공공화하여 주세요,우선 국민의 건강을 진정으로 보호하고 생활비를 발생시키지 않는 '국민복지 건강의료비 지원'과 '국민복지연금 운영체계'를 널리 알려주세요.,3.2,1.0
+boostcamp-sts-v1-dev-178,petition-rtt,성범죄를 줄이기 위해 모텔 입실시 프론트에서 성관계 '가or불가'에 대한 확인서를 작성하면 좋을듯합니다,성범죄를 줄이기 위해서는 모텔에 들어갈 때 프론트 데스크에서 '성관계 가능 여부' 확인서를 작성하는 것이 좋다.,4.2,1.0
+boostcamp-sts-v1-dev-179,petition-rtt,가상화폐투자 금감원만 아니라 관련 부서 공무원들 다 전수조사 해주세요,금감원 뿐만 아니라 관련 부처의 모든 공무원에 대해서도 철저히 조사해 주십시오.,3.6,1.0
+boostcamp-sts-v1-dev-180,slack-sampled,스쿼시 예습하러 갑니다 고고,한국 스쿼시 번개 기대 됩니다.,1.2,0.0
+boostcamp-sts-v1-dev-181,petition-sampled,외상센터지원해주세요,외상센터 지원해주세요,5.0,1.0
+boostcamp-sts-v1-dev-182,nsmc-rtt,역시 스탠리 큐브릭. 최고다,역시 스탠리 큐브릭. 최고,4.6,1.0
+boostcamp-sts-v1-dev-183,petition-sampled,정의당 해산을 요청합니다.,소년법 폐지를 요청 합니다.,0.2,0.0
+boostcamp-sts-v1-dev-184,petition-sampled,"대통령님, 저희 모녀 좀 도와 주세요","대통령님, 저희 스킨푸드 좀 꼭! 살려주세요.",0.6,0.0
+boostcamp-sts-v1-dev-185,nsmc-rtt,오랜만에 진짜 개그영화를 봤네요.,오랜만에 리얼 개그 영화를 봤다.,4.0,1.0
+boostcamp-sts-v1-dev-186,slack-rtt,#수경재배입문챕터 #파릇파릇,#수경재배 입문서 #Greenery,3.2,1.0
+boostcamp-sts-v1-dev-187,nsmc-rtt,기타노 타케시의 연기는 정말.. 그사람을 연기한다,키타노 타케시의 연기는 정말.. 그 사람을 연기합니다.,4.6,1.0
+boostcamp-sts-v1-dev-188,petition-sampled,박상기 파면해주세요,박상기 정형식. 파면 하세요.,2.8,1.0
+boostcamp-sts-v1-dev-189,slack-rtt,오오 환영합니다!!!,오 환영합니다!!!,4.6,1.0
+boostcamp-sts-v1-dev-190,nsmc-sampled,영화의 내용이 영 이상해,영화 제목이 왜 위아영인지 모르겠네요ㅠㅠ,0.4,0.0
+boostcamp-sts-v1-dev-191,nsmc-sampled,달달한 로맨틱 코미디의 정석,발랄하고 유쾌한 로맨틱 코미디 ㅋㅋ,2.2,0.0
+boostcamp-sts-v1-dev-192,nsmc-sampled,이영화는인생을 말하는것입니다.,이영화가 위는 결코 아닙니다..,0.4,0.0
+boostcamp-sts-v1-dev-193,nsmc-rtt,엑소 오빠들 사랑해요,사랑해요 엑소 오빠들,4.6,1.0
+boostcamp-sts-v1-dev-194,slack-rtt,수강하고자 하는 의향은 있으나 Python과 AI Math 강의만 수강하다가 지쳐버렸다,수강할 의지는 있는데 파이썬과 AI 수학 강의만 듣다보니 지겨워졌다.,3.4,1.0
+boostcamp-sts-v1-dev-195,petition-sampled,국가 부채를 줄입시다.,기초 단체의원을 줄입시다.,0.0,0.0
+boostcamp-sts-v1-dev-196,petition-sampled,주택정책 이대로 좋은가?,보험금 청구 시스템 이대로 괜찮은가??!!,0.4,0.0
+boostcamp-sts-v1-dev-197,slack-rtt,제가 옛날 사람이라..! 용어가 ㅎㅎ,나는 노인이다..! 용어 하하,2.0,0.0
+boostcamp-sts-v1-dev-198,slack-sampled,거의 테트리스에 가까운 일정 맞추기때문에 아쉽게 30분밖에 이야기를 나누지 못했지만 다음에 또 즐거운 이야기를 나눌 수 있기를 기대하며 이야기를 마무리하였습니다!,다음번에는 더욱더 다양한 토픽으로 대화를 나눌 수 있길 바랄게요!,1.8,0.0
+boostcamp-sts-v1-dev-199,nsmc-sampled,한고은 씨의 매력을 볼수있었던 드라마..,한석규의 전성시대가 열린 영화....,0.0,0.0
+boostcamp-sts-v1-dev-200,nsmc-sampled,보는동안 너무 재밌었고 액션또한 대단하다,보는내내 너무너무 재미있었음,2.6,1.0
+boostcamp-sts-v1-dev-201,nsmc-sampled,차태현 진짜 웃겨 빵빵터진다.,학교에서 보여줘서 봤었는데 진짜 재밌다.,1.0,0.0
+boostcamp-sts-v1-dev-202,slack-rtt,ㅋㅋ오마이~~ 참여하고싶지만 일정이 ㅠ,ㅋㅋ 어머~~ 참여하고 싶은데 일정이 ㅠ,4.4,1.0
+boostcamp-sts-v1-dev-203,petition-sampled,청소년법 개정부탁드립니다,청소년법 폐지부탁드립니다,2.0,0.0
+boostcamp-sts-v1-dev-204,slack-rtt,제 뒤의 문이 민트색인가..,내 뒤에 있는 문은 민트인가요?,3.6,1.0
+boostcamp-sts-v1-dev-205,nsmc-rtt,엔딩땜에 점수높게준다.,엔딩은 당신에게 더 높은 점수를 제공합니다.,2.6,1.0
+boostcamp-sts-v1-dev-206,slack-rtt,투자 잘 모르는 저한테 좋은 정보들 많이 알려 주었습니다.,투자에 대해 잘 모르는 분들에게 좋은 정보를 많이 주셨습니다.,3.4,1.0
+boostcamp-sts-v1-dev-207,slack-rtt,그냥 가면 살 수 있는줄 알고 열심히 왔는데…,그냥 살 수 있는 줄 알고 왔는데...,3.4,1.0
+boostcamp-sts-v1-dev-208,petition-rtt,사대보험 개인별 납부실시,4대보험부과 산정시 개인 빚도 고려해 주세요.,1.8,0.0
+boostcamp-sts-v1-dev-209,nsmc-sampled,재미있게 잘 보고 있습니다,재미있게 잘 봤습니다,3.2,1.0
+boostcamp-sts-v1-dev-210,slack-sampled,?! 오 저도 좀 알려주세요,오 저도 궁금합니다..!!,2.2,0.0
+boostcamp-sts-v1-dev-211,nsmc-rtt,"내가 이 영화에 처음으로 평점 남기는거라 잘 좀 주고 싶지만, 시간동안 서로 농담따먹기 및 추억팔이만 하다 나머지 분도 아무것도 없이 끝난다","이 영화에 평점을 남기는 것은 처음이라 칭찬을 좀 드리고 싶지만 일단은 그냥 장난치고 추억팔고 있고, 나머지는 아무 것도 없이 끝납니다.",4.0,1.0
+boostcamp-sts-v1-dev-212,petition-sampled,국민소환제를도입하라,국민투표로 국민소환제도입.,2.4,0.0
+boostcamp-sts-v1-dev-213,slack-sampled,ㅋㅋ 그 책은 제 손에 있습니다,그게 바로 이 책에 나와있습니다!,1.0,0.0
+boostcamp-sts-v1-dev-214,slack-sampled,항상 만나면 개인적인 이야기보다 회사 이야기 비중이 높아서 다음부터는 개인적인 이야기 나누는데 시간을 더 쓰는 것을 목표로 하겠습니다 ㅎㅎ,다음에는 좀 더 업무와는 거리가 먼 이야기도 나누길 기대하겠습니다,2.2,0.0
+boostcamp-sts-v1-dev-215,slack-sampled,ㅋㅋ 저는 지 리에 한표 드립니당,ㅋㅋㅋ영상으로 올려봅니당!!,0.0,0.0
+boostcamp-sts-v1-dev-216,nsmc-rtt,이 영화의 그 암울하고 비장미 넘치는 음악이 아직도 잊혀지지않는다.,이 영화의 어둡고 장밋빛 음악은 여전히 나를 괴롭힌다.,2.0,0.0
+boostcamp-sts-v1-dev-217,slack-rtt,덕분에 데이터 팀에서 일하시는 방식이나 집무실에 대해 잘 알게 되었습니다ㅎ,덕분에 데이터 팀이 일하는 방식과 사무실에 대한 좋은 아이디어를 얻었습니다.,3.0,1.0
+boostcamp-sts-v1-dev-218,nsmc-sampled,새벽에 보다가 이유모를 눈물이났다ㅠㅠㅠ,보면서 계속 눈물났어요ㅠㅠ,3.0,1.0
+boostcamp-sts-v1-dev-219,petition-sampled,거제 살인사건 가해자와 같은 강력범은 신상공개 해주세요.,강력범죄에 강력처벌 원합니다.,0.8,0.0
+boostcamp-sts-v1-dev-220,nsmc-rtt,이홍기가 캐스팅미스다,이홍기는 캐스팅 미스다.,4.8,1.0
+boostcamp-sts-v1-dev-221,petition-sampled,누진세 여름2달만이라도ㅜㅜ,전기 누진세 제발 페지해 주세요,1.4,0.0
+boostcamp-sts-v1-dev-222,petition-sampled,흥덕역 꼭 필요합니다,흥덕역 꼭 설치해주세요.,3.6,1.0
+boostcamp-sts-v1-dev-223,slack-sampled,<PERSON> 님과 티타임 커피타임을 가졌습니다.,<PERSON>님과 커스텀커피에서 티타임을 가졌습니다.,2.6,1.0
+boostcamp-sts-v1-dev-224,slack-rtt,<PERSON> 와 <PERSON> 님도 계셨으면 좋았을텐데... 다음에는 꼭 같이 와요!,<PERSON>님과 <PERSON>님도 함께 했으면 좋았을 텐데... 다음에 꼭 함께 가주세요!,4.2,1.0
+boostcamp-sts-v1-dev-225,nsmc-sampled,원래 셜록홈즈 좋아해서 번 넘게봄,솔직히 나는 남자인데..볼꺼없어서 봤는데 어우 번이상봄,1.0,0.0
+boostcamp-sts-v1-dev-226,slack-sampled,"어색하면 어쩌나 살짝 걱정을 했었는데,",처음 만나는 자리에 어색함이 당연한지라..,1.6,0.0
+boostcamp-sts-v1-dev-227,petition-sampled,저도 청소년법폐지 원합니다,청소년보호법 폐지 원합니다.,4.2,1.0
+boostcamp-sts-v1-dev-228,petition-rtt,성범죄처벌강화청원의 문제점,성범죄 처벌 강화 청원의 문제점,5.0,1.0
+boostcamp-sts-v1-dev-229,slack-sampled,<PERSON> 님과 처음으로 이야기를 나누었습니다!,<PERSON> 님과 이야기 나누었습니다!,3.0,1.0
+boostcamp-sts-v1-dev-230,nsmc-sampled,시노부는 행복입니다,시노부는 사랑입니다,2.6,1.0
+boostcamp-sts-v1-dev-231,slack-sampled,좋은 플랫폼 소개 감사합니다,좋은 콘텐츠 공유 감사합니다,1.6,0.0
+boostcamp-sts-v1-dev-232,slack-sampled,다음에 또 더 길게 얘기해요,다음에 또 이야기해요ㅎㅎ,3.2,1.0
+boostcamp-sts-v1-dev-233,slack-rtt,두부라고 하니 두부로 보이는 매직…,두부처럼 생긴 마법...,1.6,0.0
+boostcamp-sts-v1-dev-234,slack-sampled,ㅎㅎ 부럽습니다 !!,신행! 와우!!! 부럽습니다,3.0,1.0
+boostcamp-sts-v1-dev-235,slack-rtt,천천히 알아가도록 하겠습니다! ㅋ,천천히 알아보자! ㅋㅋㅋ,3.4,1.0
+boostcamp-sts-v1-dev-236,nsmc-sampled,편이 확실히 제일 재밌음..,편이 더 좋앗음...,2.0,0.0
+boostcamp-sts-v1-dev-237,slack-rtt,반동없이 10개는 처음이네요,반동 없이 10회를 해본 것은 처음이다.,4.0,1.0
+boostcamp-sts-v1-dev-238,petition-sampled,미세먼지를꼭해결해주세요~!,미세먼지좀 해결해주세요!!,4.4,1.0
+boostcamp-sts-v1-dev-239,nsmc-sampled,그 %때문에.. 평점은 확..,웃기고..슬프고..눈물나고..행복해지는..근데..평점이 왜케 짜~,1.2,0.0
+boostcamp-sts-v1-dev-240,nsmc-sampled,조카가 좋아하네요 ~,아이들이 너무 좋아하네요^^,2.4,0.0
+boostcamp-sts-v1-dev-241,slack-sampled,우리 회사 척추 잘부탁드립니다.,앞으로 잘부탁드립니다!,2.2,0.0
+boostcamp-sts-v1-dev-242,petition-sampled,공무원들이 이래도 됩니까?,공무원들!! 대체 이것이 무엇입니까,2.8,1.0
+boostcamp-sts-v1-dev-243,petition-sampled,지역주택조합 누굴위한 것인지,지역주택조합 임의탈퇴가능하게 해주세요,1.0,0.0
+boostcamp-sts-v1-dev-244,nsmc-sampled,마지막 엔딩에 누굴위해 만들었다는데.,마지막 엔딩에 눈말이 그냥..,1.4,0.0
+boostcamp-sts-v1-dev-245,nsmc-sampled,시작만 좋았던 영화,"모든것이 좋았던, 영화",1.4,0.0
+boostcamp-sts-v1-dev-246,slack-sampled,만나뵙게 되어서 반갑습니다~!,만나뵙게 되어서 행운이었습니다~!,3.0,1.0
+boostcamp-sts-v1-dev-247,nsmc-sampled,몇번을 봐도 재미있는 좀비영화.,몇번을 봐도 재미있는 영화다,2.8,1.0
+boostcamp-sts-v1-dev-248,nsmc-sampled,치명적인 매력 김남길...최고임,진짜 재밌다... 편도 나오길,0.4,0.0
+boostcamp-sts-v1-dev-249,petition-sampled,공무원 처우 개선해 주세요.,간호사 처우 개선을 위한 정책을 마련 해 주세요.,0.6,0.0
+boostcamp-sts-v1-dev-250,petition-sampled,정신 나간 공무원을 감사 청원합니다.,임현택 해수부 공무원의 조사와 파면을 청원합니다.,2.0,0.0
+boostcamp-sts-v1-dev-251,petition-sampled,시급 다시 낮춰주세요.,최저임금 꼼수 막아주세요.,0.4,0.0
+boostcamp-sts-v1-dev-252,slack-rtt,슬랙 워크플로우를 이용하면 반복 업무를 쉽게 처리할 수 있습니다.,Slack 워크플로를 사용하면 반복적인 작업을 쉽게 처리할 수 있습니다.,4.6,1.0
+boostcamp-sts-v1-dev-253,petition-rtt,버스등 졸음방지 장치 관련 안건,버스 등 졸음예방기기 관련 안건,4.4,1.0
+boostcamp-sts-v1-dev-254,slack-sampled,아래 기타 연주 사진 정말 멋지게 나왔네요~,골프필드에서의 사진이 정말 멋지네요!!,1.0,0.0
+boostcamp-sts-v1-dev-255,nsmc-rtt,고민없이 만든 로맨틱물.,고민 없이 만든 로맨스 영화.,3.4,1.0
+boostcamp-sts-v1-dev-256,nsmc-sampled,방 안에서 혼자 불끄고 봤는데~~ 정말 섬뜩하고 내용만으로도 충격을 주는 것에 대해 잊을 수 없다!!!,그당시 어린 나에게 가장 충격준 영화 혼자 불끄고 보는데 미쳐버리는줄 알았음..;;,2.6,1.0
+boostcamp-sts-v1-dev-257,petition-sampled,공무원들의 일회용품사용을 규제해주세요,매장내 일부 일회용컵 사용을 허용해주세요.,1.0,0.0
+boostcamp-sts-v1-dev-258,petition-sampled,간통죄 부활시켜주세요,간통죄 부활해주세요!!,4.0,1.0
+boostcamp-sts-v1-dev-259,petition-sampled,선수들 메달연금 올려주세요,올림픽 메달리스트 연금제도 없애주세요,1.0,0.0
+boostcamp-sts-v1-dev-260,slack-sampled,"17번째 <PERSON> 님과 만났습니다! 하시고 계신 일, 우리 회사에 오게된 이야기 등등 많은 이야기를 나누었습니다!","<PERSON> 님과 식단부터 개발 공부, 고양이 얘기, 디자인 얘기 등 정말 다양한 얘기를 나눴네요 ㅋㅋ",2.2,0.0
+boostcamp-sts-v1-dev-261,nsmc-sampled,정말 막장드라마 아님!!,정말 최고의 드라마...,1.0,0.0
+boostcamp-sts-v1-dev-262,slack-sampled,그게 일 잘하고 오래 멀리가는 방법이라 믿습니다.,워낙 발표 체질이시다보니 잘하시리라 생각합니다.,0.0,0.0
+boostcamp-sts-v1-dev-263,petition-sampled,주식시장 코스피 코스닥 폐쇄해주시길 바랍니다.,대한민국 국민이 주가된 코스피 코스닥을 만들어주세요,1.2,0.0
+boostcamp-sts-v1-dev-264,slack-sampled,불금에 일리네어 음악들으면서 코딩 달리면 될 것 같습니다.,코딩이 막 저절로 될 것 같아요.,1.0,0.0
+boostcamp-sts-v1-dev-265,petition-sampled,이명박이 출국금지 청원 합니다,이명박 전대통령 출국금지 청원합니다.,4.2,1.0
+boostcamp-sts-v1-dev-266,nsmc-rtt,오글거린다 답답하다 ㅉ,"속이 쓰리다, 답답하다.",2.6,1.0
+boostcamp-sts-v1-dev-267,nsmc-sampled,기자/평론가들 태반일거임ㅋ,기자랑 평론가들이 뭐 늘 그렇지..되도않는 지식인들..,1.2,0.0
+boostcamp-sts-v1-dev-268,petition-sampled,장애인 콜택시 좀 늘려주세요,장애인 공무원전형 늘려주세요,0.8,0.0
+boostcamp-sts-v1-dev-269,petition-sampled,조현민 형량후 추방을 요청합니다,대한항공 일가 조현민 특검을 요구합니다,1.6,0.0
+boostcamp-sts-v1-dev-270,nsmc-sampled,별다섯개주니 총평점 점올라가 버리네 ㅋㅋ;,별개주면 평점 몇올라갈까 궁금해서 개줬다 점이나 올려줬다 형이,2.8,1.0
+boostcamp-sts-v1-dev-271,petition-sampled,박시장은 그린벨트 해제하라!!!!,집값안정을 위한 그린벨트 해제 반대!!!,1.4,0.0
+boostcamp-sts-v1-dev-272,nsmc-rtt,이 드라마의 히트는 훗날 사극들에 지대한 영향을 끼쳤다.,이 드라마의 흥행은 후대의 사극에 지대한 영향을 미쳤다.,4.4,1.0
+boostcamp-sts-v1-dev-273,nsmc-sampled,진짜감동적이고재밌어요,진짜재밌어요 진짜강츄,3.4,1.0
+boostcamp-sts-v1-dev-274,nsmc-sampled,진짜 이건 아닌거같음..,.? 이건 아니지..,4.0,1.0
+boostcamp-sts-v1-dev-275,slack-sampled,오늘 이야기 너무 즐거웠습니다,어제 음식 너무 맛있었고 대화도 즐거웠습니다.,2.6,1.0
+boostcamp-sts-v1-dev-276,nsmc-sampled,"주연들의 발연기, 어거지 뜬금포 연출 ㅋㅋ",의리로도 용서 할수 없는 발연기 어쩔?,2.0,0.0
+boostcamp-sts-v1-dev-277,slack-sampled,꿈 꾸는 그날이 올때까지!!,아아아!! 그날이여 어서오라!!,1.4,0.0
+boostcamp-sts-v1-dev-278,slack-rtt,귀한분의 생일 많이 축하해주세요.,사랑하는 당신의 생일을 축하합니다.,2.8,1.0
+boostcamp-sts-v1-dev-279,nsmc-rtt,"독일장교옆에서 피아노 연주, 전쟁 생존기, 키큰남자가 가장 기억에 남는다.","독일 장교 옆에서 피아노 치는 것, 전쟁에서 살아남은 것, 키 큰 남자가 가장 기억에 남는다.",4.2,1.0
+boostcamp-sts-v1-dev-280,nsmc-rtt,대부분 편에서 인물의 기본 베이스 깐다고 약간의 루즈함이 있지만 그 속편에서 제대로 된 재미를 보여주고 있다.,"대부분의 캐릭터들의 기본 베이스가 약간 헐거워진 부분이 있지만, 속편에서는 리얼한 재미를 보여주고 있다.",3.6,1.0
+boostcamp-sts-v1-dev-281,petition-rtt,대구모..초등학교의 끔찍한 단면,대구모.. 초등학교의 끔찍한 단면,5.0,1.0
+boostcamp-sts-v1-dev-282,petition-sampled,초등돌봄교실 지자체 이관 반대,초등돌봄 교실 지자체 이관 반대,4.8,1.0
+boostcamp-sts-v1-dev-283,nsmc-sampled,정말 솔직한 드라마...,정말.. 엄청난 드라마..,1.6,0.0
+boostcamp-sts-v1-dev-284,nsmc-sampled,페북에 김보라 일진역할 욕하는 동영상 보고 보게됐는데 감동도 있고 재미도 있네요.,가족들이 보기에도 감동도 있었고 신났다아~,1.8,0.0
+boostcamp-sts-v1-dev-285,petition-sampled,부동산 양극화 주범,정부는 책임지고 부동산 양극화 해결해주세요,1.2,0.0
+boostcamp-sts-v1-dev-286,petition-sampled,제과업체들의 과대포장 규제 관련 청원,장바구니 가지고 다니기 캠페인과 과대포장 규제,0.8,0.0
+boostcamp-sts-v1-dev-287,petition-rtt,너의 췌장을 먹고 싶어.,너의 췌장을 먹고 싶어,5.0,1.0
+boostcamp-sts-v1-dev-288,petition-rtt,과장과 공포에 굴복하여 도리어 국민생명을 위협하고 있는 비이성적인 '독일 따라하기' 탈원전 정책을 멈춰주십시오.,과장과 공포에 굴복하여 국민의 생명을 위협하는 불합리한 '독일을 모방'하는 비핵화 정책을 멈춰주세요.,2.4,0.0
+boostcamp-sts-v1-dev-289,petition-sampled,다자녀 청약조건을 개선해주세요,1주택 청약자의 주택가격을 구분해주세요,0.5,0.0
+boostcamp-sts-v1-dev-290,nsmc-sampled,"조금이라도 본 게 아까워서라도 웬만하면 끝까지 볼랬는데, 토나올 것 같아 도저히 못 보겠어요.",보다가 중간에 끄고 싶었은데 본게 아까워서 못껐다,1.0,0.0
+boostcamp-sts-v1-dev-291,slack-rtt,늦었지만 ㅎ 환영합니다!,늦었지만 환영합니다!,4.8,1.0
+boostcamp-sts-v1-dev-292,slack-rtt,"닉네임(한글본명)을 사용할 경우, 어떤 분들은 닉네임으로 부르고, 어떤 분들은 한글본명+님 으로 부르게 됨","닉네임(한국식 실명)을 사용할 때 닉네임이라고 하는 사람도 있고, 한국식 실명+님이라고 하는 사람도 있습니다.",3.6,1.0
+boostcamp-sts-v1-dev-293,slack-sampled,강남 오피스 투어 다음에 저도 참여하겠습니다 ㅎㅎㅎ,다음에 강남 오피스 한번 방문하겠습니다~!,2.2,0.0
+boostcamp-sts-v1-dev-294,nsmc-sampled,"명장면이 너무 많다,",명장면이 너무많다.,5.0,1.0
+boostcamp-sts-v1-dev-295,petition-rtt,주택 과다보유 금지,주택 과잉 소유 금지,4.6,1.0
+boostcamp-sts-v1-dev-296,slack-rtt,맞아요 딱 정로환 ㅋㅋ,그렇군요 정로환입니다 ㅋㅋ,2.8,1.0
+boostcamp-sts-v1-dev-297,nsmc-sampled,하와이 풍경이 아주 좋다.,에이프릴 너무 좋다.,0.4,0.0
+boostcamp-sts-v1-dev-298,nsmc-sampled,약간 끈적한 거외에는...,요즘 시대에 이건 야한 것도 아님...,0.8,0.0
+boostcamp-sts-v1-dev-299,slack-rtt,조만간 또 뵙겠습니다~,곧 다시 보자,3.4,1.0
+boostcamp-sts-v1-dev-300,nsmc-sampled,진짜 재미있게 보고왔네요 하하하,진짜 엄청 재미있게 봤습니다.,3.6,1.0
+boostcamp-sts-v1-dev-301,petition-rtt,문 대통령은 북미 수교 정상화시켜 남북한 평화와 통일의길로 ㅎㅣㅎ,문 대통령은 남북한의 국교 정상화를 통해 남북한의 평화와 통일을 이뤘다.,2.2,0.0
+boostcamp-sts-v1-dev-302,nsmc-rtt,"과거의 기독교는 권력을 목적으로 사람을 세뇌시켜 통치했지만, 문명화된 오늘날의 기독교는 법치주의와 민주주의로 인해 권력을 못잡기에 돈을 목적으로 사람들을 세뇌시키고 있지...",과거 기독교는 권력을 위해 통치하기 위해 사람들을 세뇌했지만 오늘날의 문명화된 기독교는 법치와 민주주의로 인해 권력을 얻을 수 없기 때문에 돈을 위해 사람들을 세뇌하고 있습니다.,3.8,1.0
+boostcamp-sts-v1-dev-303,petition-rtt,화재연기감지기 오피스텔 내 오작동 관련 인명피해에 대한 대책마련,오피스텔 화재화재감지기 오동작으로 인한 인명피해 대책 마련,4.6,1.0
+boostcamp-sts-v1-dev-304,nsmc-sampled,결말이 슬프지도않은데 마음이 찡하냐,결말은 슬프면서도 아름다웠다.,1.6,0.0
+boostcamp-sts-v1-dev-305,nsmc-sampled,각자의 입장이 있는거..,내용이 잘 이해가...,0.0,0.0
+boostcamp-sts-v1-dev-306,nsmc-sampled,테리 길리엄 영화를 다시 찾아보려고 합니다.,테리길리엄.. 그 이름만으로도..,1.8,0.0
+boostcamp-sts-v1-dev-307,slack-rtt,주사위는 던져졌음 ㅋ,주사위가 던져진다,3.2,1.0
+boostcamp-sts-v1-dev-308,petition-rtt,제 와이프는 간호조무사였습니다.,제 아내는 간호 조무사였습니다.,4.8,1.0
+boostcamp-sts-v1-dev-309,petition-sampled,탁현민 행정관 사퇴,"청와대 "" 탁현민 행정관"" 의 해임을 촉구합니다",2.6,1.0
+boostcamp-sts-v1-dev-310,petition-sampled,문재인 최악 대통령,문재인 대통령 당신은,1.0,0.0
+boostcamp-sts-v1-dev-311,petition-sampled,실업자 지원 청원합니다..,정년 60세를 65세로 연장하는데 청원합니다...,0.2,0.0
+boostcamp-sts-v1-dev-312,slack-rtt,혹시 모션데스크 쓰시는 분들 어떤 브랜드 쓰시나요??,모션데스크를 사용한다면 어떤 브랜드를 사용하시나요?,4.0,1.0
+boostcamp-sts-v1-dev-313,petition-sampled,주휴 수당 폐지해주세요,최저임금제를 폐지해주세요,0.6,0.0
+boostcamp-sts-v1-dev-314,nsmc-sampled,이렇게 묻히기엔 너무나 아까운 영화고 이렇게 잊혀지기엔 너무나 안타까운 사건이다,단지종교적이라는 이유로 묻히게 되기엔 많이 아까운 영화다.,2.2,0.0
+boostcamp-sts-v1-dev-315,petition-sampled,환경부 정부 국가 상대로 국민의 건강증진 대책 미세먼지을 해결해달라,국민건강을 해치는 중국발 미세먼지에 대해 대책을 세워주십시오.,2.8,1.0
+boostcamp-sts-v1-dev-316,slack-sampled,같이 좋은 프로덕을 만들어보아요.,논의를 함께 더 발전시켜보아요.,0.8,0.0
+boostcamp-sts-v1-dev-317,slack-sampled,크 여행 떠나고 싶네요오 ;ㅁ;,크 여행떠나고싶네요~~,5.0,1.0
+boostcamp-sts-v1-dev-318,slack-rtt,돌아오는 수업도 열심히 질문하면서 적극적으로 듣도록하겠습니다!!,돌아오는 수업시간에 질문으로 적극적으로 경청하도록 노력하겠습니다!!,3.8,1.0
+boostcamp-sts-v1-dev-319,nsmc-rtt,그의 등장만으로 눈물이 날뻔 했다,그의 등장만으로도 눈물이 날 뻔했다.,4.8,1.0
+boostcamp-sts-v1-dev-320,petition-sampled,조두순 출소를 반대합니다.,조두순 출소를 반대합니다!,4.8,1.0
+boostcamp-sts-v1-dev-321,slack-rtt,자랑스러운 우리 멤버들. 말씀들도 너무 잘하시네요.,우리 회원님들이 자랑스럽습니다. 당신은 또한 말을 아주 잘합니다.,3.2,1.0
+boostcamp-sts-v1-dev-322,petition-rtt,베트남 유학생도 사람이다,베트남 학생도 사람입니다,4.0,1.0
+boostcamp-sts-v1-dev-323,petition-sampled,청원홈페이지 개선필요,청와대 홈페이지 개선 2,2.6,1.0
+boostcamp-sts-v1-dev-324,petition-sampled,이명박 출국금지 청원,이명박 출국 금지 청원,5.0,1.0
+boostcamp-sts-v1-dev-325,slack-sampled,14번째! <PERSON> 님과 이런 저런 얘기를 나눴습니다.,10번째! <PERSON> 와 이런 저런 이야기 나눴습니다!,3.0,1.0
+boostcamp-sts-v1-dev-326,slack-sampled,전 여기 차타고 가려고요,오 차타고 5분거리네요 ㅋㅋ,1.2,0.0
+boostcamp-sts-v1-dev-327,petition-sampled,길담하면 처벌해주세요,학교 선생님응 처벌해주세요,0.6,0.0
+boostcamp-sts-v1-dev-328,nsmc-sampled,무대장면에서는 입은 웃고 눈은 울면서 봤어요,보는 내내 감동이여서 눈물 훔치면서 봤어요,2.2,0.0
+boostcamp-sts-v1-dev-329,petition-sampled,미세먼지 대책세워주세요,미세먼지 대책 세워주십시오,4.5,1.0
+boostcamp-sts-v1-dev-330,nsmc-rtt,걍 고전 스릴러 재미없음,꽤 볼만한 스릴러.,0.8,0.0
+boostcamp-sts-v1-dev-331,petition-rtt,"평창 올림픽 도움으로 비핵화의 첫 단추인 남, 북 대화까지 이루어지고 있는 시점에 왜? 미, 일은 한반도에 전혀 도움 되지 않는 한목소리를 내는지..!!","평창올림픽을 계기로 비핵화의 첫걸음, 남북대화가 이뤄지는 이유는? 미국과 일본이 한반도에 전혀 도움이 되지 않는 한 목소리를 내고 있다..!!",4.0,1.0
+boostcamp-sts-v1-dev-332,slack-sampled,오… <PERSON>님 ! 멋져요!,<PERSON> 이렇게 바로ㅠㅠ!!! 감사합니다!,0.6,0.0
+boostcamp-sts-v1-dev-333,nsmc-sampled,괜히 시간아깝거든 보지말라.,평점믿고봤는데 돈아깝고 시안아깝고 ..보지마,3.0,1.0
+boostcamp-sts-v1-dev-334,petition-sampled,국민연금 자율가입제,국민연금 선택 납부제,2.0,0.0
+boostcamp-sts-v1-dev-335,slack-sampled,혹시 개발팀에서 사용중인 linear 도 고려해 보셨는지요?,Linear 사용도 고려 해 보았습니다.,2.2,0.0
+boostcamp-sts-v1-dev-336,petition-sampled,대마도 우리땅 입니다,독도 및 대마도 반환운동 청원,1.6,0.0
+boostcamp-sts-v1-dev-337,nsmc-sampled,봐도봐도 지겹지않은 영화,정말 몇번 봐도 재미있는 영화,2.8,1.0
+boostcamp-sts-v1-dev-338,petition-rtt,대통령님 제 2의 촛불의 희생자는 당신이 될수도있습니다,"대통령, 당신은 두 번째 촛불의 희생자가 될 수 있습니다",4.4,1.0
+boostcamp-sts-v1-dev-339,slack-sampled,저도 슬슬 공부 시작했습니다.,일 오래하고 다시 공부하다는 게 저는 신기했습니다.,1.2,0.0
+boostcamp-sts-v1-dev-340,nsmc-sampled,연기 연습 할 시간에 행위 연습만 했냐? ㅉㅉ,남배우 연기도 주목할만하다.,0.4,0.0
+boostcamp-sts-v1-dev-341,nsmc-sampled,대체 뭘 말하고 싶은지 모르겠더라.,뭘 말하려는지 모르겠음...,3.8,1.0
+boostcamp-sts-v1-dev-342,petition-sampled,피의자 김성수 강력한 처벌 원합니다,강서구 pc방 살인사건 피의자 김성수 감형 반대,2.8,1.0
+boostcamp-sts-v1-dev-343,nsmc-sampled,ㅋㅋ ocn에서 하길래 봤는데 킬링타임용으로도 안볼 쓰.레.기 영화다,OCN에서 하길래..그래도 끝까지 봤다.,1.8,0.0
+boostcamp-sts-v1-dev-344,nsmc-sampled,원화평이 필요하다.,네이버 평점 점이 필요하다,0.8,0.0
+boostcamp-sts-v1-dev-345,slack-rtt,낯가림이 심한 편인데... 무엇 때문이었을까요...,좀 부끄럽지만... 이유가 뭘까요...,2.0,0.0
+boostcamp-sts-v1-dev-346,petition-sampled,"초등학교 1,2학년 영어교육 허용",초등학교 1.2학년의 방과후 영어 수업 허용 요청,3.2,1.0
+boostcamp-sts-v1-dev-347,petition-sampled,북한에 대한 환상 깨라,북한에 끌려다니지 마십시오.,1.2,0.0
+boostcamp-sts-v1-dev-348,slack-sampled,아 그렇군요!! ㅎ,아 ㅋㅋ 그렇군요!,4.8,1.0
+boostcamp-sts-v1-dev-349,nsmc-sampled,습작수준으로 효율이 떨어지는 영화.,설명은 줄이고 조율이 필요한 영화.,0.6,0.0
+boostcamp-sts-v1-dev-350,nsmc-sampled,보는내내 입안가득 웃음이 피어나오는 그런영화 강추 ㅋ,"재미없고, 보는내내 뭔가 찜찜한 그런 영화..",0.4,0.0
+boostcamp-sts-v1-dev-351,slack-rtt,불가능을 가능으로 바꾸시는 포카리스웨트를 떠올리게 하는 <PERSON>함께 무사히 따릉이 입문했습니다.,불가능을 가능으로 만드는 포카리스웨트가 생각나는 <PERSON>과 함께 따릉이가 무사히 입장했습니다.,3.4,1.0
+boostcamp-sts-v1-dev-352,nsmc-sampled,평생 이런드라마 처음이다,막장을 떠나서 이런 개념없는 드라마는 처음이다,2.6,1.0
+boostcamp-sts-v1-dev-353,slack-rtt,"오복수산에서 카이센동을 먹었는데요, 우니와 참치의 조합이 예술이었습니다",오복수산에서 가이센동 먹었는데 우니와 참치 조합이 예술,4.2,1.0
+boostcamp-sts-v1-dev-354,nsmc-rtt,영화 '플러스 원'과 언뜻 비슷한 느낌이 들기도 했지만...허접하고 어설프기 짝이 없었던 배우들 연기와 전개....,얼핏보면 영화 '플러스원'과 비슷한 느낌이었지만...,2.8,1.0
+boostcamp-sts-v1-dev-355,slack-sampled,저희 로고 변경 관련 미팅 내용을 노션에 정리해두었습니다.,저는 팀 미팅 장소 혹은 외부 미팅 장소로 사용하게 될 것 같습니다!,0.6,0.0
+boostcamp-sts-v1-dev-356,nsmc-sampled,중간에 시가전 진짜 개 쩐다 ㄷㄷ,카메라 시퀀스 진짜진짜 대박입니다,0.4,0.0
+boostcamp-sts-v1-dev-357,petition-rtt,음주운전 확실히잡읍시다,음주운전을 꼭 만납시다.,1.4,0.0
+boostcamp-sts-v1-dev-358,nsmc-sampled,내가 영화 보는 수준이 낮은가 봄..,내가 영화보는 수준이 자질이라서 그런가?? 샌들러 연기력말고는 온통 지루햇다...,2.4,0.0
+boostcamp-sts-v1-dev-359,slack-sampled,이런저런 얘기하느라 즐거웠습니당,너무 즐거웠습니당.,3.2,1.0
+boostcamp-sts-v1-dev-360,petition-sampled,헌법개정 적극 지지합니다,"카풀 도입, 적극 지지합니다",0.6,0.0
+boostcamp-sts-v1-dev-361,nsmc-rtt,혜고언니도 짱 이쁨,혜고언니도 이쁘다,3.8,1.0
+boostcamp-sts-v1-dev-362,petition-sampled,서영을 살려주십시오!,법무부 근로자를 살려주십시오,0.4,0.0
+boostcamp-sts-v1-dev-363,slack-sampled,오피스에서 자주 뵐 것 같네요,오피스에서 5월이나 6월부터 자주 뵐 것 같습니다.,3.0,1.0
+boostcamp-sts-v1-dev-364,petition-rtt,청와대 비서실 명의를 사칭한 뷰티유튜버 처벌해주세요.,청와대 비서실 사칭한 뷰티 유튜버 처벌해주세요.,4.5,1.0
+boostcamp-sts-v1-dev-365,petition-sampled,남북정상회담 때 방지석 연주자 빨대피리 음악 틀어주세요,군인 여러분 근무시간 지킵시다.,0.0,0.0
+boostcamp-sts-v1-dev-366,petition-rtt,부산에 사상구억 이런 청소년 폭행사건이 비일비재한 현실에 부디 폐지하셔서 더이상의 무고한 학생들과 아이들이 피해가 생기지않게 해주십시요,부산에서 이런 청소년 폭력 사건이 만연한 상황에서 더 이상 무고한 학생과 어린이들이 피해를 입지 않도록 폐지해 주십시오.,3.5,1.0
+boostcamp-sts-v1-dev-367,petition-sampled,가수 슈 지인들도 같이 수사해주세요..,마트나 편의점 직원도 앉아도 되게 해 주세요...,0.0,0.0
+boostcamp-sts-v1-dev-368,slack-sampled,"채널에 초대된 기념으로 올립니다,",초대된 기념으로 남겨봅니다!,3.2,1.0
+boostcamp-sts-v1-dev-369,petition-rtt,정부 주택 정책 문제점,정부 주택 정책 문제,4.6,1.0
+boostcamp-sts-v1-dev-370,petition-sampled,청소년 보호법 폐지,청소년 보호법 폐지!!,4.4,1.0
+boostcamp-sts-v1-dev-371,nsmc-sampled,라는 생각만 들 정도로 가슴에 와닿았다.,라는 생각이 들 정도로 이야기와 노래 연기력이 대단했다.,2.6,1.0
+boostcamp-sts-v1-dev-372,slack-sampled,갤러리아 백화점 투어도 했는데 스카이워크 넘 재밌었습니당,갤러리아백화점에 프리스비가 있습니다,1.2,0.0
+boostcamp-sts-v1-dev-373,slack-sampled,오 코워킹 룸이 생겼네요?,고양이 양양이와 강아지 양양이가 생겼네요 ㅋㅋ,0.4,0.0
+boostcamp-sts-v1-dev-374,slack-sampled,모두 조심하시기 바랍니다-,모두 건강유의하시기 바라요-,1.8,0.0
+boostcamp-sts-v1-dev-375,nsmc-sampled,난 뭐 로맨틱하고 설레이는 싱글녀의 러브스토리인줄알았다.,[러브스토리]의 어설픈 재탕..,1.2,0.0
+boostcamp-sts-v1-dev-376,petition-sampled,조두순출소 반대합니다,조두순출소를 반대합니다,5.0,1.0
+boostcamp-sts-v1-dev-377,nsmc-sampled,"머리 나빠서 장면전환,",머리 아파지는 영화다 .,0.8,0.0
+boostcamp-sts-v1-dev-378,petition-rtt,음주흡연 단속 사각지대 스크린야구장,음주 및 흡연을 위한 사각지대 통제 스크린 야구장,3.0,1.0
+boostcamp-sts-v1-dev-379,nsmc-sampled,아주 좋은 영화입니다.,너무 좋은 영화입니다.,4.8,1.0
+boostcamp-sts-v1-dev-380,slack-rtt,응원합니다아!!!!,응원합니다!!!!,4.8,1.0
+boostcamp-sts-v1-dev-381,petition-sampled,"유치원 교사 사례처럼, 국가에서 급여보조해주는데 고용주가 다시 앗아간 금액 좀 돌려주실수 있으세요?",사립유치원도 사립요양원처럼 매년 평가를받고 지원여부를 판단해 주시기 바랍니다.,0.8,0.0
+boostcamp-sts-v1-dev-382,nsmc-sampled,이건 뭐 전기세가 아까울 정도니...,이건 뭐 조조로 봐도 돈 아까움...,2.2,0.0
+boostcamp-sts-v1-dev-383,slack-sampled,방금 권한 드렸습니다,네~! 방금 권한 부여해드렸어요.,4.0,1.0
+boostcamp-sts-v1-dev-384,slack-rtt,아니면 <PERSON> 님이랑 합체해서 댄스 가수로 데뷔를...,아니면 <PERSON>과 함께 댄스 가수로 데뷔...,3.4,1.0
+boostcamp-sts-v1-dev-385,nsmc-rtt,몇마디 안되는 그의 대사가 가슴을 후벼판다.,그의 몇 줄의 대화가 마음을 아프게 합니다.,3.8,1.0
+boostcamp-sts-v1-dev-386,slack-sampled,구글시트에 바로 적어주셔도 좋습니다!,"구독 시작하시면, 여기에만 올려주셔도 됩니다!!",0.0,0.0
+boostcamp-sts-v1-dev-387,petition-sampled,크림하우스 네이처 매트 (아기 매트),크림하우스 매트 전면판매불가조치 및 환불,1.2,0.0
+boostcamp-sts-v1-dev-388,slack-rtt,냉각타임때 불러주세요,쿨타임이 되면 전화해,0.8,0.0
+boostcamp-sts-v1-dev-389,slack-rtt,사용해보신 분들 계시면 후기 듣고 싶습니당,써보셨다면 후기를 듣고 싶습니다.,4.0,1.0
+boostcamp-sts-v1-dev-390,nsmc-rtt,편보다 편이 더 재밌는 영화... 편부터는 보지마,본편보다 영화가 더 재밌어... 본편은 보지마,1.6,0.0
+boostcamp-sts-v1-dev-391,nsmc-sampled,정말 재밌게 본 영화!!,정말 재밌게본 영화 ^^,4.6,1.0
+boostcamp-sts-v1-dev-392,slack-rtt,정말 오랜만에 <PERSON> 님과 대화를 나눴습니다.,오랜만에 <PERSON>님과 이야기를 나눴습니다.,4.2,1.0
+boostcamp-sts-v1-dev-393,slack-sampled,“우연히 선물 받음” 이 안되면 시작이 안되는건가여,복원 추출이라서 우연히 그렇게 된 걸까요 ...??,0.0,0.0
+boostcamp-sts-v1-dev-394,petition-rtt,"임기가 끝난 문재인 대통령은 즉시 사퇴하시고, 빠른 시일 내에 20대 대통령 선거가 실시되도록 해주시기 바랍니다.",임기를 마치고 집권한 문재인 대통령이 조속히 사퇴하고 20대 대통령 선거가 하루빨리 치러지기를 바랍니다.,4.2,1.0
+boostcamp-sts-v1-dev-395,slack-sampled,저희 아직 채널은 안 만들어진거죠?,가드닝 채널 있나요??,0.6,0.0
+boostcamp-sts-v1-dev-396,petition-sampled,더불어민주당 지역구 국회의원이 함부로 지역구 구민 개인정보 열람해서 우편물 보내는 사례 조사해서 엄중 처벌해주세요요.,경기도 이천시 비행 허가도 안되는 곳에 드론 경기장 설립한 관련 공무원들 처벌 바랍니다.,0.2,0.0
+boostcamp-sts-v1-dev-397,petition-sampled,이재명 경기도지사님의 부적절한수사,"이재명 경기도지사 파면, 성남시 특검!",1.0,0.0
+boostcamp-sts-v1-dev-398,nsmc-sampled,그냥 지루한 영화일뿐이다,참 답답하고 지루한 영화.,3.2,1.0
+boostcamp-sts-v1-dev-399,slack-rtt,전 한글도 영어도 제대로 안되는 어중간한 위치에 있게 되버렸네요.,한국어나 영어를 제대로 하지 못하는 곤란한 상황에 처해 있습니다.,3.4,1.0
+boostcamp-sts-v1-dev-400,nsmc-sampled,식스센스 영화감독이었다는게 리얼 반전..,식스센스의 전형적인 아류작이라고 보면 된다.,1.2,0.0
+boostcamp-sts-v1-dev-401,petition-sampled,수능성적으로 한줄세우기 해야,단순하게 수능으로 한줄 세우기 해야 합니다.,3.8,1.0
+boostcamp-sts-v1-dev-402,slack-sampled,어제는 <PERSON> 님과 점심을 같이 먹었습니다~,오늘은 <PERSON> 님과 회식 시간을 가졌습니다 ~~!,1.2,0.0
+boostcamp-sts-v1-dev-403,petition-sampled,성폭력죄 공소시효 폐지해 주세요.,공소시효 폐지 해 주세요(태완이법.성폭력법),3.2,1.0
+boostcamp-sts-v1-dev-404,petition-sampled,사교육을 줄여주세요,수능을 없에 주세요.,0.0,0.0
+boostcamp-sts-v1-dev-405,slack-sampled,<PERSON> 님께서 추천해주신 초밥을 맛있게 먹고,<PERSON> 님께서 추천해주셨던 NY BnB에서 수제 버거를 먹었는데요.,1.4,0.0
+boostcamp-sts-v1-dev-406,petition-sampled,국가 재난의료 전문가를 양성하고 진료하는 의료센터를 만들어 주십시요.,축구협회를 해체하고 정부차원에서 공정한 운영을 위한 축구협회를 다시 만들어 주세요.,0.2,0.0
+boostcamp-sts-v1-dev-407,petition-sampled,원정화 간첩조작사건 제수사해주세요,과거정부의 간첩조작사건 가해자 처벌,1.4,0.0
+boostcamp-sts-v1-dev-408,nsmc-sampled,디엠비로 본사람이 많군,저도 디엠비로 봤는데 추천,2.0,0.0
+boostcamp-sts-v1-dev-409,petition-rtt,직업도 돈도 없고 쌀도 없어 굼주리고 있는데 자치단체(시청)는 매일 조경에 물주는데 이 현실 맞는 제도인가요,나는 직업도 없고 돈도 없고 밥도 없어서 굶주리고 있다. 지방 자치 단체(시청)는 매일 조경에 물을 줍니다. 이게 현실이야?,4.5,1.0
+boostcamp-sts-v1-dev-410,nsmc-sampled,그러나 그다지 볼만하지 않다,뭐 그 분위기는 나쁘지 않다,0.8,0.0
+boostcamp-sts-v1-dev-411,nsmc-sampled,영화계 최고의 이야기꾼 이창동.,최고의 배우들 최고의 영화,0.8,0.0
+boostcamp-sts-v1-dev-412,slack-rtt,ㅋㅋ넘 잼썼어요 진짜ㅋㅋ,ㅋㅋ 정말 재밌게 봤어요 ㅋㅋ,2.4,0.0
+boostcamp-sts-v1-dev-413,nsmc-rtt,아무 주제를 찾을 수 없는 영화,주제를 찾을 수 없는 영화,4.2,1.0
+boostcamp-sts-v1-dev-414,nsmc-rtt,내일죽거도 저런 사랑한번 해봐씀 길지않은인생 후회없시 삽니다,내일 죽어도 그런 사랑을 한 번 해보세요. 후회 없이 짧은 인생을 살아라,3.6,1.0
+boostcamp-sts-v1-dev-415,slack-sampled,못다한 이야기는 한강러닝에서 이어가 보아용!!,"우리는, 못다한 이야기를 위해 목요일! 함께 점심을 먹기로 했습니다!!!(선언)!!!!",1.0,0.0
+boostcamp-sts-v1-dev-416,petition-rtt,여성도 예비군을 통해 국방의 의무를 이행하기를 청원합니다,여성들도 예비군을 통해 국방의 의무 이행을 청원한다.,4.8,1.0
+boostcamp-sts-v1-dev-417,slack-rtt,다음에 기회가 된다면 만나서 밥이라도 먹기루..!,다음에 기회가 된다면 만나서 밥먹자..!,4.2,1.0
+boostcamp-sts-v1-dev-418,nsmc-rtt,"최고의 조폭영화인듯 싶고, 조폭미화가 먹혔던 최후의 작품으로 기억하고싶었는데 친구, 두사부일체가 예상외의 흥행을 해서 씁슬했던적이 있다.",최고의 조폭 영화라고 생각했고 조폭 미화 작업을 한 마지막 작품으로 기억하고 싶었지만 한때 친구와 두 남편이 박스오피스에서 예상치 못한 공연을 해서 씁쓸했다.,2.6,1.0
+boostcamp-sts-v1-dev-419,petition-rtt,강서구 피시방 살해사건 심신미약,강서구 PC방 살인사건 심신미약,4.4,1.0
+boostcamp-sts-v1-dev-420,slack-rtt,아무래도 상관 없어요.,그것은 정말 중요하지 않습니다.,1.8,0.0
+boostcamp-sts-v1-dev-421,petition-sampled,제발 도서정가제를 폐지해주세요,4년 도서정가제 실험은 실패했다.,1.4,0.0
+boostcamp-sts-v1-dev-422,slack-sampled,도움 부탁 드리겠습니다~~,급하게 도움 요청 드립니다!!,3.8,1.0
+boostcamp-sts-v1-dev-423,slack-rtt,와. 너무너무 멋지네요. 클라임 업업!!,우와. 너무 좋아요. 올라가!!,1.6,0.0
+boostcamp-sts-v1-dev-424,slack-rtt,시청자 수 폭발한만큼 서류 접수도 폭발할 수 있게 주변에 많이 알려주시면 감사하겠습니다,시청자가 폭발한 만큼 서류 제출이 폭발할 수 있도록 주변에 알려주시면 감사하겠습니다.,4.0,1.0
+boostcamp-sts-v1-dev-425,petition-sampled,"다산 신도시 실버택배 비용의 지자체, 정부의 지원금 출현을 반대합니다.","보건복지부와 지자체 예산이 분담, 지원되는 다산신도시 실버택배 도입 철회 요청합니다.",3.4,1.0
+boostcamp-sts-v1-dev-426,petition-sampled,초등돌봄교실 지자체 이관 결사 반대,초등돌봄교실 지자체 이관 결사 반대!,5.0,1.0
+boostcamp-sts-v1-dev-427,nsmc-sampled,애잔하고 아련하고 마음속이 뜨거워지는 감동,오랫만에 마음이 뜨거워짐을 느끼며 행복~,2.4,0.0
+boostcamp-sts-v1-dev-428,nsmc-sampled,견자단 액션은 확실히 지렸는데..,견자단과 예성의 액션씬은 두고두고 볼 명장면이다.,2.4,0.0
+boostcamp-sts-v1-dev-429,petition-sampled,이명박 출국 금지!,이명박 출국금지!!!!,5.0,1.0
+boostcamp-sts-v1-dev-430,slack-rtt,아직 못 뵈었는데 마치 같이 있었던 것 같은 회식....,아직 못 봤지만 같이 있는 것 같은...,2.8,1.0
+boostcamp-sts-v1-dev-431,petition-rtt,네이버 압수 수색해야 합니다.,네이버를 수색하고 몰수해야 합니다.,3.0,1.0
+boostcamp-sts-v1-dev-432,nsmc-sampled,너무 저평가된 듯..,너무 아쉽다. 평가 저하되었다는게...,2.8,1.0
+boostcamp-sts-v1-dev-433,slack-sampled,베란다도 너무 예뻐요!!,우와 가을!!! 다 너무 예뻐요!!!,0.8,0.0
+boostcamp-sts-v1-dev-434,slack-rtt,세 달 동안 너무 고생 많으셨습니다,3개월동안 수고 많으셨습니다,4.8,1.0
+boostcamp-sts-v1-dev-435,slack-sampled,댄스파티 중입니다!,거리두기 조정안입니다~,0.0,0.0
+boostcamp-sts-v1-dev-436,petition-rtt,식약처의 모르쇠 대응으로 아직도 사용중인 가습기살균성분cmit/mit성분이 들어있는 헤어스프레이제품 회수를 청원합니다.,식품의약품안전처의 무지에 대한 대응으로 아직 사용중인 가습기살균성분 cmit/mit 성분이 함유된 헤어스프레이 제품의 리콜을 청원합니다.,4.2,1.0
+boostcamp-sts-v1-dev-437,nsmc-rtt,최악의영화 재미도없고 감동도없고 류 신파영화,재미도없고 감동도없고,2.8,1.0
+boostcamp-sts-v1-dev-438,slack-rtt,나뭇잎을 문 털복숭이라니ㅠㅠㅠ,나뭇잎을 물어뜯는 털입니다 ㅠㅠ,2.0,0.0
+boostcamp-sts-v1-dev-439,petition-sampled,조두순 출소 결사반대,조두순 출소 결사 반대,5.0,1.0
+boostcamp-sts-v1-dev-440,nsmc-sampled,다큐인줄모르고봣는뎅^^아이들이너무밝고ㅋㅋ재밋게잘봣어용^^,재밋게 잘봣어요^^,3.0,1.0
+boostcamp-sts-v1-dev-441,petition-rtt,"3년 째 경기도 양주시 옥정동 세창 아파트 105동 1501호가 내 집에 몰래 카메라와 만능 소리내는 기기 설치해 놓고 매일, 하루 종일 괴롭힙니다.",경기도 양주시 옥정동 1501 세창아파트 105호가 3년째 우리 집에 몰래카메라와 만능 음향기기를 설치하고 하루 종일 괴롭힙니다.,4.8,1.0
+boostcamp-sts-v1-dev-442,petition-rtt,"페미니즘 교육 의무화, 정치, 정책 제도를 폐지하고 이퀄리즘 교육 의무화, 정치, 정책 제도화할 것을 청원합니다.",우리는 페미니즘 교육의무와 정치·정책 제도의 폐지와 평등주의 교육의 정치·정책적 제도화를 청원합니다.,4.4,1.0
+boostcamp-sts-v1-dev-443,nsmc-rtt,레미제라블을 각색한 듯한 느낌이 드는 평작,레미제라블을 각색한 듯한 평평한 작품,3.6,1.0
+boostcamp-sts-v1-dev-444,petition-rtt,"박상기 법무장관 해고 안합니까,",박상기 법무부 장관은 해고해야 하는 것 아닌가?,4.2,1.0
+boostcamp-sts-v1-dev-445,slack-sampled,특히 오프닝 크레딧이 있는 시퀀스가 최고라고 느꼈는데요.,"OST도 매우 좋아서, 그 오프닝 크레딧에 있는 음악을 올려봅니다.",1.6,0.0
+boostcamp-sts-v1-dev-446,nsmc-rtt,청각을 잃었을때에 나도 같이 잃은 기분을 느꼈다.,"내가 청력을 잃었을 때, 나는 같은 느낌을 받았습니다.",3.2,1.0
+boostcamp-sts-v1-dev-447,slack-rtt,자브라 대만족이죠!,Jabra에 매우 만족합니다!,4.2,1.0
+boostcamp-sts-v1-dev-448,nsmc-sampled,내용도 어이없고 이제 안볼려구요,별로 공감이 안가요.,1.0,0.0
+boostcamp-sts-v1-dev-449,petition-rtt,모든 공공분야는 국가에서 관리해야 합니다.~~^^,모든 공공 부문은 국가에서 관리해야 합니다.,4.2,1.0
+boostcamp-sts-v1-dev-450,nsmc-sampled,오랜만에 나온 한국표 명작영화,오랜만에 만난 명작이다.,3.2,1.0
+boostcamp-sts-v1-dev-451,slack-sampled,금전수는 그냥 평생 푸른 잎만 보여주는 줄 알았는데.. 꽃대가 여러 개 올라오는거 있죠!,우와아아 금전수 꽃 피는 줄 처음 알았어요!,1.2,0.0
+boostcamp-sts-v1-dev-452,petition-sampled,조두순 출소 완전 반대,조두순 출소 절대 반대!,4.2,1.0
+boostcamp-sts-v1-dev-453,slack-rtt,으아 진짜 멋져부려요!!!,"와, 정말 멋져보이십니다!!!",4.0,1.0
+boostcamp-sts-v1-dev-454,slack-rtt,갈수록 뛰는 시간이 늘 것 같은 설렘!!,러닝타임이 길어질수록 더해지는 것 같은 설렘!!,2.2,0.0
+boostcamp-sts-v1-dev-455,nsmc-sampled,살아있다면꼭봐야되는영화다.,꼭보고죽어야되는영화,2.4,0.0
+boostcamp-sts-v1-dev-456,nsmc-sampled,가디언의 전설 사랑해요!!,(가디언의 전설  좀 부탁합니다~),1.6,0.0
+boostcamp-sts-v1-dev-457,petition-sampled,누진제 폐지 좀 하라구요!!!,누진제 폐지 문제 해결해주세요~,3.6,1.0
+boostcamp-sts-v1-dev-458,nsmc-sampled,범죄를 저질려도 청소년이란이유로 처벌도 안받았을꺼고ㅠ 가슴이 아팠습니다!,보는 내내 가슴이 많이 아팠네유.,2.2,0.0
+boostcamp-sts-v1-dev-459,petition-rtt,국가 인권 위원회 는 즉각 해산하라,국가인권위원회를 즉각 해산하라.,4.8,1.0
+boostcamp-sts-v1-dev-460,petition-sampled,국회의원 세비 및 봉급을 동결합시다,국회의원 월급이나 연봉 삭감을 청원합니다,1.8,0.0
+boostcamp-sts-v1-dev-461,nsmc-sampled,이런것 때문에 내가 영화를 본다...,영화를 보면서... 뭘하는지 몰랐음...,0.6,0.0
+boostcamp-sts-v1-dev-462,nsmc-sampled,나에게는 추억이 있는 영화,나에게는 충분히 즐거웠던 영화,2.2,0.0
+boostcamp-sts-v1-dev-463,petition-sampled,일간베스트와 워마드 사이트 폐쇄,"일간베스트,메갈리아 사이트 폐지해주세요",3.2,1.0
+boostcamp-sts-v1-dev-464,petition-rtt,폭력적 단체생활 강요인 수련활동을 개선해주세요.,폭력적인 집단생활을 강요받는 훈련활동을 개선해주세요.,4.0,1.0
+boostcamp-sts-v1-dev-465,nsmc-rtt,나이틀리 역의 제레미 노덤..너무 멋져요.,나이틀리 역의 제레미 노덤...너무 멋집니다.,4.4,1.0
+boostcamp-sts-v1-dev-466,slack-rtt,두 분 다 간만에 햇살 맞으며 산책이셨다고 하네요.,두 사람은 오랜만에 햇살을 받으며 산책을 했다고 한다.,4.0,1.0
+boostcamp-sts-v1-dev-467,nsmc-sampled,옛날영화치고 재밌어요 ㅋㅋ,어릴때보고 지금다시봐도 재밌어요ㅋㅋ,2.0,0.0
+boostcamp-sts-v1-dev-468,slack-rtt,넘 사랑스런 울팀...,정말 사랑스러운 팀...,3.6,1.0
+boostcamp-sts-v1-dev-469,nsmc-sampled,뭔생각으로 만든걸까 궁금하게 만드는 영화,"왜만든지 궁금하게 만드는 영화,,,,",3.8,1.0
+boostcamp-sts-v1-dev-470,slack-sampled,너무 멋진 말씀이네요. 고고고!,오 너무 멋진 글 모음이내요.,2.0,0.0
+boostcamp-sts-v1-dev-471,petition-sampled,대통령방북시 직항로개설해 주세요,1종 자동 면허 개설해 주세요~~,0.4,0.0
+boostcamp-sts-v1-dev-472,petition-sampled,제발 선처 부탁 드립니다.,소년법 폐지 부탁 드립니다.,0.5,0.0
+boostcamp-sts-v1-dev-473,nsmc-rtt,거부감은 들지만 신선하고 재밌다,거부되었지만 신선하고 재미있습니다.,3.0,1.0
+boostcamp-sts-v1-dev-474,nsmc-sampled,아ㅋㅋ 병맛영화ㅋㅋ,말그대로 병맛 코미디ㅋㅋㅋ,2.8,1.0
+boostcamp-sts-v1-dev-475,petition-sampled,국회의원 의석수를 줄여야합니다,국회의원 수를 반으로 줄입시다,3.0,1.0
+boostcamp-sts-v1-dev-476,nsmc-rtt,클래맨타인이후 깜놀한영화 시간이정말아까왔구요 이상하게 잠도안와ㅠㅠ,클레멘타인에 이어 깜짝 영화시간이 다가오고 이상하게 잠이 오지 않는다 ㅠㅠ,3.8,1.0
+boostcamp-sts-v1-dev-477,slack-sampled,막국수 에세이 ㅋㅋㅋ,오 막국수 킬러ㅋㅋㅋ 고기리 막국수 안가보셨다면 한번 모시겠습니다ㅎㅎ,1.2,0.0
+boostcamp-sts-v1-dev-478,petition-rtt,남북단일팀 취소를 촉구합니다,남북 단일팀 취소 촉구,4.0,1.0
+boostcamp-sts-v1-dev-479,petition-sampled,조양호 당장 물러나라,조양호 회장 경영 퇴출,3.6,1.0
+boostcamp-sts-v1-dev-480,petition-rtt,중국발 미세먼지 대책 마련해주세요,중국발 미세먼지 대책 강구해주세요,4.2,1.0
+boostcamp-sts-v1-dev-481,nsmc-sampled,오랜만에 인상깊은 애니메이션을 만났다,역시 애니메이션은 픽사,1.0,0.0
+boostcamp-sts-v1-dev-482,slack-rtt,구성원의 온보딩 과정에서 트레이닝과 정서적인 지지를 제공하고 구성원이 피드백할 기회를 마련해야 한다.,회원의 온보딩 과정에서 교육 및 정서적 지원이 제공되어야 하며 회원이 피드백을 제공할 수 있는 기회가 제공되어야 합니다.,3.8,1.0
+boostcamp-sts-v1-dev-483,petition-rtt,초등학교 교사 증가및 효율적인 분배를 요청합니다,초등학교 교원 증원 및 효율적인 배분 요청,4.5,1.0
+boostcamp-sts-v1-dev-484,petition-sampled,몰래카메라 판매 기준 강화,이동식무인단속카메라는 몰래카메라,0.6,0.0
+boostcamp-sts-v1-dev-485,slack-rtt,함께 실험해보실분들 모두 환영입니다!,누구나 우리와 함께 실험할 수 있습니다!,1.6,0.0
+boostcamp-sts-v1-dev-486,nsmc-sampled,평범한 소재로 어쩜 이런 영화를 만들었을까!,대체 왜! 제시카알바가 이런 영화에 그런역할로 출연했을까?,0.6,0.0
+boostcamp-sts-v1-dev-487,nsmc-sampled,그래도 이건 흥미조차 없다,흥미가 가지 않았다.,3.0,1.0
+boostcamp-sts-v1-dev-488,slack-sampled,한시간이 넘도록 말씀 나누는데 모니터 빨려들어갈 뻔 했네요.,30분이 얘기하다보니 한시간이 되었네요.,1.0,0.0
+boostcamp-sts-v1-dev-489,petition-sampled,조두순 재판을 다시해 주세요,조두순무기징역받게 해 주세요,1.8,0.0
+boostcamp-sts-v1-dev-490,slack-sampled,이후 <PERSON> 님과 함께 나른한 오후 달달한 디저트와 함께 짧고 굵은 수다를 떨었습니다.,"16번째, 금요일 오후 시간 추석 연휴를 기다리며 <PERSON> 님과 업무에 지친 몸과 마음을 리프레시 하는 수다 타임을 가졌습니다.",1.6,0.0
+boostcamp-sts-v1-dev-491,petition-sampled,국가대표 신태용감독 퇴사요구,신태용감독을 퇴출시켜주세요.,3.8,1.0
+boostcamp-sts-v1-dev-492,nsmc-sampled,지금 봐도 체감공포는 최곤데..,지금 생각해도 눈물이 흐르네요...,0.4,0.0
+boostcamp-sts-v1-dev-493,slack-sampled,"<PERSON> 님의 온보딩을 도와드리며, 식사와 티타임을 즐겼습니다!",<PERSON> 이전 티타임을 통해 한 번씩 뵈었던 경험이 있어서 4명이 가볍게 모여봤습니다.,1.4,0.0
+boostcamp-sts-v1-dev-494,petition-rtt,자동차분석 전문인력을 확보해 국민생명과재산을보호해주십시요,자동차 분석 전문가 확보로 인명과 재산을 보호합니다.,3.8,1.0
+boostcamp-sts-v1-dev-495,nsmc-rtt,너무 산만하고 시끄럽고 재미없음,재미없어도 너무없어,2.8,1.0
+boostcamp-sts-v1-dev-496,slack-sampled,첨부 이미지 참고 올립니다.,이미지 파일 이름이 모든걸 말해주네요.,0.6,0.0
+boostcamp-sts-v1-dev-497,petition-sampled,길거리 흡연 규제 및 벌금 강화,흡연자들을 위한 흡연구역 증설 및 벌금 증세,2.2,0.0
+boostcamp-sts-v1-dev-498,slack-rtt,노래방에서 노래 부르는 것이 꺼려진다는 공통점을 알고 난 후 내적 친밀감도 생성되었답니다 ㅎㅎ,노래방에서 노래하기를 꺼리는 사람들을 알게 된 후 내면의 친밀감이 형성되었습니다.,3.8,1.0
+boostcamp-sts-v1-dev-499,petition-sampled,집값폭등과 금리인상,"세월호참사, 4대강사업 << 집값폭등",1.2,0.0
+boostcamp-sts-v1-dev-500,slack-rtt,슬랙 채널에 북마크 추가할 수 있습니다.,Slack 채널에 북마크를 추가할 수 있습니다.,4.8,1.0
+boostcamp-sts-v1-dev-501,nsmc-sampled,많은 분들이 접하지 못한 의외의 수작.,볼 게 없어서 봤는데 의외의 수작... 여운이 남는 영화,2.2,0.0
+boostcamp-sts-v1-dev-502,petition-sampled,자유한당나경원 파면,자유한당 나경원 파면,5.0,1.0
+boostcamp-sts-v1-dev-503,slack-rtt,다음 사진 부터는 수정하겠습니다!,다음 사진은 수정하겠습니다!,3.2,1.0
+boostcamp-sts-v1-dev-504,nsmc-sampled,기억에 남을 영화입니다,흠. 기억에 남는 영화라고 할까요,3.8,1.0
+boostcamp-sts-v1-dev-505,petition-sampled,낙태죄 폐지 반대 청원합니다.,가상화폐 거래소 폐지 반대 청원합니다.,0.4,0.0
+boostcamp-sts-v1-dev-506,petition-rtt,난임 건보지원 횟수제한,불임 보험 지원 횟수 제한,3.2,1.0
+boostcamp-sts-v1-dev-507,nsmc-rtt,눈물이 난다...T T,눈물난다...TT,4.8,1.0
+boostcamp-sts-v1-dev-508,petition-sampled,드디어 미국도 가상화폐의 폐혜를 조금씩 인정하기 시작하는군요,세계적인 가상화폐의 흐름을 막을수 없습니다.,1.2,0.0
+boostcamp-sts-v1-dev-509,slack-sampled,화려한 조명이 감싸지는 느낌!,화려한 조명에 감싸여 계시는군용!!!ㅋㅋ,2.6,1.0
+boostcamp-sts-v1-dev-510,nsmc-rtt,주식할 때 빛지면 골로간다,스타킹 때 빛나면 골로 간다,1.2,0.0
+boostcamp-sts-v1-dev-511,nsmc-sampled,기묘하기는한데 무슨내용인지..,무슨영화인지는 모르지만 그냥 줌....,1.6,0.0
+boostcamp-sts-v1-dev-512,nsmc-rtt,이번 영화 너무 재밌게 잘 봤구요.,간만에 한국영화 정말 잼있게 봤습니다.,3.0,1.0
+boostcamp-sts-v1-dev-513,nsmc-sampled,무심코 봤지만 너무 많은걸 얻어간 영화.,굉장히 멋있었던 영화로 기억함. 옛날에 봤지만.,1.2,0.0
+boostcamp-sts-v1-dev-514,petition-rtt,중소기업 지원 제도 폐지,중소기업 지원제도 폐지,5.0,1.0
+boostcamp-sts-v1-dev-515,slack-sampled,덕분에 비즈팀과 SWE 팀에서 고민하고 있는 문제를 어느정도 맛볼 수 있었습니다.,"서로 입사하게된 계기에 대해 이야기하고, 궁금했던 추천팀 이야기도 들을 수 있었습니다.",0.2,0.0
+boostcamp-sts-v1-dev-516,petition-rtt,대한민국에서 절대로 자영업 하지마세요,한국에서 절대 자영업하지 마세요,5.0,1.0
+boostcamp-sts-v1-dev-517,petition-sampled,조두순 사형 해야합니다,조두순을 무기징역으로 해야합니다,1.5,0.0
+boostcamp-sts-v1-dev-518,slack-sampled,"레몬워터 우선 첫 물맛이, 맛있어요!!",오늘 가서 접해봤는데 맛있어요!!,1.8,0.0
+boostcamp-sts-v1-dev-519,slack-sampled,넵 저희는 github에서 관리중인데 사용자분들은 편의상 저기에 받았습니다.,대문자는 shift 눌러서 사용하고 있습니다.,0.0,0.0
+boostcamp-sts-v1-dev-520,petition-rtt,불법체류 외국인을 추방해야 합니다.,불법체류자는 추방되어야 합니다.,4.4,1.0
+boostcamp-sts-v1-dev-521,petition-sampled,여성 대체복무 제도 마련,여성의무복무제 여성가족부폐지,0.8,0.0
+boostcamp-sts-v1-dev-522,nsmc-rtt,"러닝타임이 더 길고 맥어보이가 더 많이 나왔으면 하는 바람이 있었지만, 제임스 맥어보이의 몇 번의 등장만으로도 이 영화는 십점짜리다 ㅁㅊ 사랑해요","러닝타임이 더 길고 맥어보이가 더 많았으면 좋았을 텐데, 제임스 맥어보이가 몇 번 출연해서 이 영화에 10점을 줬습니다. 사랑해요.",4.0,1.0
+boostcamp-sts-v1-dev-523,petition-rtt,자유학기제 중1에서 중3 총6학기 전체로 확대,자유학기제를 중1에서 중3까지 6학기로 확대,4.4,1.0
+boostcamp-sts-v1-dev-524,petition-sampled,청정 계곡을 지켜주세요,비자림을 지켜주세요. 제주를 지켜주세요.,0.6,0.0
+boostcamp-sts-v1-dev-525,petition-sampled,해당 판사의 경질을 청원합니다,정형식 판사의 특별감사를 청원합니다.,1.8,0.0
+boostcamp-sts-v1-dev-526,nsmc-sampled,흥행위주의ㅡ다른영화들과는 다른. 진짜영화,이런 게 진짜 영화.,2.4,0.0
+boostcamp-sts-v1-dev-527,petition-sampled,최저임금위원회 해체,최저임금위원회 해체해야만 한다 꼭,3.0,1.0
+boostcamp-sts-v1-dev-528,slack-sampled,ㅋㅋ너무 재밌었어요!!!,다시 봐도 너무 웃겨요ㅋㅋ,1.4,0.0
+boostcamp-sts-v1-dev-529,nsmc-sampled,하....뭐라 할말이없는영화다,하... 이건정말...,1.6,0.0
+boostcamp-sts-v1-dev-530,slack-sampled,대박이죠!!! ㅋㅋㅋ,그것도 내년에 받던데요?ㅋㅋㅋ,0.0,0.0
+boostcamp-sts-v1-dev-531,petition-rtt,"국회의원실의 자료 요구, '내일까지 요구자료에 대한 답변 가져오세요'",국회 의원실 자료 요청 '자료 요청한 내용은 내일까지 제공',3.6,1.0
+boostcamp-sts-v1-dev-532,slack-rtt,아 그와중에 프로필 사진을 이어붙이신 정성…. ㅋㅋ,아 그 와중에 프로필 사진 첨부하는 진심.... ㅋ,2.4,0.0
+boostcamp-sts-v1-dev-533,nsmc-sampled,심지어 전달하고자 하는 주제조차도 빈약하기 짝이 없다.,지루하기 짝이 없음,1.8,0.0
+boostcamp-sts-v1-dev-534,petition-sampled,미세먼지좀 해결해주세요,미세먼지 좀 해결해주세요.,5.0,1.0
+boostcamp-sts-v1-dev-535,petition-rtt,이렇게 비내리는 날 황토흙이 흘러내려도 흑우연맹박창오 생가는 오늘도 그곳에서 독립운동가와 박태명.박순명을 기다리고 있습니다.,"이렇게 비가 오는 날에도 황토가 흘러내린다 해도 검은소연합회 박창오의 생가는 오늘도 여전히 그곳에서 독립운동가들과 박태명, 박순명을 기다리고 있다.",3.6,1.0
+boostcamp-sts-v1-dev-536,petition-sampled,한시적 누진세 완화,누진세 완화말고 일시폐지!!,1.0,0.0
+boostcamp-sts-v1-dev-537,slack-sampled,그리고 각자가 우리 회사에 합류하게 된 스토리들을 이야기했는데 아주 재밌었습니다ㅋㅋㅋ,이런 저런 이야기 나누다가 자연스럽게 우리 회사 합류경험 이야기가 나왔는데요,2.4,0.0
+boostcamp-sts-v1-dev-538,slack-sampled,미사도 껴주세요... ㅎㅎ,오 저도 끼워주세요..! ㅎㅎ,2.8,1.0
+boostcamp-sts-v1-dev-539,slack-rtt,다음 포스트로 성장하는 나에 대한 질문과 답변이 이어집니다! 원하신다면...ㅎ,나를 키우는 것에 대한 질문과 답변은 다음 포스트에서 이어집니다! 네가 원한다면...,3.4,1.0
+boostcamp-sts-v1-dev-540,nsmc-sampled,성경영화라 쓰고 예술영화라 읽는다.,최고의 영화라 해도 손색이 없다.,0.4,0.0
+boostcamp-sts-v1-dev-541,nsmc-sampled,최고의 농촌드라마.,진심 최고의 드라마.,2.0,0.0
+boostcamp-sts-v1-dev-542,slack-rtt,다양하고 재밌는 얘기를 나눌 수 있어서 좋았습니다.,다양하고 재미있는 이야기를 나눌 수 있어서 좋았습니다.,4.8,1.0
+boostcamp-sts-v1-dev-543,petition-sampled,국민청원제를 유료로 바꾸어야 합니다,종교법 매우 강력하게 바꾸어야합니다 ~ !,0.2,0.0
+boostcamp-sts-v1-dev-544,slack-sampled,아직 입사 1주차인 제게 많은 도움이 되는 이야기들 해주셨습니다!!,많은 조언해주셔서 목표와 생각을 정리하는데도 큰 도움이되었습니다!!ㅎㅎ,2.0,0.0
+boostcamp-sts-v1-dev-545,nsmc-sampled,"사회적 이슈를 다루고 있는 가슴 찡한 드라마네요,,,",정말 가슴을 따뜻하게 한 좋은 드라마...,2.0,0.0
+boostcamp-sts-v1-dev-546,slack-rtt,(비타민 먹는 장면),(비타민을 먹는 장면),4.8,1.0
+boostcamp-sts-v1-dev-547,nsmc-sampled,내용이 뭔 내용인지도 모르겠음,무슨의미로 만들었는지 모르겠음..,2.4,0.0
+boostcamp-sts-v1-dev-548,slack-rtt,"(예: 주말에는 개인캘린더만, 업무시간에는 업무 캘린더만 보기)","(예: 주말에는 개인캘린더만 보고, 업무시간에는 업무캘린더만 보기)",5.0,1.0
+boostcamp-sts-v1-dev-549,nsmc-rtt,다소 허접한 영상도 군데군데 있음.,엉뚱한 영상도 몇 개 있습니다.,2.2,0.0
