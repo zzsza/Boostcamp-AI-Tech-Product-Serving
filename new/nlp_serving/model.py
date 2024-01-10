@@ -170,6 +170,9 @@ class Model(pl.LightningModule):
         optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr)
         return optimizer
 
+    def predict(self, x):
+        return self.forward(x)
+
 
 URL = "https://docs.google.com/uc?export=download&confirm=1"
 CHUNK_SIZE = 32768

@@ -1,9 +1,14 @@
-from fastapi import APIRouter, HTTPException, status
+import torch.utils.data
+import transformers
+from fastapi import APIRouter, HTTPException, status, Depends
 from pydantic import BaseModel
+from pytorch_lightning import Trainer
 from sqlmodel import Session
+from transformers import AutoTokenizer
 
 from database import PredictionResult, engine
-from dependencies import get_model
+from dependencies import load_model, get_trainer, get_tokenizer
+from model import Dataset
 
 router = APIRouter()
 
@@ -19,9 +24,18 @@ class PredictionResponse(BaseModel):
 
 # FastAPI 경로
 @router.post("/predict")
-def predict(request: PredictionRequest) -> PredictionResponse:
+def predict(request: PredictionRequest, model=Depends(load_model),
+            trainer: Trainer = Depends(get_trainer),
+            tokenizer: AutoTokenizer = Depends(get_tokenizer)) -> PredictionResponse:
     # 모델 추론
-    model = get_model()
+    # preprocess request body
+
+    text = '[SEP]'.join(request.features)
+    output = tokenizer(text, add_special_tokens=True, padding='max_length', truncation=True)
+    dataset = Dataset(output['input_ids'], [])
+    dataloader = torch.utils.data.DataLoader(dataset, batch_size=16, shuffle=False, num_workers=1)
+    result = trainer.predict(model=model, dataloaders=dataloader)
+
     prediction = int(model.predict([request.features])[0])
 
     # 결과를 데이터베이스에 저장

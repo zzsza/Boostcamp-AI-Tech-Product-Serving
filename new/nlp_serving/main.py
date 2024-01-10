@@ -5,9 +5,8 @@ from loguru import logger
 from sqlmodel import SQLModel
 
 from api import router
-from config import config
 from database import engine
-from dependencies import load_model
+from model import Model  # noqa
 
 
 @asynccontextmanager
@@ -16,16 +15,11 @@ async def lifespan(app: FastAPI):
     logger.info("Creating database tables")
     SQLModel.metadata.create_all(engine)
 
-    # 모델 로드
-    logger.info("Loading model")
-    load_model(config.model_path)
-
     yield
 
 
 app = FastAPI(lifespan=lifespan)
 app.include_router(router)
-
 
 if __name__ == "__main__":
     import uvicorn
