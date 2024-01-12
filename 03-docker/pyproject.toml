@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "02-docker"
+version = "0.1.0"
+description = ""
+authors = ["heumsi <heumsi@naver.com>"]
+readme = "README.md"
+packages = [{include = "02_docker"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^1.13.1"
+torchvision = "^0.14.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
