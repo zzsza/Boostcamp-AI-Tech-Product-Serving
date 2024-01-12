@@ -1,0 +1,10 @@
+black==23.9.1
+matplotlib==3.7.1
+numpy==1.23.5
+pandas==1.5.3
+Pillow==9.4.0
+python-dotenv==1.0.0
+scikit-learn==1.2.2
+tensorboard==2.13.0
+torch==2.1.1
+torchvision==0.16.1
