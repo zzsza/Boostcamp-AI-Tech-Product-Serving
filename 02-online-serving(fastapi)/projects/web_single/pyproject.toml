@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "web-single"
+version = "0.1.0"
+description = ""
+authors = ["heumsi <heumsi@naver.com>"]
+readme = "README.md"
+packages = [{include = "web_single"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = {extras = ["all"], version = "^0.105.0"}
+scikit-learn = "^1.3.2"
+sqlmodel = "^0.0.14"
+pydantic-settings = "^2.1.0"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
