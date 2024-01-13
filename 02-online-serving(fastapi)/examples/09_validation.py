@@ -117,7 +117,7 @@ class ModelInput02:
             raise ValidationError("올바르지 않은 input 입니다")
 
 
-from pydantic import BaseModel, HttpUrl, Field, DirectoryPath
+from pydantic import BaseModel, DirectoryPath, Field, HttpUrl
 
 
 class ModelInput03(BaseModel):

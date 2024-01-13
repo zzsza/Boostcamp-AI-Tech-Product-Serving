@@ -1,5 +1,5 @@
-from fastapi import FastAPI, APIRouter
 import uvicorn
+from fastapi import APIRouter, FastAPI
 
 user_router = APIRouter(prefix="/users")
 order_router = APIRouter(prefix="/orders")
@@ -37,9 +37,7 @@ def read_order_id(order_id: str):
 
 app = FastAPI()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.include_router(user_router)
     app.include_router(order_router)
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-

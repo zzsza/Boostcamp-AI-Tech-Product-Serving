@@ -1,5 +1,5 @@
 import os
-from typing import Dict, Any
+from typing import Any, Dict
 
 dev_config_yaml = """
 env: dev
@@ -14,7 +14,7 @@ with open("dev_config.yaml", "w") as f:
     f.write(dev_config_yaml)
 
 # 1. .ini, .yaml 파일 기반 config 주입
-from yaml import load, FullLoader
+from yaml import FullLoader, load
 
 
 def load_config(config_path: str) -> Dict[str, Any]:
@@ -35,7 +35,13 @@ def load_config(config_path: str) -> Dict[str, Any]:
 config = load_config(config_path="dev_config.yaml")
 
 assert config["env"] == "dev"
-expected = {"username": "user", "password": "user", "host": "localhost", "port": 3306, "database": "dev"}
+expected = {
+    "username": "user",
+    "password": "user",
+    "host": "localhost",
+    "port": 3306,
+    "database": "dev",
+}
 assert config["db"] == expected
 
 
@@ -69,9 +75,10 @@ config = DevConfig.from_yaml("dev_config.yaml")
 assert config.ENV == "dev"
 assert config.DB == expected
 
+from enum import Enum
+
 # 3. pydantic base settings
 from pydantic import BaseSettings, Field
-from enum import Enum
 
 
 class ConfigEnv(str, Enum):
