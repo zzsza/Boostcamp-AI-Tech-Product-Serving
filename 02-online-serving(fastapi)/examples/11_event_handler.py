@@ -1,23 +1,26 @@
+from contextlib import asynccontextmanager
+
 import uvicorn
 from fastapi import FastAPI
-
-app = FastAPI()
+from loguru import logger
 
 items = {}
 
 
-@app.on_event("startup")
-def startup_event():
-    print("Start Up Event")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Start Up Event")
     items["foo"] = {"name": "Fighters"}
     items["bar"] = {"name": "Tenders"}
 
+    yield
 
-@app.on_event("shutdown")
-def shutdown_event():
-    print("Shutdown Event!")
+    logger.info("Shutdown Event!")
     with open("log.txt", mode="a") as log:
         log.write("Application shutdown")
+
+
+app = FastAPI(lifespan=lifespan)
 
 
 @app.get("/items/{item_id}")
