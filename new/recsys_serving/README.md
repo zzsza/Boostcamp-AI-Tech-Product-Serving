@@ -15,9 +15,9 @@ poetry install
 ## Run
 환경 설정
 ```bash
-# .env 
+# .env
 # Default Baseline for DeepCoNN
-MODEL_PATH=./data/src/model_versions/deepconn_model.pt
+MODEL_PATH=./data/src/model_versions/model.pt
 PYTHONPATH=
 ```
 실행
@@ -27,27 +27,21 @@ poetry run python main.py
 
 ## Usage
 
-### Predict
+### Train & Recommendation
 
 ```bash
-curl -X POST "http://0.0.0.0:8000/predict" -H "Content-Type: application/json" -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
-
-{"id":3,"result":0}
+# train 값 설정을 통해 학습 유무를 결정할 수 있습니다
+# Default model.pt 은 DeepCoNN 모델에 대한 파일입니다.
+curl -X POST "http://0.0.0.0:8000/scoring" -H "Content-Type: application/json" -d '{"model": "DeepCoNN", "train": true, "vector_create": true}'
+{"id":11676,"isbn": "0000000000", "rating": 0.0, "model":"FM"} # example
 ```
 
-### Get all predictions
-
+### Get a Predictions
 ```bash
-curl "http://0.0.0.0:8000/predict"
-
-[{"id":1,"result":0},{"id":2,"result":0},{"id":3,"result":0}]
-```
-
-### Get a prediction
-
-```bash
-curl "http://0.0.0.0:8000/predict/1"
-{"id":1,"result":0}
+# 전체 결과 검색
+curl -X GET "http://0.0.0.0:8000/scoring"
+# 특정 결과 검색
+curl -X GET "http://0.0.0.0:8000/scoring/{user_id}"
 ```
 
 ## Build
