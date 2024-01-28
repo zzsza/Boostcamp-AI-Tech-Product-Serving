@@ -3,14 +3,15 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 
 from airflow.exceptions import AirflowFailException
-from operators.slack_notifier import task_fail_slack_alert, task_succ_slack_alert
+from utils.slack_notifier import task_fail_slack_alert, task_succ_slack_alert
 
 
-# slack_notifier 에 선언한 webhook 전송 함수를 활용하여 slack 알림을 제공합니다
+# slack_notifier에 선언한 webhook 전송 함수를 활용하여 slack 알림을 제공합니다
 default_args = {
     'owner': 'kyle',
     'depends_on_past': False,
-    'start_date': datetime(2022, 4, 20),
+    'start_date': datetime(2024, 1, 1),
+    'end_date': datetime(2024, 1, 4),
     'retires': 1,
     'retry_delay': timedelta(minutes=5),
     'on_failure_callback': task_fail_slack_alert, # 실패 알림
