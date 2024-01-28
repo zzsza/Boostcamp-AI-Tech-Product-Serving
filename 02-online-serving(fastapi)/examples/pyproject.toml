@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "examples"
+version = "0.1.0"
+description = "FastAPI examples"
+authors = ["Sung Yun Byeon <zzsza@naver.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.109.0"
+uvicorn = "^0.25.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+isort = "^5.13.2"
+pycln = "^2.4.0"
+pytest = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
