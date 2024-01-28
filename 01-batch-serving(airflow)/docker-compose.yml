@@ -8,7 +8,7 @@ services:
     image: postgres:13
     environment:
       - POSTGRES_USER=airflow
-      - POSTGRES_PASSWORD=1234
+      - POSTGRES_PASSWORD=!boostcamp-aitech!
     volumes:
       - ./data:/var/lib/postgresql/data
     restart: always
@@ -27,11 +27,11 @@ services:
         airflow db init && \
         airflow users create \
           --username admin \
-          --password 1234 \
-          --firstname heumsi \
-          --lastname jeon \
+          --password !boostcamp-aitech! \
+          --firstname kyle \
+          --lastname byeon \
           --role Admin \
-          --email heumsi@naver.com \
+          --email snugyun01@gmail.com \
         "
     restart: on-failure
     networks:
@@ -72,7 +72,7 @@ services:
       - airflow-init
     image: codercom/code-server:4.0.1
     environment:
-      - PASSWORD=1234
+      - PASSWORD=!boostcamp-aitech!
       - HOST=0.0.0.0
       - PORT=8888
     volumes:

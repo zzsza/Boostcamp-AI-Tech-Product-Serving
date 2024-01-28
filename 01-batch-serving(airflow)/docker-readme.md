@@ -42,7 +42,7 @@ $ docker run \
   --network airflow \
   -v $(pwd)/data:/var/lib/postgresql/data \
   -e POSTGRES_USER=airflow \
-  -e POSTGRES_PASSWORD=1234 \
+  -e POSTGRES_PASSWORD=!boostcamp-aitech! \
   postgres:13
 ```
 
@@ -70,11 +70,11 @@ $ docker run \
     airflow db init && \
     airflow users create \
       --username admin \
-      --password 1234 \
-      --firstname heumsi \
-      --lastname jeon \
+      --password !boostcamp-aitech! \
+      --firstname seongyun \
+      --lastname byeon \
       --role Admin \
-      --email heumsi@naver.com \
+      --email snugyun01@gmail.com \
   "
 ```
 
@@ -141,7 +141,7 @@ $ docker run -it --name code-server \
     -d \
     -v "$(pwd)/dags:/home/coder/project" \
     -p 8888:8888 \
-    -e PASSWORD=1234 \
+    -e PASSWORD=!boostcamp-aitech! \
     -e HOST=0.0.0.0 \
     -e PORT=8888 \
     codercom/code-server:4.0.2
