@@ -11,7 +11,7 @@ def send_message(slack_msg):
         task_id="slack_webhook",
         slack_webhook_conn_id=SLACK_DAG_CONN_ID,
         message=slack_msg,
-        username="sample-airflow",
+        username="Airflow-alert",
     )
 
 

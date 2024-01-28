@@ -5,7 +5,8 @@ from datetime import datetime, timedelta
 default_args = {
     'owner': 'kyle',
     'depends_on_past': False,  # 이전 DAG의 Task가 성공, 실패 여부에 따라 현재 DAG 실행 여부가 결정. False는 과거의 실행 결과 상관없이 매일 실행한다
-    'start_date': datetime(2022, 4, 20),
+    'start_date': datetime(2024, 1, 1),
+    'end_date': datetime(2024, 1, 4),
     'retires': 1,  # 실패시 재시도 횟수
     'retry_delay': timedelta(minutes=5)  # 만약 실패하면 5분 뒤 재실행
 }
