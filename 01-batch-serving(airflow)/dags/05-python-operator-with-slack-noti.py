@@ -5,12 +5,13 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 
 from airflow.exceptions import AirflowFailException
-from operators.slack_notifier import task_fail_slack_alert, task_succ_slack_alert
+from utils.slack_notifier import task_fail_slack_alert, task_succ_slack_alert
 
 default_args = {
     'owner': 'kyle',
     'depends_on_past': False,
-    'start_date': datetime(2022, 4, 20),
+    'start_date': datetime(2024, 1, 1),
+    'start_date': datetime(2024, 1, 4),
     'retires': 1,
     'retry_delay': timedelta(minutes=5),
 }
