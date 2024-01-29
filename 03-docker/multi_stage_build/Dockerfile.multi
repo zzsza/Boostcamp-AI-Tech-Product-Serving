@@ -1,0 +1,21 @@
+# Stage 1: Build
+FROM python:3.9 as build
+
+WORKDIR /app
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir --user --upgrade -r /app/requirements.txt
+
+# Stage 2 : Runtime
+FROM python:3.9-slim as runtime
+
+WORKDIR /app
+
+# 필요한 파일들을 빌드 스테이지에서 복사
+COPY --from=build /root/.local /root/.local
+COPY ./simple_webserver.py /app/simple_webserver.py
+
+# 환경 변수 설정 : pip install 할 때 --user로 설치하면 /root/.local에 저장됨
+ENV PATH=/root/.local:$PATH
+
+# 애플리케이션 실행
+CMD ["python", "simple_webserver.py"]
