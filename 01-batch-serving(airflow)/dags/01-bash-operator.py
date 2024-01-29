@@ -11,17 +11,14 @@ default_args = {
     # 'priority_weight': 10 # DAG의 우선 순위를 설정할 수 있음
     # 'end_date': datetime(2022, 4, 24) # DAG을 마지막으로 실행할 Date
     # 'execution_timeout': timedelta(seconds=300), # 실행 타임아웃 : 300초 넘게 실행되면 종료
-    # 'on_failure_callback': some_function # 만약에 Task들이 실패하면 실행할 함수
-    # 'on_success_callback': some_other_function
-    # 'on_retry_callback': another_function
 }
 
 # with 구문으로 DAG 정의
 with DAG(
-        dag_id='bash_dag',
-        default_args=default_args,
-        schedule_interval='@once',
-        tags=['my_dags']
+    dag_id='bash_dag',
+    default_args=default_args,
+    schedule_interval='@once',
+    tags=['my_dags']
 ) as dag:
     # BashOperator 사용
     task1 = BashOperator(

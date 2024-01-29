@@ -43,10 +43,10 @@ def print_current_date_with_context_variable(*args, **kwargs):
 
 # with 구문으로 DAG 정의
 with DAG(
-        dag_id='python_dag_with_context',
-        default_args=default_args,
-        schedule_interval='30 0 * * *',
-        tags=['my_dags']
+    dag_id='python_dag_with_context',
+    default_args=default_args,
+    schedule_interval='30 0 * * *',
+    tags=['my_dags']
 ) as dag:
     PythonOperator(
         task_id='print_current_date_with_context_variable',

@@ -29,10 +29,10 @@ def print_current_date_with_jinja(date):
 
 # with 구문으로 DAG 정의
 with DAG(
-        dag_id='python_dag_with_jinja',
-        default_args=default_args,
-        schedule_interval='30 0 * * *',
-        tags=['my_dags']
+    dag_id='python_dag_with_jinja',
+    default_args=default_args,
+    schedule_interval='30 0 * * *',
+    tags=['my_dags']
 ) as dag:
     execution_date = "{{ ds }}"  # Template 정의
 

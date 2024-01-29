@@ -21,10 +21,10 @@ def print_current_date():
 
 # with 구문으로 DAG 정의
 with DAG(
-        dag_id='python_dag1',
-        default_args=default_args,
-        schedule_interval='30 0 * * *',  # UTC 시간 기준 0시 30분에 Daily로 실행하겠다! 한국 시간 기준 오전 9시 30분
-        tags=['my_dags']
+    dag_id='python_dag1',
+    default_args=default_args,
+    schedule_interval='30 0 * * *',  # UTC 시간 기준 0시 30분에 Daily로 실행하겠다! 한국 시간 기준 오전 9시 30분
+    tags=['my_dags']
 ) as dag:
     python_task = PythonOperator(
         task_id='print_current_date',
