@@ -1,5 +1,3 @@
-# train.py
-
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 
@@ -14,6 +12,7 @@ if __name__ == "__main__":
 
     penalty = "elasticnet"
     l1_ratio = 0.1
+
     lr = LogisticRegression(penalty=penalty, l1_ratio=l1_ratio, solver="saga")
 
     with mlflow.start_run() as run:
@@ -21,4 +20,3 @@ if __name__ == "__main__":
 
     score = lr.score(X, y)
     print("Score: %s" % score)
-   

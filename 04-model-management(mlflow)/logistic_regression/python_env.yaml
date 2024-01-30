@@ -1,0 +1,15 @@
+python: "3.9.13"
+
+# 패키지를 빌드할 때 필요한 디펜던시(Optional)
+build_dependencies:
+  - pip
+  - setuptools
+  - wheel==0.37.1
+
+# 프로젝트 실행할 때 필요한 디펜던시
+dependencies:
+  - mlflow==2.10.0
+  - scikit-learn==1.4.0
+  - pandas==2.2.0
+  - numpy==1.26.3
+  - matplotlib==3.8.2

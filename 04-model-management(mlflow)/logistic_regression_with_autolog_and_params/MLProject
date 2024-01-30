@@ -1,4 +1,11 @@
-name: tutorial
+name: tutorial_with_autolog
+
+python_env: python_env.yaml
+# or
+# conda_env: my_env.yaml
+# or
+# docker_env:
+#    image:  mlflow-docker-example
 
 entry_points:
   main:
