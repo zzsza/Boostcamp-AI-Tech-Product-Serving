@@ -3,34 +3,20 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-- [부스트캠프 AI Tech](https://boostcamp.connect.or.kr/program_ai.html) - Product Serving 자료
+- [부스트캠프 AI Tech](https://boostcamp.connect.or.kr/program_ai.html) - Product Serving 자료 중 코드가 필요한 내용을 저장한 Repo입니다
 
 
 <br />
 
 ## Repository 구조
-- part1(MLOps 개론, Model Serving, 머신러닝 프로젝트 라이프 사이클은 별도의 코드가 없으며, part2 ~ part4는 강의 자료에서 사용한 코드가 저장되어 있습니다
-- `assets`엔 예제로 사용할 Mask Classification Model이 저장되어 있습니다
-  - 만약 실무였다면 part 아래에 있는 폴더들에 같이 저장되는 것이 조금 더 좋지만, 교육용 Github Repo라서 중복 저장을 피하기 위해 이렇게 저장했습니다
-
+- 
 
 ```
-├── README.md
-├── .github/workflows : Github Action Workflow
-├── assets : Mask Classification Model
-│   └── mask_task
-├── part2
-│   ├── 01-voila
-│   ├── 02-streamlit
-│   └── 04-cicd
-├── part3
-│   ├── 01-fastapi
-│   ├── 02-docker
-│   ├── 03-logging
-│   └── 04-mlflow
-└── part4
-    ├── 01-bentoml
-    └── 02-airflow
+├── 01-batch-serving(airflow)
+├── 02-online-serving(fastapi)
+├── 03-docker
+├── 04-model-management(mlflow)
+└── README.md
 ```
 
 
@@ -55,7 +41,7 @@
 
 <br />
 
-## 협업 규칙
+## 조교-마스터 협업 규칙
 
 - 커밋 메시지 컨벤션은 [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)을 따릅니다 
   - [commitizen](https://github.com/commitizen-tools/commitizen)을 사용하면 더욱 쉽게 커밋할 수 있습니다
