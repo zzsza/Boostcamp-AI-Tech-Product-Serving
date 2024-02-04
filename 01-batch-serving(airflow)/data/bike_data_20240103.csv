@@ -1,0 +1,120 @@
+trip_id,subscriber_type,bikeid,start_time,start_station_id,start_station_name,end_station_id,end_station_name,duration_minutes,dummy_date
+21308544,U.T. Student Membership,213,2019-11-27 11:17:18 UTC,4061,Lakeshore/Austin Hostel,4062,Lakeshore/Pleasant Valley,2,2024-01-03
+21310203,Local365,2130,2019-11-27 18:27:12 UTC,4057,6th/Chalmers ,2544,East 6th/Pedernales,4,2024-01-03
+21309658,Explorer,430,2019-11-27 15:34:01 UTC,3791,Lake Austin/Enfield,3790,Lake Austin Blvd/Deep Eddy,8,2024-01-03
+21309227,Explorer,963,2019-11-27 13:52:45 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,3791,Lake Austin/Enfield,30,2024-01-03
+21309284,Explorer,430,2019-11-27 14:03:57 UTC,3377,Veterans/Atlanta @ MoPac Ped Bridge,3791,Lake Austin/Enfield,20,2024-01-03
+21308183,Explorer,1551,2019-11-27 09:13:24 UTC,2504,South Congress/Elizabeth,4060,Red River/Cesar Chavez @ The Fairmont,14,2024-01-03
+21308175,Explorer,2122B,2019-11-27 09:11:35 UTC,2504,South Congress/Elizabeth,4060,Red River/Cesar Chavez @ The Fairmont,16,2024-01-03
+21309393,Explorer,1531,2019-11-27 14:31:39 UTC,2567,Barton Springs/Bouldin @ Palmer Auditorium,2494,2nd/Congress,13,2024-01-03
+21309390,Explorer,920,2019-11-27 14:31:20 UTC,2567,Barton Springs/Bouldin @ Palmer Auditorium,2494,2nd/Congress,13,2024-01-03
+21307883,Local365,865,2019-11-27 06:46:19 UTC,3513,South Congress/Barton Springs @ The Austin American-Statesman,2494,2nd/Congress,4,2024-01-03
+21307961,Local365,160,2019-11-27 07:35:14 UTC,2552,3rd/West,2494,2nd/Congress,3,2024-01-03
+21307897,Local365,110G,2019-11-27 06:50:30 UTC,2552,3rd/West,2495,4th/Congress,4,2024-01-03
+21308222,Local365,109,2019-11-27 09:29:39 UTC,2552,3rd/West,2495,4th/Congress,4,2024-01-03
+21307983,Local365,650,2019-11-27 07:48:46 UTC,2542,Plaza Saltillo,2496,8th/Congress,11,2024-01-03
+21308989,Local365+Guest Pass,432,2019-11-27 12:57:53 UTC,2707,Rainey/Cummings,2501,5th/Bowie,13,2024-01-03
+21309070,Single Trip (Pay-as-you-ride),893,2019-11-27 13:13:19 UTC,2574,Zilker Park,2503,South Congress/James,29,2024-01-03
+21309849,Explorer,963,2019-11-27 16:19:03 UTC,2574,Zilker Park,2503,South Congress/James,39,2024-01-03
+21309066,Single Trip (Pay-as-you-ride),873,2019-11-27 13:12:40 UTC,2574,Zilker Park,2503,South Congress/James,30,2024-01-03
+21309850,Explorer,861,2019-11-27 16:19:27 UTC,2574,Zilker Park,2503,South Congress/James,39,2024-01-03
+21309730,Explorer,252,2019-11-27 15:48:28 UTC,2503,South Congress/James,2503,South Congress/James,1,2024-01-03
+21309738,Explorer,873,2019-11-27 15:49:58 UTC,2503,South Congress/James,2503,South Congress/James,3,2024-01-03
+21309122,Explorer,1585,2019-11-27 13:21:47 UTC,3619,6th/Congress,2504,South Congress/Elizabeth,57,2024-01-03
+21309118,Explorer,849,2019-11-27 13:21:21 UTC,3619,6th/Congress,2504,South Congress/Elizabeth,57,2024-01-03
+21309117,Explorer,134,2019-11-27 13:20:57 UTC,3619,6th/Congress,2504,South Congress/Elizabeth,58,2024-01-03
+21308178,Explorer,453,2019-11-27 09:12:04 UTC,2504,South Congress/Elizabeth,2504,South Congress/Elizabeth,1,2024-01-03
+21310395,Local365,663,2019-11-27 20:14:09 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,2537,6th/West,3,2024-01-03
+21308790,Local365,650,2019-11-27 12:10:14 UTC,2496,8th/Congress,2539,3rd/Trinity @ The Convention Center,7,2024-01-03
+21309879,Explorer,349G,2019-11-27 16:26:21 UTC,2574,Zilker Park,2540,17th/Guadalupe,62,2024-01-03
+21309881,Explorer,88,2019-11-27 16:26:35 UTC,2574,Zilker Park,2540,17th/Guadalupe,62,2024-01-03
+21309884,Explorer,529,2019-11-27 16:27:09 UTC,2574,Zilker Park,2540,17th/Guadalupe,1066,2024-01-03
+21308043,Local30,110,2019-11-27 08:17:45 UTC,3798,21st/Speedway @ PCL,2540,17th/Guadalupe,6,2024-01-03
+21310130,Local365,745,2019-11-27 17:53:17 UTC,2544,East 6th/Pedernales,2542,Plaza Saltillo,5,2024-01-03
+21309973,Local365,2351,2019-11-27 16:49:20 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,2547,21st/Guadalupe,17,2024-01-03
+21310237,Local365,166,2019-11-27 18:40:43 UTC,3799,23rd/San Jacinto @ DKR Stadium,2547,21st/Guadalupe,8,2024-01-03
+21310409,Local365,2351,2019-11-27 20:22:22 UTC,2552,3rd/West,2547,21st/Guadalupe,18,2024-01-03
+21308764,Local365,460,2019-11-27 12:02:50 UTC,3838,26th/Nueces,2547,21st/Guadalupe,7,2024-01-03
+21308955,Local365,572,2019-11-27 12:49:31 UTC,3838,26th/Nueces,2547,21st/Guadalupe,5,2024-01-03
+21308138,Single Trip (Pay-as-you-ride),472,2019-11-27 08:57:24 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,2549,South 1st/Riverside @ Long Center,19,2024-01-03
+21309181,Local365,2351,2019-11-27 13:40:41 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,2552,3rd/West,16,2024-01-03
+21310369,Local365,014G,2019-11-27 19:58:39 UTC,2494,2nd/Congress,2552,3rd/West,42,2024-01-03
+21308605,Local365,865,2019-11-27 11:30:32 UTC,2494,2nd/Congress,2552,3rd/West,4,2024-01-03
+21310368,Local365,160,2019-11-27 19:57:55 UTC,2494,2nd/Congress,2552,3rd/West,8,2024-01-03
+21308263,Local30,14264,2019-11-27 09:47:45 UTC,2496,8th/Congress,2552,3rd/West,11,2024-01-03
+21310250,Local365,2351,2019-11-27 18:48:20 UTC,2547,21st/Guadalupe,2552,3rd/West,18,2024-01-03
+21308806,Local365,2351,2019-11-27 12:15:01 UTC,2547,21st/Guadalupe,2552,3rd/West,15,2024-01-03
+21310104,Local365,133,2019-11-27 17:37:51 UTC,2552,3rd/West,2552,3rd/West,14,2024-01-03
+21310290,Local365,2351,2019-11-27 19:08:00 UTC,2552,3rd/West,2552,3rd/West,13,2024-01-03
+21310317,Local365,2351,2019-11-27 19:21:52 UTC,2552,3rd/West,2552,3rd/West,41,2024-01-03
+21309867,Single Trip (Pay-as-you-ride),827,2019-11-27 16:24:17 UTC,4061,Lakeshore/Austin Hostel,2563,Rainey/Davis,30,2024-01-03
+21309784,24 Hour Walk Up Pass,871,2019-11-27 16:01:08 UTC,2707,Rainey/Cummings,2563,Rainey/Davis,53,2024-01-03
+21309798,24 Hour Walk Up Pass,220,2019-11-27 16:04:53 UTC,2707,Rainey/Cummings,2563,Rainey/Davis,50,2024-01-03
+21308193,Pay-as-you-ride,280,2019-11-27 09:15:45 UTC,2569,East 11th/San Marcos,2565,6th/Trinity,13,2024-01-03
+21309042,Local365,2351,2019-11-27 13:09:29 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,31,2024-01-03
+21309420,Local365,1555,2019-11-27 14:37:43 UTC,2567,Barton Springs/Bouldin @ Palmer Auditorium,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,6,2024-01-03
+21309109,Explorer,663,2019-11-27 13:20:32 UTC,3292,East 4th/Chicon,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,31,2024-01-03
+21309114,Explorer,024G,2019-11-27 13:20:46 UTC,3292,East 4th/Chicon,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,31,2024-01-03
+21308028,Local365,305G,2019-11-27 08:11:56 UTC,2549,South 1st/Riverside @ Long Center,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,6,2024-01-03
+21308872,Local365,2351,2019-11-27 12:34:54 UTC,2552,3rd/West,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,18,2024-01-03
+21309330,Local365,2351,2019-11-27 14:15:54 UTC,2552,3rd/West,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,45,2024-01-03
+21309168,Local365,1531,2019-11-27 13:36:33 UTC,2563,Rainey/Davis,2567,Barton Springs/Bouldin @ Palmer Auditorium,18,2024-01-03
+21309579,Local365,1555,2019-11-27 15:17:04 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,2567,Barton Springs/Bouldin @ Palmer Auditorium,5,2024-01-03
+21309337,Local365,1555,2019-11-27 14:17:04 UTC,3377,Veterans/Atlanta @ MoPac Ped Bridge,2567,Barton Springs/Bouldin @ Palmer Auditorium,11,2024-01-03
+21309445,Local365,3,2019-11-27 14:44:56 UTC,2711,Barton Springs/Kinney,2567,Barton Springs/Bouldin @ Palmer Auditorium,4,2024-01-03
+21308465,Local365,440,2019-11-27 10:57:01 UTC,2539,3rd/Trinity @ The Convention Center,2569,East 11th/San Marcos,12,2024-01-03
+21310011,Local365,3,2019-11-27 17:00:14 UTC,2567,Barton Springs/Bouldin @ Palmer Auditorium,2571,8th/Red River,17,2024-01-03
+21309434,Pay-as-you-ride,208,2019-11-27 14:40:45 UTC,2572,Barton Springs Pool,2572,Barton Springs Pool,21,2024-01-03
+21309694,Explorer,529,2019-11-27 15:42:56 UTC,3790,Lake Austin Blvd/Deep Eddy,2574,Zilker Park,30,2024-01-03
+21309656,Explorer,963,2019-11-27 15:33:50 UTC,3791,Lake Austin/Enfield,2574,Zilker Park,39,2024-01-03
+21309542,Single Trip (Pay-as-you-ride),080G,2019-11-27 15:09:07 UTC,2570,South Congress/Academy,2574,Zilker Park,23,2024-01-03
+21309547,Single Trip (Pay-as-you-ride),349G,2019-11-27 15:09:42 UTC,2570,South Congress/Academy,2574,Zilker Park,23,2024-01-03
+21308571,Explorer,88,2019-11-27 11:24:35 UTC,2574,Zilker Park,2574,Zilker Park,5,2024-01-03
+21308562,Explorer,893,2019-11-27 11:23:04 UTC,2574,Zilker Park,2574,Zilker Park,6,2024-01-03
+21308471,Explorer,113G,2019-11-27 10:58:50 UTC,2494,2nd/Congress,2574,Zilker Park,24,2024-01-03
+21308470,Explorer,043G,2019-11-27 10:58:50 UTC,2494,2nd/Congress,2574,Zilker Park,24,2024-01-03
+21309751,Explorer,928,2019-11-27 15:52:50 UTC,2503,South Congress/James,2574,Zilker Park,32,2024-01-03
+21309727,Explorer,2095,2019-11-27 15:48:17 UTC,2503,South Congress/James,2574,Zilker Park,36,2024-01-03
+21309735,Explorer,893,2019-11-27 15:49:23 UTC,2503,South Congress/James,2574,Zilker Park,35,2024-01-03
+21309929,Single Trip (Pay-as-you-ride),815,2019-11-27 16:37:25 UTC,2575,Riverside/South Lamar,2575,Riverside/South Lamar,22,2024-01-03
+21309142,Pay-as-you-ride,871,2019-11-27 13:28:35 UTC,2707,Rainey/Cummings,2707,Rainey/Cummings,33,2024-01-03
+21308980,Local365,3,2019-11-27 12:54:19 UTC,2567,Barton Springs/Bouldin @ Palmer Auditorium,2711,Barton Springs/Kinney,3,2024-01-03
+21309002,Explorer,024G,2019-11-27 13:01:29 UTC,3619,6th/Congress,3292,East 4th/Chicon,19,2024-01-03
+21309000,Explorer,663,2019-11-27 13:01:16 UTC,3619,6th/Congress,3292,East 4th/Chicon,19,2024-01-03
+21309229,Explorer,610,2019-11-27 13:53:01 UTC,2566,Electric Drive/Sandra Muraida Way @ Pfluger Ped Bridge,3377,Veterans/Atlanta @ MoPac Ped Bridge,9,2024-01-03
+21308748,Single Trip (Pay-as-you-ride),430,2019-11-27 11:59:16 UTC,2575,Riverside/South Lamar,3377,Veterans/Atlanta @ MoPac Ped Bridge,15,2024-01-03
+21308736,Single Trip (Pay-as-you-ride),1555,2019-11-27 11:58:31 UTC,2575,Riverside/South Lamar,3377,Veterans/Atlanta @ MoPac Ped Bridge,16,2024-01-03
+21310024,Local365,922,2019-11-27 17:05:20 UTC,2552,3rd/West,3390,6th/Brazos,8,2024-01-03
+21309253,Explorer,1471,2019-11-27 13:57:53 UTC,3513,South Congress/Barton Springs @ The Austin American-Statesman,3513,South Congress/Barton Springs @ The Austin American-Statesman,52,2024-01-03
+21309268,Explorer,554,2019-11-27 14:00:27 UTC,3513,South Congress/Barton Springs @ The Austin American-Statesman,3513,South Congress/Barton Springs @ The Austin American-Statesman,49,2024-01-03
+21309273,Explorer,240,2019-11-27 14:01:53 UTC,3513,South Congress/Barton Springs @ The Austin American-Statesman,3513,South Congress/Barton Springs @ The Austin American-Statesman,48,2024-01-03
+21309614,Local365,1531,2019-11-27 15:24:15 UTC,2494,2nd/Congress,3513,South Congress/Barton Springs @ The Austin American-Statesman,3,2024-01-03
+21309851,Single Trip (Pay-as-you-ride),75,2019-11-27 16:19:53 UTC,2494,2nd/Congress,3513,South Congress/Barton Springs @ The Austin American-Statesman,31,2024-01-03
+21309854,Single Trip (Pay-as-you-ride),920,2019-11-27 16:20:37 UTC,2494,2nd/Congress,3513,South Congress/Barton Springs @ The Austin American-Statesman,30,2024-01-03
+21310315,Local365,1555,2019-11-27 19:21:23 UTC,2567,Barton Springs/Bouldin @ Palmer Auditorium,3619,6th/Congress,9,2024-01-03
+21310248,Local365,661,2019-11-27 18:47:13 UTC,3390,6th/Brazos,3621,3rd/Nueces,6,2024-01-03
+21309385,Single Trip (Pay-as-you-ride),2274,2019-11-27 14:30:26 UTC,3513,South Congress/Barton Springs @ The Austin American-Statesman,3687,Boardwalk West,6,2024-01-03
+21310364,Local365,1545,2019-11-27 19:52:29 UTC,2549,South 1st/Riverside @ Long Center,3687,Boardwalk West,7,2024-01-03
+21310558,U.T. Student Membership,303G,2019-11-27 21:44:18 UTC,3798,21st/Speedway @ PCL,3792,22nd/Pearl,6,2024-01-03
+21308541,24 Hour Walk Up Pass,683,2019-11-27 11:16:10 UTC,4052,Rosewood/Angelina,3794,Dean Keeton/Speedway ,33,2024-01-03
+21308543,24 Hour Walk Up Pass,034G,2019-11-27 11:17:13 UTC,4052,Rosewood/Angelina,3794,Dean Keeton/Speedway ,32,2024-01-03
+21309130,Local365,772,2019-11-27 13:25:23 UTC,3798,21st/Speedway @ PCL,3794,Dean Keeton/Speedway ,5,2024-01-03
+21308610,Local365,2197,2019-11-27 11:31:15 UTC,3799,23rd/San Jacinto @ DKR Stadium,3794,Dean Keeton/Speedway ,6,2024-01-03
+21310445,Local365,2351,2019-11-27 20:40:22 UTC,2547,21st/Guadalupe,3794,Dean Keeton/Speedway ,13,2024-01-03
+21309010,Single Trip (Pay-as-you-ride),511,2019-11-27 13:03:49 UTC,3795,Dean Keeton/Whitis,3795,Dean Keeton/Whitis,60,2024-01-03
+21309196,U.T. Student Membership,057G,2019-11-27 13:43:37 UTC,3798,21st/Speedway @ PCL,3795,Dean Keeton/Whitis,43,2024-01-03
+21309201,Single Trip (Pay-as-you-ride),153,2019-11-27 13:44:55 UTC,3798,21st/Speedway @ PCL,3795,Dean Keeton/Whitis,19,2024-01-03
+21309205,Single Trip (Pay-as-you-ride),907,2019-11-27 13:45:37 UTC,3798,21st/Speedway @ PCL,3795,Dean Keeton/Whitis,18,2024-01-03
+21307799,U.T. Student Membership,040G,2019-11-27 00:21:41 UTC,3792,22nd/Pearl,3798,21st/Speedway @ PCL,4,2024-01-03
+21308719,Local365,854,2019-11-27 11:55:59 UTC,3794,Dean Keeton/Speedway ,3798,21st/Speedway @ PCL,5,2024-01-03
+21309043,Single Trip (Pay-as-you-ride),382,2019-11-27 13:10:03 UTC,3795,Dean Keeton/Whitis,3798,21st/Speedway @ PCL,33,2024-01-03
+21309048,Single Trip (Pay-as-you-ride),3471,2019-11-27 13:10:49 UTC,3795,Dean Keeton/Whitis,3798,21st/Speedway @ PCL,33,2024-01-03
+21308160,U.T. Student Membership,057G,2019-11-27 09:04:16 UTC,2548,Guadalupe/West Mall @ University Co-op,3798,21st/Speedway @ PCL,3,2024-01-03
+21310534,U.T. Student Membership,303G,2019-11-27 21:34:14 UTC,2548,Guadalupe/West Mall @ University Co-op,3798,21st/Speedway @ PCL,3,2024-01-03
+21307839,U.T. Student Membership,772,2019-11-27 05:12:49 UTC,3838,26th/Nueces,3798,21st/Speedway @ PCL,5,2024-01-03
+21308554,U.T. Student Membership,58,2019-11-27 11:20:19 UTC,3838,26th/Nueces,3798,21st/Speedway @ PCL,5,2024-01-03
+21310491,Local365,2351,2019-11-27 21:01:50 UTC,3794,Dean Keeton/Speedway ,3799,23rd/San Jacinto @ DKR Stadium,4,2024-01-03
+21308607,Local365,14151,2019-11-27 11:30:50 UTC,3799,23rd/San Jacinto @ DKR Stadium,3799,23rd/San Jacinto @ DKR Stadium,1,2024-01-03
+21308639,Local365,460,2019-11-27 11:37:22 UTC,3794,Dean Keeton/Speedway ,3838,26th/Nueces,25,2024-01-03
+21309206,Local365,549,2019-11-27 13:45:38 UTC,3793,28th/Rio Grande,3841,23rd/Rio Grande,3,2024-01-03
+21308705,Local365,388,2019-11-27 11:52:53 UTC,3793,28th/Rio Grande,3841,23rd/Rio Grande,4,2024-01-03

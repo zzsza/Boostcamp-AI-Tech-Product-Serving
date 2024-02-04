@@ -11,7 +11,7 @@ default_args = {
     'owner': 'kyle',
     'depends_on_past': False,
     'start_date': datetime(2024, 1, 1),
-    'start_date': datetime(2024, 1, 4),
+    'end_date': datetime(2024, 1, 4),
     'retires': 1,
     'retry_delay': timedelta(minutes=5),
 }
