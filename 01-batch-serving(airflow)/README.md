@@ -4,6 +4,59 @@
     - Docker 환경을 설정하는 방법은 [Docker README](https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/blob/main/01-batch-serving(airflow)/docker-readme.md)에 작성해두었습니다
     - Docker 환경에선 VS Code Server를 활용하는 것도 추가했으니, 이 부분도 꼭 보시는 것을 추천드립니다
 
+## 설치
+- 가상 환경 설정
+
+    ```
+    python -m venv .venv
+    source .venv/bin/activate
+    ```
+
+- Apache Airflow 설치
+
+    ```
+    pip3 install pip --upgrade
+
+    AIRFLOW_VERSION=2.6.3
+    PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
+    CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+
+    pip3 install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+    ```
+
+- Airflow DB init
+
+    ```
+    export AIRFLOW_HOME=`pwd`
+    echo $AIRFLOW_HOME
+
+    airflow db init
+    ```
+
+- Airflow Admin 생성
+
+    ```
+    airflow users create \
+    --username admin \
+    --password '!boostcamp-aitech!' \
+    --firstname kyle \
+    --lastname byeon \
+    --role Admin \
+    --email snugyun01@gmail.com 
+    ```
+
+- Airflow Webserver 실행
+
+    ```
+    airflow webserver --port 8080
+    ```
+
+- Airflow Scheduler 실행
+
+    ```
+    airflow scheduler
+    ```
+
 
 ---
 
@@ -33,6 +86,12 @@
 ### 05-python-operator-with-slack-noti
 - 배우는 내용
   - DAG의 Task가 실패할 때 슬랙 메세지를 전송합니다
+
+### 06-simpe_elt.py
+- 배우는 내용
+  - 간단한 ELT 파이프라인을 만들고, 데이터 엔지니어링에 대해 연습합니다
+  - 이 코드는 Google Cloud Composer에서 실행합니다
+
 
 ### 추가 학습 자료
 - Local에서 위 실습을 모두 완료했다면, Docker 환경에서 실행해보는 것을 추천합니다(강의에서는 따로 다루진 않지만 꼭 실행해보세요) - [Docker README](https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/blob/main/01-batch-serving(airflow)/docker-readme.md)
