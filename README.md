@@ -9,8 +9,6 @@
 <br />
 
 ## Repository 구조
-- 
-
 ```
 ├── 01-batch-serving(airflow)
 ├── 02-online-serving(fastapi)
