@@ -13,6 +13,9 @@ from airflow.providers.google.cloud.transfers.local_to_gcs import LocalFilesyste
 from utils.slack_notifier import task_fail_slack_alert, task_succ_slack_alert
 
 execution_date = "{{ ds_nodash }}" # 20240101
+execution_date_with_slash = "{{ macros.ds_format(ds, '%Y-%m-%d', '%Y/%m/%d') }}" # 2024/01/01
+# macros를 사용해 ds(2024-01-01)을 2024/01/01로 포매팅을 수정합니다
+# 참고 링크 : https://airflow.apache.org/docs/apache-airflow/stable/templates-ref.html#airflow.macros.ds_format
 
 PROJECT_ID = "boostcamp-ai-tech-serving"
 BUCKET_NAME = "boostcamp-ai-tech-gcs"
@@ -20,10 +23,11 @@ BUCKET_NAME = "boostcamp-ai-tech-gcs"
 FILE_NAME = f"bike_data_{execution_date}.csv" # bike_data_20240101.csv
 LOCAL_FILE_PATH = str(Path(__file__).parent.parent / "data" / FILE_NAME)
 
-GCS_PATH = f"{execution_date}/bike_data.csv" 
+GCS_PATH = f"{execution_date_with_slash}/bike_data.csv" 
 # 현업에서 데이터를 저장할 때, 날짜로 구분을 많이 함
 # 2024/01/01/bike_data.csv
 # 2024/01/02/bike_data.csv
+# execution_date_with_slash를 사용합니다 : 2024/01/01
 
 default_args = {
     "owner": "kyle",
