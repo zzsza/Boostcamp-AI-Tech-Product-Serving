@@ -3,6 +3,45 @@
 - 상황 : 데이터 과학자가 model.py을 만들었고(model.joblib이 학습 결과), 그 model을 FastAPI을 사용해 Online Serving을 구현해야 함
   - model.py는 추후에 수정될 수 있으므로, model.py를 수정하지 않음(데이터 과학자쪽에서 수정)
 
+## 설치
+- Python >= 3.9
+- Poetry >= 1.1.4
+
+
+```
+poetry install
+```
+
+## Run
+```bash
+PYTHONPATH=.
+python main.py
+```
+
+## Predict
+```bash
+curl -X POST "http://0.0.0.0:8000/predict" -H "Content-Type: application/json" -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+```
+
+## Get all predictions
+```bash
+curl "http://0.0.0.0:8000/predict"
+```
+
+## Get a prediction
+```bash
+curl "http://0.0.0.0:8000/predict/1"
+```
+
+## Docker Build
+```
+docker build -t web_single_example .
+```
+
+---
+
+
+
 # 시작하기 전에
 - 여러분들이라면 어떻게 시작할까? 어떻게 설계할까? => 잠깐이라도 생각해보기
   - 여러분들의 생각과 제가 말하는 것을 비교 => Diff => 이 Diff가 왜 생겼는가?
