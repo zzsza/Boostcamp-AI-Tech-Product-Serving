@@ -11,7 +11,7 @@ from api import router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # 데이터베이스 테이블 생성
-    logger.info("Createing database table")
+    logger.info("Creating database table")
     SQLModel.metadata.create_all(engine)
 
     # 모델 로드
