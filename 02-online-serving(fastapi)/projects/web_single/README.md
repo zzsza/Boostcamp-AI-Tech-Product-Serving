@@ -38,6 +38,12 @@ curl "http://0.0.0.0:8000/predict/1"
 docker build -t web_single_example .
 ```
 
+## Docker Run
+```
+docker run -p 8000:8000 web_single_example
+```
+
+
 ---
 
 
