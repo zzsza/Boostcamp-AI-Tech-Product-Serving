@@ -2,7 +2,6 @@
 - Airflow를 처음 학습할 때는 Local 환경에서 DAG 작성에 집중하시는 것을 추천합니다
     - 그 후, 익숙해지면 Docker 환경에서 설정하고 DAG 작성을 해보시는 것을 추천합니다
     - Docker 환경을 설정하는 방법은 [Docker README](https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/blob/main/01-batch-serving(airflow)/docker-readme.md)에 작성해두었습니다
-    - Docker 환경에선 VS Code Server를 활용하는 것도 추가했으니, 이 부분도 꼭 보시는 것을 추천드립니다
 
 ## 설치
 - 가상 환경 설정
