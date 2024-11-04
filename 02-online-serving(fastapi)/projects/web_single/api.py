@@ -38,7 +38,7 @@ def get_predictions() -> list[PredictionResponse]:
         ]
 
 @router.get("/predict/{id}")
-def get_preidction(id: int) -> PredictionResponse:
+def get_prediction(id: int) -> PredictionResponse:
     with Session(engine) as session:
         prediction_result = session.get(PredictionResult, id)
         if not prediction_result:
