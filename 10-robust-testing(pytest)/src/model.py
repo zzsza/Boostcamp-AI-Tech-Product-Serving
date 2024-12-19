@@ -2,9 +2,9 @@ from loguru import logger
 from pydantic import ValidationError
 
 import nltk
-import data
-import models
-from trainer import Trainer
+import src.data as data
+import src.models as models
+from src.trainer import Trainer
 
 model = None
 

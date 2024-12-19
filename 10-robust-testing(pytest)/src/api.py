@@ -2,7 +2,7 @@ import os
 from pydantic import BaseModel
 from fastapi import APIRouter, HTTPException
 
-from model import ModelOptions
+from src.model import ModelOptions
 
 router = APIRouter()
 
@@ -15,6 +15,10 @@ class PredictionResponse(BaseModel):
     isbn: str
     rating: float
 
+
+@router.get("/test")
+def test():
+    return {"message": "Hello, World!"}
 
 # 여러 모델에 대한 옵션, 학습 옵션을 추가해 볼 수 있습니다
 # DeepCoNN 은 첫 실행 시 vector_create True 설정 필요

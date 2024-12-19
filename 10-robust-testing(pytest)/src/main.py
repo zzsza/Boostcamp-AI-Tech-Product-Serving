@@ -4,8 +4,8 @@ from fastapi import FastAPI
 from loguru import logger
 from sqlmodel import SQLModel
 
-from api import router
-from database import engine
+from src.api import router
+from src.database import engine
 
 
 @asynccontextmanager

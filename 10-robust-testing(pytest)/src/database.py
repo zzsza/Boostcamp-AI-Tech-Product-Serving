@@ -1,6 +1,6 @@
 from sqlmodel import Field, SQLModel, create_engine
 
-from config import config
+from src.config import config
 
 
 class PredictionResult(SQLModel, table=True):
