@@ -22,20 +22,20 @@
 
 ## 추천 학습 방식
 - 강의를 수강한 후, 강의에서 나온 공식 문서를 보며 코드를 작성합니다
-- 강의에서 활용한 코드를 그대로 복사 붙여넣기하지 말고, **직접 타이핑해주세요**
+- 강의에서 활용한 코드를 그대로 복사 붙여넣기하지 말고, **직접 작성해주세요**
   - 오류를 많이 경험하고, 오류가 발생했다면 그 이유와 해결 방법을 별도로 기록해주세요
-- 강의에서 진행된 코드를 더 좋게 개선해도 좋아요 :)
-- 강의에서 다룬 내용보다 더 넓은 내용을 찾아보고 정리해서 나만의 Serving 노트를 만들어보아요
+- 강의에서 진행된 코드를 더 개선하는 것도 추천해요.
+- 강의에서 다룬 내용보다 더 넓은 내용을 찾아보고 정리해서 나만의 Serving 노트를 만드는 것도 추천해요.
 
 
 <br />
 
 ## 만약 이슈가 생겼다면
 - 실습 코드 관련 문의는 **슬랙 채널**에 문의해주세요
-  - 어떤 상황에서(OS, Python 버전 등) 어떤 오류가 발생했는지 자세히 알려주시면 좋아요. 같이 해결해보아요!
+  - 어떤 상황에서(OS, Python 버전 등) 어떤 오류가 발생했는지 자세히 알려주시면 더 빠르게 해결할 수 있습니다. Context를 같이 제공해주세요!
 - 강의 영상 및 강의 자료 관련 문의는 **부스트코스**를 통해서 해주세요!
-- 이해하기 어렵거나 토론하고 싶은 소재가 있다면 **슬랙 채널**에 공유해주세요!
-  - 단순히 GET이 뭐에요? 라는 질문보다는 간단히 검색한 후, 검색한 자료를 공유하면서 어떤 부분이 어려운지 질문주시는 것을 추천드려요 :)
+- 이해하기 어렵거나 토론하고 싶은 소재가 있다면 **슬랙 채널**에 공유해주시면 더 자세한 내용을 공유드릴게요.
+  - 단순히 GET이 뭐에요? 라는 질문보다는 간단히 검색한 후, 검색한 자료를 공유하면서 어떤 부분이 어려운지 질문주시는 것을 추천드려요.
 
 <br />
 
@@ -67,6 +67,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://dailyheumsi.tistory.com"><img src="https://avatars.githubusercontent.com/u/31306282?v=4?s=100" width="100px;" alt="heumsi"/><br /><sub><b>heumsi</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=heumsi" title="Code">💻</a> <a href="#content-heumsi" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=heumsi" title="Documentation">📖</a> <a href="#example-heumsi" title="Examples">💡</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/ykmoon/"><img src="https://avatars.githubusercontent.com/u/45195471?v=4?s=100" width="100px;" alt="YkMoon"/><br /><sub><b>YkMoon</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=Ykmoon" title="Code">💻</a> <a href="#content-Ykmoon" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=Ykmoon" title="Documentation">📖</a> <a href="#example-Ykmoon" title="Examples">💡</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/noeunkim"><img src="https://avatars.githubusercontent.com/u/79394690?v=4?s=100" width="100px;" alt="NOEUN KIM"/><br /><sub><b>NOEUN KIM</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=noeunkim" title="Code">💻</a> <a href="#content-noeunkim" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=noeunkim" title="Documentation">📖</a> <a href="#example-noeunkim" title="Examples">💡</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yansfil"><img src="https://avatars.githubusercontent.com/yansfil?v=4?s=100" width="100px;" alt="yansfil"/><br /><sub><b>yansfil</b></sub></a><br /><a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=yansfil" title="Code">💻</a> <a href="#content-yansfil" title="Content">🖋</a> <a href="https://github.com/zzsza/Boostcamp-AI-Tech-Product-Serving/commits?author=yansfil" title="Documentation">📖</a> <a href="#example-yansfil" title="Examples">💡</a></td>
     </tr>
   </tbody>
 </table>
