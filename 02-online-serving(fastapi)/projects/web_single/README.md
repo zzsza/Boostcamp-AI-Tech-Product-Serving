@@ -33,6 +33,12 @@ curl "http://0.0.0.0:8000/predict"
 curl "http://0.0.0.0:8000/predict/1"
 ```
 
+- 만약 curl이 없다는 오류가 발생한다면 아래 명령어로 설치해주세요
+
+```
+apt-get update && apt-get install -y curl 
+```
+
 ## Docker Build
 ```
 docker build -t web_single_example .
